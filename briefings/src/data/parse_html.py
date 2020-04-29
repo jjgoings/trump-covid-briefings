@@ -17,7 +17,8 @@ for briefing in briefings:
     isTrump = False
     lines = []
     for line in text:
-        cleaned_line = clean_html(line)
+        # We don't want any newlines
+        cleaned_line = clean_html(line).replace('\n', ' ')
         if cleaned_line[:5].isupper(): # actors are in all upper case for at least 5 characters long
             if cleaned_line[:14] == 'THE PRESIDENT:':
                 isTrump = True 
@@ -26,12 +27,12 @@ for briefing in briefings:
         if isTrump:
             # print Trump's remarks, cutting out the actor's name
             if cleaned_line[:14] == 'THE PRESIDENT:':
-                lines.append(cleaned_line[14:])
+                lines.append(re.sub(' +', ' ',cleaned_line[14:]).strip())
             # don't print things like "(Cross talk.)"
             elif (cleaned_line[0] == '(') and (cleaned_line[-1] == ')'):
                 continue
             else:
-                lines.append(cleaned_line)
+                lines.append(re.sub(' +', ' ',cleaned_line).strip())
 
     date = briefing.split('_')[-1].split('.')[0]
     filename = 'trump_raw_text_'+date+'.txt'
