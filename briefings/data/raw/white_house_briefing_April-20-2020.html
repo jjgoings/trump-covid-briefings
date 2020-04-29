@@ -1,0 +1,1965 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+ <head>
+  <script>
+   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
+		document.createElement('picture');
+  </script>
+  <meta charset="utf-8"/>
+  <meta content="ie=edge" http-equiv="x-ua-compatible"/>
+  <script type="text/javascript">
+   (window.NREUM||(NREUM={})).loader_config={xpid:"VQ4FUVdTCBAIVFZbAgUBVw==",licenseKey:"9360826e15",applicationID:"80795461"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(21),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(22),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),c.xhrWrappable&&t(10),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(9),s=t(8),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof x&&(this.bstStart=y.now())}),o.on(w,function(t,n){var e=t[0];e instanceof x&&i("bst",[e,n,this.bstStart,y.now()])}),a.on(m,function(t,n,e){this.bstStart=y.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),this.bstType])}),s.on(m,function(){this.bstStart=y.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),"requestAnimationFrame"])}),o.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),o.on(g+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){function r(t,n,e){var r=t[n];"function"==typeof r&&(t[n]=function(){var t=i(arguments),n={};o.emit(e+"before-start",[t],n);var a;n[m]&&n[m].dt&&(a=n[m].dt);var s=r.apply(this,t);return o.emit(e+"start",[t,a],s),s.then(function(t){return o.emit(e+"end",[null,t],s),t},function(t){throw o.emit(e+"end",[t],s),t})})}var o=t("ee").get("fetch"),i=t(22),a=t(21);n.exports=o;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,n){r(d[h],n,f),r(l[h],n,f)}),r(s,"fetch",c),o.on(c+"end",function(t,n){var e=this;if(n){var r=n.headers.get("content-length");null!==r&&(e.rxSize=r),o.emit(c+"done",[null,n],e)}else o.emit(c+"done",[t],e)}))},{}],7:[function(t,n,e){var r=t("ee").get("history"),o=t("wrap-function")(r);n.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,n,e){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],9:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t("wrap-function")(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],10:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",s)}function i(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];n.exports=u;var x=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,n,e){function r(t){if(!i(t))return null;var n=window.NREUM;if(!n.loader_config)return null;var e=(n.loader_config.accountID||"").toString()||null,r=(n.loader_config.agentID||"").toString()||null,s=(n.loader_config.trustKey||"").toString()||null;if(!e||!r)return null;var c=a.generateCatId(),f=a.generateCatId(),u=Date.now(),d=o(c,f,u,e,r,s);return{header:d,guid:c,traceId:f,timestamp:u}}function o(t,n,e,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:n,ti:e}};return i&&r!==i&&(s.d.tk=i),btoa(JSON.stringify(s))}function i(t){var n=!1,e=!1,r={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(r=NREUM.init.distributed_tracing,e=!!r.enabled),e)if(t.sameOrigin)n=!0;else if(r.allowed_origins instanceof Array)for(var o=0;o<r.allowed_origins.length;o++){var i=s(r.allowed_origins[o]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){n=!0;break}}return e&&n}var a=t(19),s=t(13);n.exports={generateTracePayload:r,shouldGenerateTrace:i}},{}],12:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);n.aborted||(e.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):i(this,t),e.cbTime=this.cbTime,u.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime]))}}function o(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.parsedOrigin=c(n),t.sameOrigin=t.parsedOrigin.sameOrigin}function i(t,n){t.params.status=n.status;var e=w(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){i(n,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=f(this.parsedOrigin);e&&e.header&&(n.setRequestHeader("newrelic",e.header),this.dt=e)}),u.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=m(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<l;s++)n.addEventListener(d[s],this.listener,!1)}),u.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),u.on("xhr-load-added",function(t,n){var e=""+p(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,n){var e=""+p(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],n)}),u.on("removeEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],n)}),u.on("fn-start",function(t,n,e){n instanceof v&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,n){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)}),u.on("fetch-before-start",function(t){var n,e=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url&&(n=t[0].url),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var r=f(this.parsedOrigin);if(r&&r.header){var o=r.header;if("string"==typeof t[0]){var i={};for(var a in e)i[a]=e[a];i.headers=new Headers(e.headers||{}),i.headers.set("newrelic",o),this.dt=r,t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&(t[0].headers.append("newrelic",o),this.dt=r)}})}},{}],13:[function(t,n,e){var r={};n.exports=function(t){if(t in r)return r[t];var n=document.createElement("a"),e=window.location,o={};n.href=t,o.port=n.port;var i=n.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("/")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=n.hostname||e.hostname,o.pathname=n.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!n.protocol||":"===n.protocol||n.protocol===e.protocol,s=n.hostname===document.domain&&n.port===e.port;return o.sameOrigin=a&&(!n.hostname||s),"/"===o.pathname&&(r[t]=o),o}},{}],14:[function(t,n,e){function r(t,n){var e=t.responseType;return"json"===e&&null!==n?n:"arraybuffer"===e||"blob"===e||"json"===e?o(t.response):"text"===e||"document"===e||""===e||void 0===e?o(t.responseText):void 0}var o=t(16);n.exports=r},{}],15:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(21),s=t(22),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],16:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],17:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],18:[function(t,n,e){function r(t,n){var e=t.getEntries();e.forEach(function(t){"first-paint"===t.name?c("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&c("timing",["fcp",Math.floor(t.startTime)])})}function o(t,n){var e=t.getEntries();e.length>0&&c("lcp",[e[e.length-1]])}function i(t){if(t instanceof u&&!l){var n,e=Math.round(t.timeStamp);n=e>1e12?Date.now()-e:f.now()-e,l=!0,c("timing",["fi",e,{type:t.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,s,c=t("handle"),f=t("loader"),u=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),s=new PerformanceObserver(o);try{a.observe({entryTypes:["paint"]}),s.observe({entryTypes:["largest-contentful-paint"]})}catch(d){}}if("addEventListener"in document){var l=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(t){document.addEventListener(t,i,!1)})}}},{}],19:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],20:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],21:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],22:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],23:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([x,e,r,a]),a}}function p(t,n){g[t]=m(t).concat(n)}function h(t,n){var e=g[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return g[t]||[]}function w(t){return d[t]=d[t]||o(e)}function v(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var g={},y={},x={on:p,addEventListener:p,removeEventListener:h,emit:e,get:w,listeners:m,context:n,buffer:v,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(21),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(21),u=t("ee"),d=t(20),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:g,features:{},xhrWrappable:x,userAgent:d};t(15),t(18),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(23)},{}],"wrap-function":[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(22),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}]},{},["loader",2,12,4,3]);
+  </script>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Remarks by President Trump, Vice President Pence, and Members of the Coronavirus Task Force in Press Briefing | The White House
+  </title>
+  <script type="application/ld+json">
+   [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"News","item":"https://www.whitehouse.gov/news/"},{"@type":"ListItem","position":2,"name":"Briefing Statements","item":"https://www.whitehouse.gov/briefings-statements/"},{"@type":"ListItem","position":3,"name":"Remarks by President Trump, Vice President Pence, and Members of the Coronavirus Task Force in Press Briefing"}]}]
+  </script>
+  <meta content="James S. Brady Press Briefing Room 5:39 P.M. EDT THE PRESIDENT:  Thank you very much everyone.  Thank you.  Following the release of our reopening guidelin" name="description"/>
+  <link href="https://www.whitehouse.gov/briefings-statements/remarks-president-trump-vice-president-pence-members-coronavirus-task-force-press-briefing-29/" rel="canonical"/>
+  <meta content="en_US" property="og:locale"/>
+  <meta content="article" property="og:type"/>
+  <meta content="Remarks by President Trump, Vice President Pence, and Members of the Coronavirus Task Force in Press Briefing | The White House" property="og:title"/>
+  <meta content="James S. Brady Press Briefing Room 5:39 P.M. EDT THE PRESIDENT:  Thank you very much everyone.  Thank you.  Following the release of our reopening guidelin" property="og:description"/>
+  <meta content="https://www.whitehouse.gov/briefings-statements/remarks-president-trump-vice-president-pence-members-coronavirus-task-force-press-briefing-29/" property="og:url"/>
+  <meta content="The White House" property="og:site_name"/>
+  <meta content="https://facebook.com/whitehouse" property="article:publisher"/>
+  <meta content="1790466490985150" property="fb:app_id"/>
+  <meta content="https://www.whitehouse.gov/wp-content/uploads/2017/12/wh.gov-share-img_03-1024x538.png" property="og:image"/>
+  <meta content="https://www.whitehouse.gov/wp-content/uploads/2017/12/wh.gov-share-img_03-1024x538.png" property="og:image:secure_url"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="James S. Brady Press Briefing Room 5:39 P.M. EDT THE PRESIDENT:  Thank you very much everyone.  Thank you.  Following the release of our reopening guidelin" name="twitter:description"/>
+  <meta content="Remarks by President Trump, Vice President Pence, and Members of the Coronavirus Task Force in Press Briefing | The White House" name="twitter:title"/>
+  <meta content="@whitehouse" name="twitter:site"/>
+  <meta content="https://www.whitehouse.gov/wp-content/uploads/2017/12/wh.gov-share-img_03-1024x538.png" name="twitter:image"/>
+  <meta content="@whitehouse" name="twitter:creator"/>
+  <link crossorigin="" href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900,900i&amp;subset=latin-ext" id="google-fonts-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/dist/site.min.css?ver=fb3993a9" id="site-css" media="all" rel="stylesheet" type="text/css"/>
+  <script src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/dist/polyfills.min.js?ver=fb3993a9" type="text/javascript">
+  </script>
+  <script src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/vendor/picturefill/dist/picturefill.min.js?ver=fb3993a9" type="text/javascript">
+  </script>
+  <link href="/favicon.ico?ver=fb3993a9" rel="icon" type="image/x-icon"/>
+  <link href="/favicon-32x32.png?ver=fb3993a9" rel="icon" sizes="32x32" type="image/png"/>
+  <link href="/favicon-16x16.png?ver=fb3993a9" rel="icon" sizes="16x16" type="image/png"/>
+  <link href="/apple-touch-icon-precomposed.png?ver=fb3993a9" rel="apple-touch-icon-precomposed" sizes="180x180"/>
+  <link href="/touch-icon-256x256.png?ver=fb3993a9" rel="icon" sizes="256x256" type="image/png"/>
+  <link href="/touch-icon-192x192.png?ver=fb3993a9" rel="icon" sizes="192x192" type="image/png"/>
+  <link href="/site.webmanifest?ver=fb3993a9" rel="manifest"/>
+  <link color="#336799" href="/safari-pinned-tab.svg?ver=fb3993a9" rel="mask-icon"/>
+  <meta content="The White House" name="apple-mobile-web-app-title"/>
+  <meta content="The White House" name="application-name"/>
+  <meta content="#0c2644" name="msapplication-TileColor"/>
+  <meta content="#f5f5f5" name="theme-color"/>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-12099831-10">
+  </script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-12099831-10');
+		window.gtag_id = 'UA-12099831-10';
+  </script>
+  <script>
+   !function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="B75PJ-VWDMF-FF8GY-2P7NB-DC3RE",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,o,_,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",_=document.getElementsByTagName("script")[0],_.parentNode.insertBefore(r,_);try{o=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",o=r.contentWindow.document}o.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"B75PJ-VWDMF-FF8GY-2P7NB-DC3RE",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},o.write("<bo"+'dy onload="document._l();">'),o.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e=""=="true"?1:0,t="",n="qasaoyyxanpcexvj5ata-f-79cf0412c-clientnsv4-s.akamaihd.net",i={"ak.v":"27","ak.cp":"653138","ak.ai":parseInt("351244",10),"ak.ol":"0","ak.cr":99,"ak.ipv":4,"ak.proto":"","ak.rid":"7ed3436","ak.r":35636,"ak.a2":e,"ak.m":"dscb","ak.n":"essl","ak.bpcip":"128.36.7.0","ak.cport":12740,"ak.gh":"172.232.11.15","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.csrc":"-","ak.acc":"fast","ak.t":"1588193318","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==SCLPStoaVi0kZio0ytyv9MHBJe4nKtL5sRIiC2zjV+4QggLPAQrxo2gmkQMM4vspRHOTK9bneQTQztDSPihr6KvKnnEcAZbxhm1cN+S6TZMknOv0LNQAey0YsYxUYc4cOoLre/bjwtIdbuqqYW4zJaCLhlY3c3uRi1v0Digm4hik4p8wwCrt2BFyDwvaP8Qdta27+Izb3sZmJHVB99LwCcRL2Zmy0nPhjPPDVcVHjR7r0mJaRmxL+J8K1SndrvhMwmfb52S8k62MAYiYUvfElz7mhDLZz0KRH8GAMA6t3xOrwQ5Gz1eOxWbCmmK41B081Kzi+ATqW8zAoCg9tbOoC/FJpDbxp/bc6oBHQDd2L/7pltpoh6fjhnAyTTp3FEYAllAxS+eI2CunnQZbl2QRO9T+SrWch2KX6Y8fxPqkduY=","ak.pv":"203"};if(""!==t)i["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))i["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);
+  </script>
+ </head>
+ <body class="briefing-statement-template-default single single-briefing-statement postid-233939">
+  <a class="skip-link" href="#main-content">
+   <span>
+    Skip to content
+   </span>
+  </a>
+  <div class="body-overflow">
+   <header class="header header--has-share">
+    <div class="header__container">
+     <div class="header__inner">
+      <button class="header__hamburger" type="button">
+       <b class="svg svg--hamburger" data-icon="hamburger" data-img-url="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/hamburger.png" data-svg-url="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/hamburger.svg">
+        <svg aria-label="Open Menu" focusable="false" height="20" role="img" viewbox="0 0 24 14" width="28" xmlns="http://www.w3.org/2000/svg">
+         <title>
+          Open Menu
+         </title>
+         <path d="M.64,12H16.36c.36,0,.64.43.64,1s-.28,1-.64,1H.64C.28,14,0,13.57,0,13s.28-1,.64-1M23.1,2H.9A.94.94,0,0,1,0,1,.94.94,0,0,1,.9,0H23.1A.94.94,0,0,1,24,1a.94.94,0,0,1-.9,1M.9,8A.94.94,0,0,1,0,7,.94.94,0,0,1,.9,6H23.1A.94.94,0,0,1,24,7a.94.94,0,0,1-.9,1Z" fill="#a98860">
+         </path>
+        </svg>
+       </b>
+      </button>
+      <div class="header__wrap">
+       <div class="header__logo">
+        <a href="https://www.whitehouse.gov">
+         <img alt="" class="logo--white" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-sm-wh.png" srcset="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-sm-wh.png 1x, https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-md-wh.png 2x, https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-lg-wh.png 3x"/>
+         <img alt="" class="logo--blue" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-sm-bl.png" srcset="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-sm-bl.png 1x, https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-md-bl.png 2x, https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-lg-bl.png 3x"/>
+         <span class="visually-hidden">
+          White House Logo
+         </span>
+        </a>
+       </div>
+       <div class="header__share">
+        <a class="header__share--copy" data-clipboard-text="https://www.whitehouse.gov/briefings-statements/remarks-president-trump-vice-president-pence-members-coronavirus-task-force-press-briefing-29/?utm_source=link&amp;utm_medium=header" href="https://www.whitehouse.gov/briefings-statements/remarks-president-trump-vice-president-pence-members-coronavirus-task-force-press-briefing-29/?utm_source=link&amp;utm_medium=header">
+         <b class="svg svg--share-link" data-icon="share-link" data-svg-url="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/share-link.svg">
+          <svg aria-label="Copy URL to your clipboard" focusable="false" height="15" role="img" width="17">
+           <title>
+            Copy URL to your clipboard
+           </title>
+           <g fill="#30669B">
+            <path d="M3.96 9.65c.85.8 2 1.22 3.2 1.22 1.2 0 2.35-.43 3.2-1.22l.94-.88c.35-.33.35-.85 0-1.2-.36-.32-.92-.32-1.28 0l-.94.9c-.5.47-1.2.74-1.92.74-.74 0-1.4-.26-1.93-.74L2.66 6.08c-1.07-1-1.07-2.6 0-3.6 1.08-.98 2.8-.98 3.85 0l.84.77c.35.33.9.33 1.27 0s.37-.85 0-1.2L7.8 1.3c-1.76-1.65-4.63-1.65-6.4 0-1.74 1.64-1.74 4.3 0 5.93l2.58 2.42zM5.7 6.25c-.35.33-.35.85 0 1.2.36.32.92.32 1.28 0l.94-.9c.5-.47 1.2-.74 1.92-.74s1.4.28 1.93.76l2.57 2.4c1.07 1 1.07 2.6 0 3.6-1.08 1-2.8 1-3.87 0l-.83-.77c-.36-.34-.92-.34-1.27 0-.36.32-.36.85 0 1.18l.82.77c.87.8 2.03 1.23 3.2 1.23 1.16 0 2.3-.42 3.2-1.23 1.76-1.65 1.76-4.3 0-5.96l-2.56-2.45c-.85-.8-2-1.22-3.2-1.22-1.2 0-2.35.43-3.2 1.22l-.94.9z">
+            </path>
+           </g>
+          </svg>
+         </b>
+         Share
+        </a>
+       </div>
+       <nav class="nav nav--primary header__nav">
+        <ul class="nav__menu nav__menu--depth0 menu">
+         <li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-issue menu-item-692">
+          <a class="nav__link" href="https://www.whitehouse.gov/issues/economy-jobs/">
+           Economy
+          </a>
+         </li>
+         <li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-issue menu-item-693">
+          <a class="nav__link" href="https://www.whitehouse.gov/issues/national-security-defense/">
+           National Security
+          </a>
+         </li>
+         <li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-issue menu-item-16229">
+          <a class="nav__link" href="https://www.whitehouse.gov/issues/budget-spending/">
+           Budget
+          </a>
+         </li>
+         <li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-issue menu-item-16236">
+          <a class="nav__link" href="https://www.whitehouse.gov/issues/immigration/">
+           Immigration
+          </a>
+         </li>
+         <li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-custom menu-item-object-custom menu-item-227001">
+          <a class="nav__link" href="http://www.coronavirus.gov">
+           Coronavirus.gov
+          </a>
+         </li>
+        </ul>
+       </nav>
+      </div>
+      <a class="header__search" href="https://www.whitehouse.gov/search/">
+       <span class="visually-hidden">
+        Search WhiteHouse.gov
+       </span>
+       <b class="svg svg--search" data-icon="search" data-img-url="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/search.png" data-svg-url="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/search.svg">
+        <svg aria-label="Open Search" focusable="false" height="20" role="img" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+         <title>
+          Open Search
+         </title>
+         <path d="M20,18.7l-5.1-5.1c2.6-3.3,2.4-8.1-0.6-11.2C12.7,0.9,10.6,0,8.4,0C6.1,0,4,0.9,2.5,2.5
+	C0.9,4,0,6.1,0,8.4s0.9,4.3,2.5,5.9c1.6,1.6,3.7,2.5,5.9,2.5c1.9,0,3.8-0.7,5.3-1.8l5.1,5.1L20,18.7z M8.5,15
+	c-1.7,0-3.4-0.7-4.6-1.9C2.7,11.9,2,10.2,2,8.5s0.7-3.4,1.9-4.6C5.1,2.7,6.8,2,8.5,2c1.7,0,3.4,0.7,4.6,1.9c2.5,2.5,2.5,6.7,0,9.2
+	C11.9,14.3,10.2,15,8.5,15z" fill="#A98860">
+         </path>
+        </svg>
+       </b>
+      </a>
+     </div>
+    </div>
+   </header>
+   <main id="main-content">
+    <div class="page-header page-header--small-title">
+     <div class="page-header__wrap">
+      <p class="page-header__section">
+       Press Briefings
+      </p>
+      <h1 class="page-header__title">
+       Remarks by President Trump, Vice President Pence, and Members of the Coronavirus Task Force in Press Briefing
+      </h1>
+      <div class="meta meta--mobile-wrap">
+       <div class="meta__issue">
+        <p class="issue-flag">
+         <a href="https://www.whitehouse.gov/issues/healthcare/">
+          Healthcare
+         </a>
+        </p>
+       </div>
+       <p class="meta__date">
+        <span class="meta__label">
+         Issued on:
+        </span>
+        <time>
+         April 20, 2020
+        </time>
+       </p>
+      </div>
+      <span class="divider">
+       <hr/>
+       <hr/>
+      </span>
+     </div>
+    </div>
+    <div class="page-content">
+     <div class="page-content__wrap">
+      <div class="page-content__content editor">
+       <aside class="editor__module editor__module--left editor__module--named editor__module-share">
+        <div class="share">
+         <ul>
+          <li class="share__item share__label">
+           Share:
+          </li>
+          <li class="share__item share__item--facebook">
+           <a class="share__link share__link--facebook" href="https://www.facebook.com/dialog/share?app_id=1790466490985150&amp;display=popup&amp;quote=Remarks%20by%20President%20Trump%2C%20Vice%20President%20Pence%2C%20and%20Members%20of%20the%20Coronavirus%20Task%20Force%20in%20Press%20Briefing&amp;href=https%3A%2F%2Fwww.whitehouse.gov%2Fbriefings-statements%2Fremarks-president-trump-vice-president-pence-members-coronavirus-task-force-press-briefing-29%2F%3Futm_source%3Dfacebook" rel="noopener noreferrer" target="_blank">
+            <b class="svg svg--share-facebook" data-icon="share-facebook" data-svg-url="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/share-facebook.svg">
+             <svg aria-label="Share this page on Facebook" focusable="false" height="18" role="img" width="10">
+              <title>
+               Share this page on Facebook
+              </title>
+              <g fill="#30669B">
+               <path d="M2.86 6.56V4.94c0-.6.1-1.15.3-1.68.2-.52.5-.97.84-1.35.36-.37.77-.67 1.25-.9.47-.22.98-.33 1.52-.33H9.4v3.2H6.76c-.15 0-.3.1-.44.3-.13.2-.2.43-.2.7v1.7H9.4V9.8H6.12v7.92H2.86V9.82H.24V6.56h2.62z">
+               </path>
+              </g>
+             </svg>
+            </b>
+           </a>
+          </li>
+          <li class="share__item share__item--twitter">
+           <a class="share__link share__link--twitter" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.whitehouse.gov%2Fbriefings-statements%2Fremarks-president-trump-vice-president-pence-members-coronavirus-task-force-press-briefing-29%2F%3Futm_source%3Dtwitter&amp;text=Remarks%20by%20President%20Trump%2C%20Vice%20President%20Pence%2C%20and%20Members%20of%20the%20Coronavirus%20Task%20Force%20in%20Press%20Briefing&amp;via=whitehouse" rel="noopener noreferrer" target="_blank">
+            <b class="svg svg--share-twitter" data-icon="share-twitter" data-svg-url="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/share-twitter.svg">
+             <svg aria-label="Share this page on Twitter" focusable="false" height="14" role="img" width="17">
+              <title>
+               Share this page on Twitter
+              </title>
+              <path d="M16.75 2.13c-.44.65-1 1.24-1.67 1.76v.38c0 1.1-.2 2.24-.63 3.4-.42 1.13-1.03 2.16-1.84 3.08-.8.93-1.8 1.67-2.98 2.25-1.18.6-2.54.88-4.08.88-.95 0-1.86-.14-2.72-.4-.87-.28-1.68-.66-2.44-1.14.13.02.26.03.4.03h.4c1.6 0 3-.48 4.16-1.42-.74-.02-1.4-.25-1.96-.7-.57-.42-.96-.98-1.16-1.65.22.06.43.1.6.1.18 0 .33-.02.47-.04.13-.02.28-.05.42-.1-.78-.15-1.42-.54-1.94-1.14-.5-.6-.76-1.32-.76-2.14v-.03c.22.12.46.2.7.28.26.08.54.1.86.1-.48-.28-.86-.67-1.12-1.16-.26-.48-.4-1.02-.4-1.62 0-.6.16-1.16.46-1.7.84 1.04 1.85 1.88 3.04 2.5 1.2.62 2.48.96 3.88 1.02-.06-.23-.08-.47-.08-.73 0-.46.08-.9.26-1.32.18-.42.42-.78.73-1.1.3-.3.66-.54 1.06-.72.4-.17.84-.26 1.3-.26.5 0 .96.1 1.37.3.4.2.77.44 1.1.76.36-.06.73-.16 1.1-.3.38-.16.72-.3 1.04-.48-.3.78-.78 1.4-1.47 1.84.35-.04.7-.1 1-.2.32-.1.63-.2.92-.33z" fill="#30669B">
+              </path>
+             </svg>
+            </b>
+           </a>
+          </li>
+          <li class="share__item share__item--clipboard">
+           <a class="share__link share__link--copy" data-clipboard-text="https://www.whitehouse.gov/briefings-statements/remarks-president-trump-vice-president-pence-members-coronavirus-task-force-press-briefing-29/?utm_source=link" href="https://www.whitehouse.gov/briefings-statements/remarks-president-trump-vice-president-pence-members-coronavirus-task-force-press-briefing-29/?utm_source=link">
+            <b class="svg svg--share-link" data-icon="share-link" data-svg-url="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/share-link.svg">
+             <svg aria-label="Copy URL to your clipboard" focusable="false" height="15" role="img" width="17">
+              <title>
+               Copy URL to your clipboard
+              </title>
+              <g fill="#30669B">
+               <path d="M3.96 9.65c.85.8 2 1.22 3.2 1.22 1.2 0 2.35-.43 3.2-1.22l.94-.88c.35-.33.35-.85 0-1.2-.36-.32-.92-.32-1.28 0l-.94.9c-.5.47-1.2.74-1.92.74-.74 0-1.4-.26-1.93-.74L2.66 6.08c-1.07-1-1.07-2.6 0-3.6 1.08-.98 2.8-.98 3.85 0l.84.77c.35.33.9.33 1.27 0s.37-.85 0-1.2L7.8 1.3c-1.76-1.65-4.63-1.65-6.4 0-1.74 1.64-1.74 4.3 0 5.93l2.58 2.42zM5.7 6.25c-.35.33-.35.85 0 1.2.36.32.92.32 1.28 0l.94-.9c.5-.47 1.2-.74 1.92-.74s1.4.28 1.93.76l2.57 2.4c1.07 1 1.07 2.6 0 3.6-1.08 1-2.8 1-3.87 0l-.83-.77c-.36-.34-.92-.34-1.27 0-.36.32-.36.85 0 1.18l.82.77c.87.8 2.03 1.23 3.2 1.23 1.16 0 2.3-.42 3.2-1.23 1.76-1.65 1.76-4.3 0-5.96l-2.56-2.45c-.85-.8-2-1.22-3.2-1.22-1.2 0-2.35.43-3.2 1.22l-.94.9z">
+               </path>
+              </g>
+             </svg>
+            </b>
+           </a>
+          </li>
+         </ul>
+        </div>
+       </aside>
+       <aside class="editor__module editor__module--left editor__module--named editor__module-all">
+        <div class="sidebar-button">
+         <a class="sidebar-button__text" href="https://www.whitehouse.gov/news/">
+          <img alt="menu" class="sidebar-button__icon" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/menu-large.svg"/>
+          All News
+         </a>
+        </div>
+       </aside>
+       <!-- The Content -->
+       <div>
+        James S. Brady Press Briefing Room
+        <br/>
+        5:39 P.M. EDT
+        <p>
+         THE PRESIDENT:  Thank you very much everyone.  Thank you.  Following the release of our reopening guidelines, governors across the country are looking forward to phase one and announcing plans for an economic resurgence; we’re going to have a resurgence, too.  At a time when millions of American workers and families are struggling with the financial consequences of the virus, it’s critical to continue the medical war while reopening the economy in a safe and responsible fashion.
+        </p>
+        <p>
+         During this time, Americans must maintain strict vigilance and continue to practice careful hygiene, social distancing, and the other protective measures that we have outlined and that everybody has become very familiar with.
+        </p>
+        <p>
+         We continue to be encouraged that many of the areas hardest hit by the virus appear to have turned the corner.  For example, recent deaths are down very, very substantially.  You can compare that with their peak not so long ago, and you have numbers of 30 percent, 25 percent.  In Detroit, as an example, it’s down by over 50 percent.  Congratulations.  And, in New Orleans, where they’ve done a terrific job, they’re down 65 percent.
+        </p>
+        <p>
+         Thirty states have just one case or less per 1,000 people — far fewer cases per capita, as an example, than Germany, the United Kingdom, France, Italy, Ireland, Switzerland, Singapore, Belgium, Spain, Norway, the Netherlands, Austria, Sweden.
+        </p>
+        <p>
+         My administration continues to press Congress to replenish the enormously successful Paycheck Protection Program, which has impacted 30 million American jobs.  We hope to have an agreement very soon.  And hopefully tomorrow, the Senate is going to be able to vote.  A lot of progress has been made on that — tremendous progress.  It’s a great plan.  It’s a great plan.  It’s helped a lot of people.  So we hope to have a vote maybe tomorrow in the Senate.
+        </p>
+        <p>
+         And based on the record-low price of oil that you’ve been seeing — it’s at a level that’s very interesting to a lot of people — we’re filling up our National Petroleum Reserves.  Strategic — you know, the Strategic Reserves.  And we’re looking to put as much as 75 million barrels into the reserves themselves.  That would top it out.  That would be first time in a long time it’s been topped out.  We’d get it for the right price.
+        </p>
+        <p>
+         We’re also pushing for the deal to include an additional $75 billion — our deal; the deal we’re talking about — $75 billion for hospitals and other healthcare providers.  Many providers and their employees have taken a huge financial hit in recent weeks.  And visits, elective procedures, surgeries, et cetera, et cetera, were canceled.  We think that they can all get back online.  They’ll get it done.  The hospitals have really been fantastic.  The hospitals, they’ve — they’ve stepped up to the plate.  They’ve really done a great job.  We appreciate it so much.
+        </p>
+        <p>
+         For areas less affected by the virus, we’ve issued new recommendations about how to safely resume elective treatments.  HHS has also distributed the first $30 billion in direct payments to a million healthcare providers across the country.  We’ve also invested $1.4 billion in community health centers to ensure our most vulnerable communities, including many African American and Hispanic American communities, have access to the services and testing that they need.
+        </p>
+        <p>
+         Earlier today, Vice President Pence spoke with governors from all 50 states about our unified effort to defeat the virus.  He had a great call.  It was a great call — very positive in, I’d say, every way.  Prior to the call, we provided each governor with a list of the names, addresses, and phone numbers of the labs where they can find additional testing capacity within their states — many, many labs.  We’re providing you with the list.  We’ll show it to you now if you need it.  We’ll give you the details.  But hundreds and hundreds of labs are ready, willing, and able.
+        </p>
+        <p>
+         Some of the governors, like, as an example, the governor from Maryland didn’t really understand the list.  He didn’t understand too much about what was going on.  So now I think he’ll be able to do that.  It’s pretty simple.  But they have tremendous capacity and we hope to be able to help him out.  We’ll work with him and work with all of the governors.
+        </p>
+        <p>
+         Similar to the situation with ventilators, states need to assess their complete inventory of available capacity.  Some states have far more capacity than they actually understand.  And it is a complex subject, but some of the governors didn’t understand it.  The governor, as an example, Pritzker from Illinois did not understand his capacity.  Not simply ask the federal government to provide unlimited support — I mean, you have to take the support where you have it, but we are there to stand with the governors and to help the governors, and that’s what we’re doing.  And they have a tremendous capacity that we’ve already built up.  And you’ll be seeing that; we’re going to be introducing a couple of the folks in a little while to talk about it.
+        </p>
+        <p>
+         I want to draw your attention to Governor Cuomo’s remarks during his press conference today.  He said: The President is right.  The states’ testing is up to the states to do, which will implement the test and logistically coordinate the tests.  We have about 300 labs in New York and they do it.  And they’re great labs, actually.  And it’s my job to coordinate those 300 labs.  I think the President is right when he says that the states should lead.
+        </p>
+        <p>
+         And the governor is really — they’re really getting — they’re getting it together in New York.  A lot of good things are happening in New York.  And I think the governor is going to come in to see us tomorrow.  He’s coming to the Oval Office tomorrow afternoon.  Andrew is going to be coming in with some of his people.  So we look forward to that.
+        </p>
+        <p>
+         The — some of the articles that just recently came about — if you remember, I put out a statement today.  For a month, it was all “ventilator, ventilator, ventilator.”  That’s all people could talk about was ventilators.  And we did a great job with that.  We built a lot of ventilators, to put it mildly.  We have so many now that, at some point soon, we’re going to be helping Mexico and Italy and other countries.  We’ll be sending them ventilators, which they desperately need.  They were a position — they were not in a position to build them themselves.
+        </p>
+        <p>
+         But we have thousands being built.  Every state has had — they have the ventilators.  If they don’t, we have almost 10,000 in our Federal Reserve — our “stockpile,” as they call it.  And we did a great job with the ventilators.
+        </p>
+        <p>
+         Unfortunately, the press doesn’t cover it — other than the fair press.  But — so then you say, “Gee, I — they need ventilators.”  We don’t need ventilators.  And that’s — that’s under pressure we did that.
+        </p>
+        <p>
+         Nobody that needed a ventilator in this country didn’t get one.  And a story that just came out: “How the Media Completely Blew the Trump Ventilator Story.”  I’m sure you love to see that.  That’s by Rich Lowry, a respected journalist and person.  “How the Media Completely Blew the Trump Ventilator Story” — which, unfortunately, you did.
+        </p>
+        <p>
+         And here’s another one that just came out.  Kyle Smith.  “The Ventilator Shortage That Wasn’t.”  “The Ventilator Shortage That Wasn’t” — because we got it fixed.  And we’re also going to help the states, by the way, stockpile ventilators.  So if a thing like this should happen again, they’ve got them.
+        </p>
+        <p>
+         The stories on testing are all over the place — that we’re actually in good shape.  I’m going to have the Vice President and others speak to you about that, but we’re in very good shape on testing and we’re getting better all the time.  You’re going to see some interesting things.
+        </p>
+        <p>
+         I thought before I went any further though, I’d like to have General Semonite, who has done an incredible job, tell you where we are.  You know we’re still building beds and hospitals for people that need them.  I guess the hospital business generally is getting pretty much closed out now, but we’re — we’re creating a lot of space for people, just in case.  And in some cases, they probably will be using them.
+        </p>
+        <p>
+         But I thought the general — he’s been so impressive and done such a great job.  I thought, on behalf of the services and on behalf of the federal government, he’d say a few words about what we’re doing right now.
+        </p>
+        <p>
+         Thank you very much.  General.
+        </p>
+        <p>
+         LIEUTENANT GENERAL SEMONITE:  Well, thank you, Mr.  President.  I just want you to know that, on behalf of all of us in the Department of Defense, our thoughts and prayers go out to all of those patients and all those victims that have been affected by this terrible virus.
+        </p>
+        <p>
+         And the President of Vice President talk all the time about the heroes, but when I’ve been out there, I’ve seen the doctors, I’ve seen the nurses, and all those that have worked very, very hard, and we’re just — we’re just so proud to be part of this noble calling.
+        </p>
+        <p>
+         I — for my team, I really made it very, very simple.  I said there’s three legs of this stool, and they all have “S’s”: There are “sites” — in other words, hospitals; we’ve got to worry about “supplies”; and we’ve got to worry about “staff.”
+        </p>
+        <p>
+         And so, right when Governor Cuomo called the President, about almost 30 days ago, he said, “I need some help” — worrying about what could be tens of thousands of hotel room — I mean, of hospital room shortages.
+        </p>
+        <p>
+         So the President and Secretary of Defense asked us to fly to Albany with a team.  And on the way up, we understood how complex of a challenge this was, and we knew there was no way you can solve a complex catastrophe with a complicated solution.  We needed a very, very simple solution to be able to then work with HHS, to be able to work with FEMA, to be able to work with the Vice President’s task force, and then to be able to power this down all the way down to the local level.
+        </p>
+        <p>
+         Some of the governors asked us to try to build a hospital in a parking lot or a field in two or three weeks.  You can’t physically do that.  So what we said was, “Let’s go to where there’s an existing facility.”  And I’m going to kind of make this in two big pots: those that are either hotel rooms or college dormitories, smaller rooms — or those that are in real large areas, like field houses or convention centers.
+        </p>
+        <p>
+         And we designed those standard facilities that could be either non-COVID or COVID, and then we got that approved here at the federal government to be able to then power that back down.
+        </p>
+        <p>
+         So we went to Governor Cuomo, and he said, right up front, “I love the concept.  I need you in the Javits Center.  I’m ready to start having you work tomorrow afternoon.”
+        </p>
+        <p>
+         So when we flew back that afternoon, the next day, we basically built this standard design and then continued to be able to power it down, all the way down through the rest of the team.
+        </p>
+        <p>
+         So I just want to show you a couple of slides here.  And we’ll — we’ll kind of let you know where we’re at right now, Mr President.
+        </p>
+        <p>
+         We had to do a bunch of assessments, so somewhere in the order of over 1,100 different locations we went to.  And we work for FEMA, and we work for the President, and we work for governors and mayors.  And we said, “What do you think your demand is going to be?”  And based on a lot of the modeling that’s been in this room here, we were able to understand when the peak curve was, but we also were able to understand where’s the bed shortage.
+        </p>
+        <p>
+         So then, these 1,100 facilities — right now today, sir, we’re actually executing 32 different facilities.  That’s on the order of merit of about 16,000 beds.  Eight of those are all done.  We’ve still got a lot more to complete.  And in the next week and a half, we’re going to complete about 15 more facilities.
+        </p>
+        <p>
+         We’ve got some pending.  Some mayors and governors are still wondering do they have enough bed space.  And what’s important here is we need a very agile plan.  You can’t do something three weeks ago and think that this is going to continue to stay, because this virus gets a vote.  And this entire team — the federal government has tried to be as agile as they can, supporting those states and those governors.
+        </p>
+        <p>
+         The beauty of the plan, though, was it doesn’t have to be built by the United States Army Corps of Engineers.  So we designed about an extra 52 facilities.  We gave those to the governors.  And I’ve got to be very, very laudatory to the governors.  They then imposed and put a lot of those on the — on the ground and did those themselves.
+        </p>
+        <p>
+         So let’s go to — I’m just going to show you some real simple pictures here.  Go to the next slide, if you don’t mind.
+        </p>
+        <p>
+         So this is an example of the Javits Center, and you heard the President talk about it quite a few times.  This one, about 2,100 bed spaces.  What you get is about an 11- or 12-foot-square cubicle.  There is lights in there.  There’s a nurse call, so if you need to be able to call the nurse station.  There are nurse spaces throughout.  There’s pharmacies throughout.  This one started as non-COVID, but then we came back in and put in central oxygen.  So everybody has oxygen right behind their bed to be able to take care of those patients.  And again built this one, and about 1,000 patients treated.
+        </p>
+        <p>
+         Let’s go to the next one.
+        </p>
+        <p>
+         I was up in Detroit with Governor Whitmer, and she walked us through and told us her intent.  Here’s what — she needed to do this in the TCF Center.  You’ll see all the cubicles that are laid out.  This is right in the middle of a convention floor where there might be like a boat show or a car show, and then we went in and we built 970 different capabilities there.
+        </p>
+        <p>
+         And again, a lot of great work by my guys in the Corps of Engineers and the rest of the mayors in the cities’ team all pulling together.
+        </p>
+        <p>
+         Let’s go to the next one.
+        </p>
+        <p>
+         This is called the McCormick Place.  Governor Pritzker sat us down.  He said, “Here’s, kind of, our intent on what you want to do.”  Mayor Lightfoot walked us through, and we went into another large convention center.  This is actually 3,000 bed spaces.  This was a very, very large build.  And got this one done in a relatively short time.
+        </p>
+        <p>
+         And then here’s another one that kind of helps you understand the dynamic here.  Go to the next one, please.
+        </p>
+        <p>
+         This is in Miami Beach, and I flew in to see Governor DeSantis.  And my guys had kind of scoped out about 450 beds, and he said, “Todd, how long is it going to take to build this?”  And we kind of said, “Probably until the 27th of April.”  And he went to his health people and he said, “How long do you need?”  And he said, “The day we need this is the 21st of April.”  And I told my guys, “You don’t have until the 27th.  Figure out how to get it done by the 20th.”
+        </p>
+        <p>
+         This is where you don’t get to build to be able to have the perfect solution.  You got to be able to get the mission essential done.  Lives are on the line here, and we’ve got to be able to get everything done to be able to save those lives.
+        </p>
+        <p>
+         And let’s go to the last one here.  This is one we’re doing right now: Colorado.  This is in Denver, in another gigantic convention center.  You’ll see all the different cubicles here to be able to just bring in that oxygen.  Six-inch copper pipe that comes in, and it’s all piped throughout the entire convention center.  Six miles of pipe that’s able to go in to be able to make that happen.
+        </p>
+        <p>
+         And in closing, I just want to be able to say that we are very, very focused in the Corps of Engineers on getting this done, but this is all about the team — the federal team, the state team, the local team.  The Vice President and his task force, and on a lot of the people sitting here, have informed us of how fast we need to go.  And it goes back to, again, all the governors and the mayors to make this happen.
+        </p>
+        <p>
+         But I want to reiterate: President Trump has called me three times, and Secretary Esper has been on the phone at least one of those times, and said, “What else do we need to do to set you up for success?  Is there any other knobs we can turn to be able to help you go?”  And you think about that equation of those three “S’s.”  I think that with the federal government and the mayors in the cities here, we’ve effectively taken that first “S” out of the equation.
+        </p>
+        <p>
+         And, sir, I can’t tell you, of all the things I’ve done in my career, this is a noble calling to be able to step up and save American lives.
+        </p>
+        <p>
+         So, with that, sir, I thank you very much.
+        </p>
+        <p>
+         THE PRESIDENT:  Fantastic job.  Thank you very much.  Anybody have a question for the general while he’s here?  Anybody?  Because I think he’s very self-explanatory.  He’s done an incredible job.
+        </p>
+        <p>
+         Jeff, do you have a question?
+        </p>
+        <p>
+         Q    Are there are there more projects, sir, beyond the ones that you’ve just identified that you’ll be working on?
+        </p>
+        <p>
+         LIEUTENANT GENERAL SEMONITE:  So, about a week ago, we thought we were about capped at 26.  What we’re seeing is — as I said, the virus gets a vote.  We’re seeing some of these curves are stretching out where we might have thought we only had five or six days.  We actually have a couple weeks now.
+        </p>
+        <p>
+         Other ones, we’re seeing exactly the opposite.  So where we didn’t think there was some — and I’m not going to go into locations here — but we are definitely get requests in.  We’ve got six more requests in just in the last four or five days.  They’re a little bit smaller facilities and more remote areas, but our job, we still — if we have enough time to go build, we want to get in there, do the assessment.  We work for the mayor and the city and the governor here.  And we can still get them done if the mayors and those elected officials make a fast enough decision.
+        </p>
+        <p>
+         THE PRESIDENT:  You might say, while you’re here, we’re building — the general is in charge of the wall on the southern border, and we want to build 450 miles of wall, and it’s very much under construction.  You might give them a little bit of an update: how are we doing with the wall.
+        </p>
+        <p>
+         LIEUTENANT GENERAL SEMONITE:  So, sir, I think the most important thing — and you stressed this and Secretary Esper stressed this — there’s really several different priorities here.  Our number-one priority in the Department of Defense and the Corps of Engineers is to protect the team, protect the force.  No matter what we do, we’ve got to continue to take care of our civilians and our service members out there.
+        </p>
+        <p>
+         And so every single thing we’re doing, whether we’re building for the VA, or we’re building for Civil Works projects or for the Department of Defense, or building on the southwest border, we are going out of our way.
+        </p>
+        <p>
+         I talked to my commanders this morning; we’ve got over 4,000 contractors that are on the ground out there, and we’ve had no positives as of this morning, knock on wood.  Same thing with my 400 employees.  We’re testing them — not necessarily with the more stringent test, but with temperatures — to be able to make sure that everybody is safe and everybody goes out of their way to do things the right way.
+        </p>
+        <p>
+         Construction is going very, very smooth.  What we’re seeing is our contractors are extremely focused.  Now that we’ve — we’ve got a good clear path — both on the CBP program, as well as some of the DOD program — we, I think, are very well postured.  It’s a very, very aggressive build, but we’re well postured to be able to meet your expectations, sir, of 450 by the end of December 2020.
+        </p>
+        <p>
+         THE PRESIDENT:  And we’re over 160 miles.
+        </p>
+        <p>
+         LIEUTENANT GENERAL SEMONITE:  A hundred and sixty-four as of today, sir.
+        </p>
+        <p>
+         THE PRESIDENT:  A hundred and sixty-four miles.  And we’ll have it done sometime pretty early next year.  Very exciting.
+        </p>
+        <p>
+         LIEUTENANT GENERAL SEMONITE:  Yes, sir.
+        </p>
+        <p>
+         THE PRESIDENT:  And you might just say one thing: the quality of that wall, in terms of its power for stopping people that shouldn’t be coming into our country.
+        </p>
+        <p>
+         LIEUTENANT GENERAL SEMONITE:  So, same thing.  If you have a standard design that you trust in and it works very well — I’ve got to pat on the back Commissioner Morgan; he was very adamant to continue to be able to make sure that it supports his agents.
+        </p>
+        <p>
+         And so we’ve got a design now that certainly does that.  And then we’ve got a phenomenal contractor workforce that’s in there, my Corps of Engineer employees.  And it’s going in well.  We don’t see any significant problems.
+        </p>
+        <p>
+         And I think it’s also important to point out that there — we want to do this the right way, so we try to balance this with environmental considerations that are out there.  We’re trying to do due diligence when it comes to anything to do with any of the citizens who are affected.  We’re trying to make sure that we’re protecting all of the things that we need to protect and try to find that balance where we can both meet the administration’s directive, while at the same time making sure we’re doing this so that everybody gets a vote and everybody has a fair shake.
+        </p>
+        <p>
+         THE PRESIDENT:  Okay?  Yeah, please.
+        </p>
+        <p>
+         Q    May I ask what you’re doing regarding the availability of — the recreation sites that the Army Corps of Engineers operates, how the access is going there and whether or not there are restrictions —
+        </p>
+        <p>
+         LIEUTENANT GENERAL SEMONITE:  So, I’m an engineer.  I take my guidance from some of these experts sitting on the bench over here.  And when the President says, “Turn on America,” what we initially did, like many, many other governors — they, you know, shut down beaches, shut down cities — I had a meeting with my commanders this morning, and as soon as we think it’s safe, turn them back on.
+        </p>
+        <p>
+         I mean, parking out there at a rec area where you’re 500 feet away from everybody in a camper is probably low threat.  I will continue to take guidance from the administration.  But when we get greenlights to continue to put our rec areas full up and let everybody go back out there and do things the safest way — I mean, we work for the administration, so I want to do it safe, but I don’t want to be the last guy that turns things on.  Not at all.
+        </p>
+        <p>
+         Yes, ma’am.
+        </p>
+        <p>
+         Q    Hi.  Thanks for walking through some of the efforts.  Do you have any — can you say anything about whether or not there are any specific efforts in communities that are hardest hit, like black communities or Latino communities, communities of color?  Are the Army Corps of Engineers doing anything that would be building any sort of temporary facilities for those communities?
+        </p>
+        <p>
+         LIEUTENANT GENERAL SEMONITE:  So we basically key off what the city asked for — the city and the governor.  There are a couple specific areas that certain city mayors have asked us for.  Again, I’m not going to go into details.  But we basically — if they go in and say, “I’m very worried about a hotspot on this side of town, or a specific community here,” we will do — and that’s what the administration has charged to do — is whatever we can do to be most responsive.
+        </p>
+        <p>
+         We just don’t want ever to have an ambulance pull up to the back of a hospital and somebody says, “We’re out of room.  Go to the next hospital down.”  So that’s where we’re trying to make sure that that bed space is available.  And, so far, everything we’ve built has been ahead of need.  In other words, we’re able to finish the building two or three days before it’s needed.
+        </p>
+        <p>
+         Thank you, ma’am.
+        </p>
+        <p>
+         THE PRESIDENT:  Okay?  So, General, you have a choice: You can stay and watch — watch these wonderful people ask us really nice questions — or you can go back to building beds.
+        </p>
+        <p>
+         LIEUTENANT GENERAL SEMONITE:  Sir, I got a lot of building to do.  I’m going to leave, if you don’t mind.
+        </p>
+        <p>
+         THE PRESIDENT:  Go ahead.  I had a feeling you were going to say that.
+        </p>
+        <p>
+         LIEUTENANT GENERAL SEMONITE:  Thank you, sir.
+        </p>
+        <p>
+         THE PRESIDENT:  Very impressive.  That’s an impressive job, isn’t it?  Seriously.  That’s really great.  Thank you very much.  He’s a terrific gentleman.  We have a lot of great people doing that kind of thing that they really have to get recognition for the incredible job they’re doing, because I don’t think anybody else could do it.  Nothing like that.  And that’s on top of thousands and thousands of hospitals.  And, you know, he built — just in New York alone — four hospitals and 2,900 beds, and got them done so quickly.  Nobody — nobody saw anything like it.
+        </p>
+        <p>
+         Fortunately, we haven’t had to use too many of them, and that’s okay.  That’s probably better news than having to use them all, right?  Because a lot of good things are happening in New York and elsewhere.
+        </p>
+        <p>
+         So through the public-private partnerships and deregulation, the federal government has already made immense testing capabilities available, but some states need to take action to fully utilize it.  To date, the United States has conducted millions more tests than any other country.  You can add them all up and they don’t catch us.  And our numbers are doubling almost on a — certainly on a monthly basis, but almost on a weekly basis.  We’re moving very rapidly, far — at a number nobody thought possible.
+        </p>
+        <p>
+         And we’ll be doubling our number of daily tests if the governors bring their states fully online through the capability that they have.  We have tremendous capability out there already existing.  And we explained that to the governor today.  Mike and all of the people explained it very strongly to the governors.  They — they really get it now, I think.
+        </p>
+        <p>
+         As the experts have explained, this capacity is sufficient to allow states to conduct diagnostic testing to treat patients as well as contact tracing to contain outbreaks and monitoring to pinpoint potential hotspots during phase one.
+        </p>
+        <p>
+         And there are some hotspots, and we have them pinpointed, and they can really cover it very, very nicely when they know exactly where to go and they’re being told where to go.  And also, these locations where they’re going — and some of them are federal; some of the governors didn’t realize they were allowed to use federal locations.  They are.
+        </p>
+        <p>
+         And we have a booklet of the federal locations.  We can hold it up.  I think you’ll show that.  Maybe we’ll hold it up now.
+        </p>
+        <p>
+         DR. BIRX:  I’ll have the locations.
+        </p>
+        <p>
+         THE PRESIDENT:  Yeah.  Okay, fine.  But you see the number — thanks.  Thanks.  These are all locations where they can go, which is really pretty amazing.  This is just one page out of many.
+        </p>
+        <p>
+         DR. BIRX:  Over 5,000, sir.
+        </p>
+        <p>
+         THE PRESIDENT:  Look.  Look at this.  This is — these are all locations.  (The President displays a document.)
+        </p>
+        <p>
+         THE VICE PRESIDENT:  Five thousand labs.
+        </p>
+        <p>
+         THE PRESIDENT:  That’s a lot of locations.  And they can all — what is it?  Five thousand —
+        </p>
+        <p>
+         DR. BIRX:  Five thousand pieces of equipment.
+        </p>
+        <p>
+         THE PRESIDENT:  So that’s — thank you very much.  That’s more than anybody thought, and it’s already there.  They have to use it.  That’s all.  They have to use it.  Some weren’t aware; some were very much aware.  Some weren’t aware.
+        </p>
+        <p>
+         My administration also continues to support states with our massive operation to deliver masks, gowns, gloves, and other vital supplies.  Admiral Polowczyk and his team at
+         <s>
+          FIFA
+         </s>
+         [FEMA] are really — what a job they’ve done.  And Pete, what a job he’s done.  They’re calling on Easter Sunday to make sure everyone is okay.  But they’re using detailed data about supply chains to track the deployment of 1 billion pieces of protective equipment through private distributors every two weeks.  So what we’re doing is we’re delivering a number that nobody anywhere in the world is delivering.
+        </p>
+        <p>
+         FEMA is working closely with Dr. Birx and the distributors to prioritize supply of resources where they are most needed.  We’re finding the location that they have to — they have to get to that location.  We have locations that are very important to get to and get to them fast.  And that’s where they’re going.  So we have a very strong priority.
+        </p>
+        <p>
+         This pandemic has reaffirmed the importance of keeping vital supply chains at home.  We cannot outsource our independence.  We cannot be reliant on foreign nations.  I’ve been saying this for a long time.  If we’ve learned one thing it’s: Let’s do it here, let’s build it here, let’s make it here.  We’ve got the greatest country in the world.  We’ve got to start bringing our supply chains back.
+        </p>
+        <p>
+         Somebody, years ago, got this crazy idea: Let’s build all over the place and let’s have parts — let’s have a screw for a car delivered and made in a country that’s far away, and let’s have a fender made someplace else, and let’s do this, and let’s do that, and let’s put it all together.
+        </p>
+        <p>
+         And I like making it right here in the USA.  And I think we’ve learned a lot about that and especially maybe when it comes to pharmaceutical products.
+        </p>
+        <p>
+         We’ve also conducted major military operations, providing cities and states with additional medical capacity and the incredible 1,800 men and women from the Army Corps of Engineers.  You just met with Todd.  He’s — the job they’ve done is incredible.  But we have nurses, doctors — we have experts in every field, all over.
+        </p>
+        <p>
+         I spoke with Governor Cuomo, I spoke with Mayor de Blasio, I spoke with many of the other governors that I’m both friendly.  And — yeah, I think I’m friendly with just about all of them, if you can believe it.  But I’ve gotten friendly with a lot of them.  I’ve gained a lot of respect for a lot of the governors, both Republican and Democrat, during this process.  Some really good people, some really good talent.
+        </p>
+        <p>
+         But we’re sending a lot of our medical people, not only our construction people like Todd Semonite, but a lot of our medical people are being sent all over the country to different locations: New York City, New York State, New Jersey.  I spoke with Phil today.  He’s doing a terrific job in New Jersey, but New Jersey got hit very, very hard — Phil Murphy, governor.
+        </p>
+        <p>
+         From the day this crisis began, America launched a scientific mobilization of colossal size and scale.  Someday they’ll be able to write the true story because nobody has seen anything like it.  The fake news just refuses to cover it correctly, but that’s okay.  But the people are understanding, and that’s what matters to me.
+        </p>
+        <p>
+         There are now 72 active trials underway across the United States researching dozens of therapies and treatments, and another 211 are in the planning stages.  They’re getting — I mean, they’re literally mobilizing on therapeutics and also on vaccines.  A tremendous progress is being made on vaccines and, I must say, on therapeutics.
+        </p>
+        <p>
+         I mean, frankly, if I had my choice: Give me the therapeutics right now, because that would help people right now.  And we have some things that I think are working.  Not only working, but we have some incredible things that look like they could be an answer.  But we’ll know soon.  Being tested.  Working out right now.
+        </p>
+        <p>
+         This includes their therapies designed to attack the virus, as well as others that would hinder its replication, reduce the rate of infection, control the immune response, or transfer lifesaving antibodies from the blood of recovered patients.
+        </p>
+        <p>
+         And one of the incredible things that we’ve seen — and Mike and I were talking about it before — is the fact oftentimes somebody gets very ill from the plague — okay? — from this horrible scourge.  And they get better and they recover, and the first thing they say is, “I want to give my blood.”  That’s happened.  The doctors have told me it’s happened so much.  “I want to give my blood.  I want to give my blood.”  And they’re doing that.
+        </p>
+        <p>
+         But tremendous things are happening.  You’ll be seeing about — you’ll be seeing that over the weeks.  I think we’ll be talking about it in the not-too-distant future.
+        </p>
+        <p>
+         Johnson &amp; Johnson is very well along on vaccines.  Again, the vaccines have to be tested.  The therapeutics are for now, but a lot of good things are happening on both.  But ultimately, we also hope to prevent infection through a safe — a very safe vaccine.  And that’ll be a great thing when we have that.  And we will have that.
+        </p>
+        <p>
+         So with that, I’d like to introduce Admiral Giroir and Brad Smith to discuss some of the incredible things that have been done.  And we have — they really are — what they’ve been able to do in a very, very short period of time with — and equipment.  You’re going to see equipment that you haven’t seen before.
+        </p>
+        <p>
+         Any if you’d just come up, Brad.  If you guys would come up, you could give us a little display of some of the equipment that we have and some of the things that are happening, having to do with testing, because “testing” is a big word.
+        </p>
+        <p>
+         Remember, it was all ventilators.  And the reason it was all ventilators — they said, “There’s no way he’ll ever be able to catch this one.”  And not only did we catch it, we are now the king of ventilators all over the world.  We can send them anywhere.  We have thousands being made a week.  And they’re very high quality.  And that’s — it wasn’t playing well, so then they said, “Testing.  Testing.  Oh, we’ll get him on testing.”  Well, testing is much easier than ventilators.  Ventilators are big machines that are very complex and are very expensive.  You need real — real — you need a group of people that really know what they’re doing.  We took auto lines.  We took a lot of different people, and now we’ve done that.  But it used to be “ventilators, ventilators, ventilators.”  Not it’s “testing, testing, testing.”
+        </p>
+        <p>
+         And I think the Admiral and I think that Brad will show you some things that you haven’t seen that are, really, very spectacular having to do with testing.  We’re way advanced.  Way advanced.
+        </p>
+        <p>
+         The list I showed you — these are places you can go if you’re in the states: 5,000 different machines.  Five thousand.  They’re all over the country.  And we have international also, but these are all over the country.  But you’ll see something now that’s really eye-popping in terms of what they’ve done.
+        </p>
+        <p>
+         And they’ve done this under great pressure.  They’ve come up with things under great pressure that are absolutely amazing.
+        </p>
+        <p>
+         So, please, if you would.  Thank you, fellas.
+        </p>
+        <p>
+         ADMIRAL GIROIR:  Well, thank you, Mr. President.  I want to talk about a couple things today a little bit different than I’ve spoken about before.
+        </p>
+        <p>
+         Since early March, we’ve really been focusing on two key concepts for testing.  Number one: to assure and expand supplies in the U.S. market.  This is really critical because we were talking about, really, a cottage industry with very minimal suppliers that we were asking to supply, over a two-week period of time, the normal production that would be for at least a year.
+        </p>
+        <p>
+         And as simple as a swab is: A swab is not a swab is not a swab.  And we need to be very careful that when we put something in a person and tell them a test result, that it’s really correct.
+        </p>
+        <p>
+         The second component is to secure sufficient supplies at FEMA during this time of peak disease where we could alleviate any mal-distributions within the state.  This is the FEMA process of requesting and sending things out, and also supporting outbreaks.
+        </p>
+        <p>
+         So, starting many weeks ago — starting in my office many weeks ago, we assembled a multidisciplinary team of really incredible people: the medical side of the equation, which I represent; the laboratory side of the equation; high-tech side of the equation; logistics and operation.
+        </p>
+        <p>
+         And Brad Smith is — his day job is Director of the Center for Medicare and Medicaid Services — an incredibly important component of our country’s CMS system, building the future healthcare system — but has done a really incredible job operationally and logistically in bringing everyone together.
+        </p>
+        <p>
+         We have focused on every piece of the supply chain that relates to testing, down to the most minute detail.  And he’s going to talk to you about some of that.  But that started in the second week of March, was starting an airlift, because the only supplier — the main supplier of swabs at that time was a place in Italy that was completely shut off because of the outbreak in Italy.  So Admiral Polowczyk arranged gray-tail Air Force planes to go to Italy to bring millions of swabs back to secure.  That’s just how it started, and it’s expanded since then.
+        </p>
+        <p>
+         The second part is we’ve been really marrying — and this has been the beauty — the logistics and supplies to the overall strategy.  Two pieces of strategy: Number one, what is the overall testing strategy?  And Dr. Birx has had just an elegant strategy in the past, but even more important in the future, when we make sure we take care of indigent populations and those most vulnerable.  So the clinical, the contact tracing, and the monitoring of those who are at most risk.
+        </p>
+        <p>
+         We’ve also married it to the strategy — and you’ve heard more than you know about — you wanted it to know about it: that a small machine — this point of care — is good for certain things, but it’s not going to test 5,000 people over a short period of time.  So the small machines, the medium machines, and the large machines and how to contextualize them.
+        </p>
+        <p>
+         And the third thing, before I give it to Brad, which is very important and it’s really critical, is coordinating the research, the epidemiology, and the FDA regulatory process.  And why is that so important?  When we started five weeks ago, if we wanted to test this many people with the technology we had, we would have used about 80 percent of the Strategic National Stockpile in PPE just to do testing.
+        </p>
+        <p>
+         We needed an innovation.  That innovation was to be able to test out of the anterior nose with a completely different kind of swab.  It sounds very mundane, but if you don’t do that, you can’t get the testing to scale.  That allowed us to really go to widespread testing last week, moving to polyester swabs, which is going to open up millions of new swabs onto the market.  But that’s a regulatory, science, and innovation step that had to co-occur with this.
+        </p>
+        <p>
+         And with that, I’m going to let Brad talk about some of the details that he has really shepherded over the past weeks in ways that have truly been amazing and incredibly impressive to me.
+        </p>
+        <p>
+         THE PRESIDENT:  Thank you.  Thanks, Admiral.
+        </p>
+        <p>
+         MR. SMITH:  Well, thank you, Mr. President.  It’s an honor of a lifetime to be here and serving in this way.  I’ve been working under Dr. Birx’s and Admiral Giroir’s leadership over the past several weeks to help increase the supply of testing across the United States.
+        </p>
+        <p>
+         As you all know, there’s really three parts that you need to make the test work.  First, you need the machine — which as Dr. Birx will share more, and the President spoke to, we have a very, very large number of those across the United States.  It’s about making sure that we’re taking advantage of them.
+        </p>
+        <p>
+         The second part of the testing is making sure that we have the collection supplies to actually be able to collect the specimen.  And I’ll talk a little bit more about that.  And then the third part is making sure that you have the materials you need to support the machine to ensure that you can actually process the test once it gets to the lab.  I’ll let Dr. Birx talk more about the machines here in a second.
+        </p>
+        <p>
+         But as you’ll — as you’ll see across the United States, we have a tremendous number.  They range in variety.  So we have some very small machines that do point-of-care testing.  They may do, say, 50 to 100 tests a day.  We also have other very large machines; they can do several thousand — process several thousand tests a day.
+        </p>
+        <p>
+         On the collection supply piece, I’ll talk through a couple of different kinds of collection that can be done.  So for the nucleic acid test, which are the tests that are currently being done today, you generally need a swab of the nose.  To do that, you need the swab, you need the collection tube, and you also need the transport media that it can be transported in.  We have a large — very large number of swabs already in the country, but we have secured an additional 3 million in production that will be ramping up over the next several weeks.
+        </p>
+        <p>
+         One company located in the northeast — we’re going to be using Title 3 of the DPA to help them build four new production lines.  They are currently the largest swab producer in the country, and this will help them ramp up their production tremendously to over 20 million additional swabs a month.
+        </p>
+        <p>
+         A second company located in Ohio is currently the largest Q-tip maker in the country.  We’re helping them convert their line from making Q-tips into making swabs.  They are actually ramping up production, starting this week, of swabs, and will be ramping up to over 10 million production — 10 million per month.  So, in total, that’s over 30 million new swabs that will be coming just over the next handful of weeks.
+        </p>
+        <p>
+         The second piece is on the collection tubes.  The collection tubes, we’ve been partnering with Oak Ridge National Lab, a Department of Energy lab based in Tennessee.  They have very unique and sophisticated injection molding manufacturing capability, and they are in the process of ramping that up to create collection tubes, and they will be ramping up to over 40 million collection tubes a month here over the next several weeks.
+        </p>
+        <p>
+         In addition to the swabs, we believe that as testing progresses, there’ll be other types of testing, like serological testing that will occur.  And those samples have to be collected in different ways.  So, many times, some of those tests will require a finger prick.  So, in addition, we’ve secured over 17 million lancets, which is what you use for the finger prick, so that we have those available, as well as 17 million alcohol swabs, which is what you need to clean the finger before you do the finger prick.
+        </p>
+        <p>
+         In addition, although folks are not talking about this much yet, we also believe that businesses across the country may want thermometers to test folks as they come into the office, and so we’ve secured over 650,000 infrared thermometers that states and businesses will be able to access, to be able to test folks as they come into work.  So I think we’ve made tremendous progress on the collection side.
+        </p>
+        <p>
+         In addition to the collection side, we’ve been very focused on ensuring that the labs have what they need.  To process a specimen in a lab, you really need two things: You need something called an extraction kit, and you need something called a PCR test.  In order to be able to fully process a test, you need both of these things.  Sometimes these things come together, and sometimes they come separate.
+        </p>
+        <p>
+         For some of our point-of-care tests, including the Abbott and Cepheid tests, they come together.  They are ramping up production rapidly to over 3 million of those tests per month.  And these are tests that did not exist even a month ago.
+        </p>
+        <p>
+         The second piece is on some of these large machines.  They also sell complex cartridges that come together.  One of the big manufacturers has already ramped up production from about 1.6 million a month to more than twice that already.  And that’s already occurred.
+        </p>
+        <p>
+         In addition to when they come together, they also sometimes come separate, and we see significant ramping up of production there from our manufacturers through our public-private partnerships.  And we’re seeing both several million more over the next few weeks of both the RNA extraction kit, as well as the PCR test kit.
+        </p>
+        <p>
+         So with that, thank you.
+        </p>
+        <p>
+         THE PRESIDENT:  Mike, please.  Thank you, Brad.
+        </p>
+        <p>
+         THE VICE PRESIDENT:  Thank you, Mr. President.  And I share your admiration for this remarkable team — from the Army Corps of Engineers, to Brad, to Admiral Giroir.  They’re doing a remarkable job every day.
+        </p>
+        <p>
+         As the President mentioned, today we had our weekly conference call with governors across the country — states and territories.  And I was able to convey to them our appreciation for the leadership that every governor of every state and territory has provided.
+        </p>
+        <p>
+         Thanks to their leadership, thanks to the extraordinary cooperation of the American people — despite the fact that more than 770,000 Americans have contracted the coronavirus, and our hearts grieve for the more than 41,000 Americans who’ve lost their life — the truth is that, as we stand here today, we are slowing the spread.  And as the President reflected, we continue to see steady progress in less cases, lower hospitalizations, even in hotspots around the country.  And we commended America’s governors for their efforts in that regard.
+        </p>
+        <p>
+         We are preserving our healthcare capacity, as the General with the Army Corps of Engineers reflected.  At the President’s direction, we’ve built a great number of hospitals around the country, but the utilization rate has been fairly low because of the mitigation efforts, the cooperation of the American people, and we have not had to use them.  And that, as the President said, is very good news.
+        </p>
+        <p>
+         In a word, we thank the governors across country for taking actions — decisive action to save lives and to make a difference.  I reminded them that we’re all in this together, that we have one mission, and we’re one team.
+        </p>
+        <p>
+         And we spoke on the conference call about last week’s Guidelines to Open Up America Again.  And we heard from governors across the country about the progress that they were making.  We spoke to governors from New Jersey, Connecticut, Florida, Louisiana, Texas, and Michigan about their ongoing efforts at social distancing and addressed questions that they had about needs that have been spoken up already in this — in this presentation today.
+        </p>
+        <p>
+         In addition, as we promised last week when we spoke to governors on Thursday about the guidelines to open up America, our team presented every governor in the country, states and territories, with a memorandum detailing laboratory capacity and all locations of laboratory equipment for diagnostic tests that can perform the coronavirus test.
+        </p>
+        <p>
+         We also provided, as Dr. Birx will elaborate in just a few moments, literally a map about where these — these testing devices are located.  And I must tell you, Mr. President, I was very impressed at the way governors, as we speak, are scaling testing in their own states using these resources.
+        </p>
+        <p>
+         Our hope is that by providing this information, and by our team that we’ve enlisted out of Walter Reed that’s contacting every one of the laboratories in the country to find out what their needs are and to encourage them to activate those testing machines to do coronavirus testing, that we’ll continue to be able to support a state-managed effort to increase testing even more.
+        </p>
+        <p>
+         But a few highlights: Governor Doug Ducey announced antibody testing for 250,000 health professionals this week and first responders — a partnership between the state and the University of Arizona.
+        </p>
+        <p>
+         We spoke today about Governor Gavin Newsom’s announcement that he set up a task force for testing at five to seven high-capacity testing hubs, in partnership with UC San Diego and UC Davis, to increase testing in high-capacity labs around the state of California.
+        </p>
+        <p>
+         We heard from Governor Ron DeSantis, Mr. President, about — about the efforts of the state of Florida.  I believe he said that, at this time, Florida had conducted 275,000 coronavirus tests, and they are in the process of a major expansion of statewide testing, with the goal of opening up additional sites and using the Florida National Guard to test residents at nursing homes and long-term care facilities in Florida.
+        </p>
+        <p>
+         We also recommend — recommended, today, to every governor’s attention the public health website that the state of Florida established, which has useful information on a county-by-county level about where testing is happening.
+        </p>
+        <p>
+         Mr. President, as you said, governors are utilizing testing assets.  They’re managing and deploying these resources as they see fit.  And at your direction, we’re going to continue to work very closely with them.
+        </p>
+        <p>
+         Other governors that we spoke with included Governor Gretchen Whitmer of Michigan.  There are 13 new or expanded coronavirus drive-through testing sites in Michigan that her team has stood up with the Michigan Primary Care Association.  And we — and we assured her that we would continue to work, as Brad and Admiral Giroir are literally working around the clock, to make sure that they have the supplies to support all of that testing.
+        </p>
+        <p>
+         As the President said, Governor Hogan — who always begins our conference calls as he’s chairman of the National Governors Association — expressed appreciation for last week’s Guidelines to Open America Up Again and his appreciation, on behalf of all the governors, for the list of laboratories in each individual state.
+        </p>
+        <p>
+         He did raise the issue that we had included on the list Department of Defense facilities that have laboratories and machines, and also other federal facilities, many of which are in Maryland.  And I was able to assure Governor Hogan and every governor on the call that we will make all of those laboratories available across the country, to every state, as the need for testing capacity continues to scale.
+        </p>
+        <p>
+         And so this is one more step where you see the Army Corps of Engineers; where you literally see thousands of military doctors and nurses on the streets of New York and other cities around the country.  This is one more step where we, literally, as the President said from early on, are leaving no stone unturned, and we are delivering a whole-of-government approach for our states as they — as they deal with the coronavirus outbreak.
+        </p>
+        <p>
+         Governors are continuing to expand testing, and we assured them that we’re going to continue to work in every way to support their efforts to do just that.
+        </p>
+        <p>
+         And I will say again, as we’ve said before, as Dr. Birx comes up to explain to you what we delivered to the governors today: We told the governors once again, today, that by our best estimates, we have enough testing capacity today for every state in America to go to phase one if they meet the other criteria of 14 days of reduced cases and sufficient hospital capacity to prepare for any eventuality that may occur.  Once again, we have enough testing capacity for every state in America to go to phase one.
+        </p>
+        <p>
+         But we assured the governors today that we’re going to continue to work around the clock to expand the testing capacity, support supplies, and to support their efforts to encourage social distancing and the very mitigation efforts that the American people have been doing that have brought us the progress that we see all across the country today.
+        </p>
+        <p>
+         With that, Mr. President, I’ll just let Dr. Birx describe what we distributed today.
+        </p>
+        <p>
+         THE PRESIDENT:  Thank you, Mike.  Deborah?
+        </p>
+        <p>
+         DR. BIRX:  Thank you, Mr. Vice President and Mr. President.  I just want to show you a couple of additional slides, but also to remind all of Americans that we still have a significant number of cases, both in the Boston area and across Massachusetts and Chicago.  To really — that our hearts go out to those cities as they continue to struggle with coronavirus and the consequences at the hospitalization — to all the healthcare providers that are on the frontline.
+        </p>
+        <p>
+         We wanted — so these are just an illustration of the different types of equipment that are out there, describing them both as low speed but quick turnaround time, to high speed and taking three to four hours to actually run 100 or more tests.
+        </p>
+        <p>
+         And so the equipment range from those different — and that’s why there’s 5,000 of them, as noted by the President in this list.
+        </p>
+        <p>
+         We wanted every governor and every state and health laboratory director to have a clear understanding of the full capacity within the state — both for the capacity, but also where technical assistance and additional supplies may be available.  And we were proud to put the federal labs on that list because the military and the VA have stepped up every step of the way to provide support both in testing and care.  We have many military members on the frontlines, and I’m sure the military would offer their facilities to the governor of Maryland or any governor who wanted to utilize those to expand testing.
+        </p>
+        <p>
+         So the next slide — I’m just going to run through them very quickly.  So every governor not only received the Excel spreadsheet with the complete list of the equipment and the ZIP Code of the location and the laboratory to really be able to create a mosaic of laboratories of the high-speed and low-speed equipment together to meet the needs of their clients, depending if they’re drive-through or hospital needs.
+        </p>
+        <p>
+         So this is what Florida looks like.  Next slide.  This is what Louisiana looks like.  Next slide.  Maryland, with significant capacity.  Next slide.  Virginia, with significant capacity throughout the state.  Next slide.  New York — obviously a lot of capacity in New York City, with overlapping capacity.  It’s important to know where this is, because then hospitals and labs can support each other when they need surge capacity.  Next slide.  This is New Jersey.  Next slide.  Pennsylvania.  Next slide.  Massachusetts.  Next slide.  Ohio.  Next slide.  Oklahoma.  Next slide.  Washington.  Next slide.  I think that’s Wyoming.
+        </p>
+        <p>
+         So we wanted to show, both in states that have large populations and in states that have lower populations.  You can see that, in general, the number of machines match their population.
+        </p>
+        <p>
+         And we’re working with the Walter Reed group and the American Society of Microbiologists and all the lab directors to really create a web of understanding of what the capacity is currently, what the capacity can be, and how the federal government can support them in developing their strategies linked to the overarching federal strategy of testing, as outlined in our guidelines.
+        </p>
+        <p>
+         Thank you, Mr. President.
+        </p>
+        <p>
+         THE PRESIDENT:  Thank you very much.  That was great.
+        </p>
+        <p>
+         Q    A question for Dr. Birx, please.
+        </p>
+        <p>
+         THE PRESIDENT:  Yeah.
+        </p>
+        <p>
+         Q    Dr. Birx, the University of Southern California and the L.A. County Public Health put out a report today that suggests that the penetrance of the virus is as much as almost 40 times what it was believed to be; that as many as 442,000 people in L.A. County may have been infected, which suggests two things.  It suggests that you have a lot more people out there who would be spreading the virus, but it also suggests that the case fatality rate is more in line with the 2017-2018 flu than what we’ve seen in some other areas of the world.  But I’m wondering if you’ve seen that and what your thoughts were.
+        </p>
+        <p>
+         DR. BIRX:  So we’re looking at all those studies very carefully.  And I think you will remember, over the last three weeks, I’ve been talking about the level of asymptomatic spread and my concern about asymptomatic spread.  Because with flu and other diseases, when people are sick, it’s easy to contact trace.  When people are not sick and shedding virus, you have to have a very different approach — a very different sentinel surveillance approach, a sentinel monitoring approach, which we outlined in the guidelines.  And it’s why the guidelines took that very seriously.  We knew that was unique for respiratory diseases, but it was because we were very concerned about the level of asymptomatic.
+        </p>
+        <p>
+         And, if you remember, we used to — we talked about younger age groups may have more asymptomatic disease, and your asymptomatic disease may decrease with your older age groups, and that your symptomatic disease might increase with — with age groups.  This is still our working hypothesis.  We have no data right now, still, to support that.  But it’s these kinds of studies that help that.  We know that New York and Detroit and other cities are very interested, which we want to also support them in — testing for frontline responders, first responders, and healthcare workers because we think their exposure may have been the greatest.
+        </p>
+        <p>
+         What we don’t want to do — and I’m just going to do another 30 seconds on testing.  These tests are not 100 percent sensitive or specific.  And I’m going to go over this over and over again.  So if you have 1 percent of your population infected, and you have a test that’s only 99 percent specific, that means that when you find a positive, 50 percent of the time it will be a real positive and 50 percent of the time it won’t be.
+        </p>
+        <p>
+         And that’s why we’re really asking people to start testing in among the first responders and the healthcare workers that have had the greatest exposure, because that’s where the test will be most reliable.  And then, when we have the luxury, we can go out to broader and broader communities.  But this has been the fundamental question to begin with and has been persistent.
+        </p>
+        <p>
+         And we will emphasize to the American people again: This is a highly contagious virus.  And we don’t know, by looking at someone, whether they have preexisting conditions or not.  And so all of us, as far as protecting others, must continue to do all of the recommendations to ensure that when we are in an asymptomatic state, we’re not passing the virus to others.
+        </p>
+        <p>
+         Q    I have a question for you as well.  The governor of South Carolina announced today they’re going to open some stores with restrictions.  But they just told my colleague, Natasha Chen, that they have not achieved that criteria in the White House Guidelines about the downward trajectory for 14 days.  So shouldn’t they not be reopening stores today?
+        </p>
+        <p>
+         DR. BIRX:  We have asked every governor to follow the guidelines, just as we’ve asked every American to follow the guidelines put out by the President.  But each of the governors can decide for themselves whether they’ve reached specific guidelines in specific areas.
+        </p>
+        <p>
+         I had a question, I think, on Saturday about Jacksonville and their beaches.  So I did spend about five hours going to every state website, and I will tell you that the — Florida’s Department of Health website is extraordinary.  And this is what every department of health should have.  Because when you go to that website, you can see that most of the cases are in southern Florida — in the Miami, Fort Lauderdale, Broward County area.  And if you look in Jacksonville, they had less than 20 cases per day and less than 800 in four weeks.
+        </p>
+        <p>
+         And so these are the kinds — when you inform the public and give them the information that they need, then they can make decisions along with the local government and governors.
+        </p>
+        <p>
+         So I’m not going to say specifically with South Carolina because I don’t know their specific website right now, and I don’t talk about data unless I’ve seen it myself.  But I know from Jacksonville that they had less than 20 cases a day.
+        </p>
+        <p>
+         And so this is how we need to start informing the community.  These websites are critical.  It’s by ZIP Code and it’s by county.  They can see cases, they can see cumulative cases, they can see new cases, they can see hospitalizations, they can see mortality, they can see age groups of mortality, and they can see where every testing piece is.
+        </p>
+        <p>
+         This is how we have to inform the American public, and this is where the American public will develop confidence in each of their counties and local governments.
+        </p>
+        <p>
+         Q    Dr. Birx, I was hoping you can comment — the Vice President mentioned that there’s enough testing capacity right now to proceed to phase one.  But what about phase two or phase three?  Is there — are there enough machines or enough cartridges, are there enough regents right now for this sort of reopening the administration is envisioning taking place over the next month or two?
+        </p>
+        <p>
+         DR. BIRX:  So you can see the current machine outline.  And you can see that both of these gentlemen have par- — prepared to have everything ready for phase two, and preparing it now for what we will need in the future.  And I think that’s what you saw with the ventilators.  That’s what you’re seeing with PPE.  It’s not just for today, it’s for tomorrow.  And as our federal planning is not just for this instant — it’s making sure that we meet the needs of this instance, but we’re planning for 30 and 60 and 90 days ahead.
+        </p>
+        <p>
+         THE PRESIDENT:  Admiral, go ahead on that one, if you’d like.
+        </p>
+        <p>
+         ADMIRAL GIROIR:  I — I would just agree with Dr. Birx completely.  We are ready right now to enter phase one.  And we are ramping up all our capabilities across the board, not just to achieve what’s necessary for phase two, but two x, three x, four x, so that we will be absolutely over prepared when the nation is ready to go into those phases.
+        </p>
+        <p>
+         Q    President Trump?
+        </p>
+        <p>
+         THE PRESIDENT: And, by the way, not everybody agrees that we have to do that much testing.  We’re going maximum.  You understand.  There’s some people that don’t want to do that much testing, but we’re going maximum.  We’re going to the outer limits.  And I think that’s the way, probably, it should be.
+        </p>
+        <p>
+         Jeff, go ahead.
+        </p>
+        <p>
+         Q    Mr. President, to return to a topic that you opened the press conference with on oil: U.S. crude futures today went below zero, went into negative territory.
+        </p>
+        <p>
+         THE PRESIDENT:  It went negative.
+        </p>
+        <p>
+         Q    Yeah.
+        </p>
+        <p>
+         THE PRESIDENT:  Like interest rates, they go negative.
+        </p>
+        <p>
+         Q    Does that make you want to see Saudi Arabia and Russia and OPEC Plus do more to reduce supply?
+        </p>
+        <p>
+         THE PRESIDENT:  Well, it’s for short term.  Much of it has to do with short sellers, much of it has to do — if you look a month into the future, I think it’s at $25 or $28 a barrel.  So a lot of people got caught.  They got caught.  And there are a lot of people that are not too happy because they got caught.
+        </p>
+        <p>
+         So if you take a look at it, you’ll see it’s more of a financial thing than an oil situation, but — because you take, I believe, in a month or so — in other words, go a little bit out, it’s at $25 and $28 a barrel.  So it’s largely a financial squeeze, and they did get squeezed.
+        </p>
+        <p>
+         Q    So would you like to see, however, Saudi Arabia and other countries make more cuts?
+        </p>
+        <p>
+         THE PRESIDENT:  Well, we’ve already done that, where Saudi Arabia is cutting back, Russia is cutting back, Mexico is cutting back, and the OPEC Plus — they call it OPEC, plus additional states — are cutting back.
+        </p>
+        <p>
+         And you know, the problem is nobody is driving the car anywhere in the world — essentially, 184 nations.  Factories are closed and businesses are closed.  And so, all of a sudden — we had really a lot of energy to start off with, oil in particular.  We had a lot.  And then, all of a sudden, they lost 40, 50 percent of their markets.  So it just stopped.
+        </p>
+        <p>
+         So it’s going to be picking up, and the energy business will be strong.  But they cut back.  It could be 20 million barrels, but it’s, let’s say, 15.  That was between Russia and Saudi Arabia.
+        </p>
+        <p>
+         But this had to do with the squeeze, and it was a very tough squeeze.  A lot of people got —
+        </p>
+        <p>
+         Q    You don’t think they need to do more right now?
+        </p>
+        <p>
+         THE PRESIDENT:  Well, they got to do more by the market, to be honest.  Look, same thing over here.  If the market is the way it is, people are going to slow it down or they’re going to stop.  That’s going to be automatic, and that’s happening.
+        </p>
+        <p>
+         Yeah.
+        </p>
+        <p>
+         Q    Mr. President, I — on criminal justice reform and these SBA loans: I got an email earlier this morning from a fella in the northwest who owns a supply business.  And he has a felony on his record — non-violent felony — in the past five years, which under SBA guidelines makes him ineligible for one of these PPP loans.  So he has now had to let go 50 employees, many of whom are criminals trying to get back into society.
+        </p>
+        <p>
+         I don’t believe there’s anything in the CARES Act that would restrict somebody —
+        </p>
+        <p>
+         THE PRESIDENT:  If you give me the name of the company and his name, I’ll have that checked out, John.  I’ll do that.
+        </p>
+        <p>
+         Q    Okay.
+        </p>
+        <p>
+         THE PRESIDENT:  It’s a friend of yours?
+        </p>
+        <p>
+         Q    No, not a friend of mine.  No.  Just somebody who contacted me out of the blue.
+        </p>
+        <p>
+         THE PRESIDENT:  Why did he call you?  He called you to say he’s a criminal and why did he get a loan?  Or what — what’s —
+        </p>
+        <p>
+         Q    Because he says he wanted to apply for an SBA loan and couldn’t, and wondered how that squared —
+        </p>
+        <p>
+         THE PRESIDENT:  Okay.  If you give me the —
+        </p>
+        <p>
+         Q    — with your drive to criminal reform.
+        </p>
+        <p>
+         THE PRESIDENT:  — name, I’ll look into it.
+        </p>
+        <p>
+         Q    Okay.
+        </p>
+        <p>
+         THE PRESIDENT:  I’d like to look into that, okay?
+        </p>
+        <p>
+         Q    I have a question —
+        </p>
+        <p>
+         THE PRESIDENT:  Kaitlan, go ahead.
+        </p>
+        <p>
+         Q    — on reopening of the country.  If these companies that open, and they have employees come back to work and they get sick, will these companies be liable?
+        </p>
+        <p>
+         THE PRESIDENT:  Which companies are you talking about?  Under what?
+        </p>
+        <p>
+         Q    Any companies that open.  Manufacturing — any kind of company that opens and employees go back to work —
+        </p>
+        <p>
+         THE PRESIDENT:  So we have —
+        </p>
+        <p>
+         Q    — and they get sick, will the company be liable?
+        </p>
+        <p>
+         THE PRESIDENT:  I’ll give you an answer to that.  I’ll give you a legal answer to that when we look it up.  But we have tried to take liability away from these companies.  We just don’t want that because we want the companies to open and to open strong.
+        </p>
+        <p>
+         But I’ll get you a legal opinion on that.
+        </p>
+        <p>
+         Q    Who would be liable?
+        </p>
+        <p>
+         THE PRESIDENT:  I’ll get you — well, that’s what I’m saying.  I’ll get you a legal opinion on it.
+        </p>
+        <p>
+         Q    You — you guys haven’t discussed that yet?
+        </p>
+        <p>
+         THE PRESIDENT:  Nobody has discussed it, no.  But we will now.
+        </p>
+        <p>
+         Q    Have any business executives voiced concern to you about being liable, potentially?
+        </p>
+        <p>
+         THE PRESIDENT:  Not one.  Not one.
+        </p>
+        <p>
+         Q    They didn’t say it —
+        </p>
+        <p>
+         THE PRESIDENT:  Not at this point.
+        </p>
+        <p>
+         Q    — on the call last week?
+        </p>
+        <p>
+         THE PRESIDENT:  But we’re going to look, because they have talked about general liability.  So I’ll get you a specific answer from the lawyers.  Okay?
+        </p>
+        <p>
+         Go ahead.  Please.
+        </p>
+        <p>
+         Q    Thanks, Mr. President.  I want to follow on oil.  When you were talking earlier, you were talking about the PPP deal, and then mentioned the SPR in the first stimulus package, even though you had announced that —
+        </p>
+        <p>
+         THE PRESIDENT:  Oh, I’ll bet you know the price of oil right now, don’t you?
+        </p>
+        <p>
+         Q    I do.  Do you know the price of oil?  (Laughter.)
+        </p>
+        <p>
+         THE PRESIDENT:  I do.  I actually do.
+        </p>
+        <p>
+         Q    It’s negative 37 dollars.
+        </p>
+        <p>
+         THE PRESIDENT:  Of course, nobody has ever heard of negative oil before, but it’s for a short term.
+        </p>
+        <p>
+         Q    In your opening remarks, you were talking about the PPP deal, and then you mentioned the 75 million barrels of oil that —
+        </p>
+        <p>
+         THE PRESIDENT:  Yes.
+        </p>
+        <p>
+         Q    — you previously had said you wanted to purchase.
+        </p>
+        <p>
+         THE PRESIDENT:  Yes.
+        </p>
+        <p>
+         Q    You weren’t able to get funding for that in the first deal.  So I’m wondering, are you —
+        </p>
+        <p>
+         THE PRESIDENT:  Well, at the price you’re talking about, you don’t need funding.  They pay you.  See?  You know? Because right now —
+        </p>
+        <p>
+         Q    You could if you can go get it in the next 24 hours —
+        </p>
+        <p>
+         THE PRESIDENT:  Well, if you can get it.  That’s true.  If you can get it.
+        </p>
+        <p>
+         Q    So my question — my first question is: Are you asking for that funding as —
+        </p>
+        <p>
+         THE PRESIDENT:  Well, at a minimum, we’ll let —
+        </p>
+        <p>
+         Q    — part of the PPP deal?
+        </p>
+        <p>
+         THE PRESIDENT:  — people store.  So we’ll store it.  We’ll use it as storage and charge for it.  But people need storage desperately, and we have massive storage under the petroleum —
+        </p>
+        <p>
+         Q    So you’re not going to make it a requirement of the PPP interim funding deal?
+        </p>
+        <p>
+         THE PRESIDENT:  It’s not a question of requirement.  If we could buy it for nothing, we’re going to take everything we can get.  The only thing I like better than that is where they pay you to take the oil, but that’s a short-term squeeze.  You understand that.  So it’s — I don’t think you’re going to see that.
+        </p>
+        <p>
+         But, no, we’d like to have Congress — this is a great time to buy oil.  And we’d like to have Congress approve it so that we could — instead of just storing it for the big — usually the big companies.  Because I think we have 75 million gallons right now, capacity.  That’s a lot.  It’s — we’ve been building it up over a period of time, but that’s a lot: 75 million barrels.
+        </p>
+        <p>
+         So we’re going to get — either ask for permission to buy it, or we’ll store it.  One way or the other, it will be full.
+        </p>
+        <p>
+         Okay, please.
+        </p>
+        <p>
+         Q    Mr. President —
+        </p>
+        <p>
+         Q    And then, Mr. President — oh, sorry.
+        </p>
+        <p>
+         THE PRESIDENT:  No, go ahead.  You — you can finish up.  We’ll go right to you.
+        </p>
+        <p>
+         Q    Yeah, some senators, including Senator Cramer, have called on you to stop Saudi oil shipments that are on the way right now.  Is that — you can do that under Section 232.  Is that something that you would consider?
+        </p>
+        <p>
+         THE PRESIDENT:  Well, we’ll look at it.  I heard just as I’m walking into the room.  We certainly have plenty of oil.  So I’ll take a look at that.  Okay?
+        </p>
+        <p>
+         Yes, please.
+        </p>
+        <p>
+         Q    Two questions: First, on testing.  The second on the SBA loan program.  When will you — or will you, in fact, invoke the DPA to force that company you mentioned to ramp up production of cotton swabs?
+        </p>
+        <p>
+         THE PRESIDENT:  Well, we don’t — we really don’t need it.  We use it.  We go up.  And I’ve used it a lot.  But we use it and then sometimes all they have to do is see it coming.
+        </p>
+        <p>
+         Do you want to talk about that, Admiral?  Please.
+        </p>
+        <p>
+         ADMIRAL GIROIR:  I think this is — I don’t think any of us knew very much about the DPA, but there’s sort of a force side of the DPA where you force a company to do something.  But there’s a second side of it which is really a hand up.
+        </p>
+        <p>
+         The company we’re talking about have done — has done everything to support this effort and have ramped up production.  I’m on the phone with them multiple times a day.  This is the hand up.  This is the government coming in and saying, “How can we help you expand your lines?”  There’s no asynchrony here at all.
+        </p>
+        <p>
+         So this is the hand-up side of the DPA, which is exactly what these small American heroic companies need.  They don’t need to be forced.  They’re all in.  Their employees are all in.
+        </p>
+        <p>
+         MR. SMITH:  So a point of clarity, because —
+        </p>
+        <p>
+         THE PRESIDENT:  And we don’t want to embarrass people either.
+        </p>
+        <p>
+         Please, Brad.  Go ahead.
+        </p>
+        <p>
+         MR. SMITH:  So today, we were on site — or there were folks on site with that company, finishing out what their capital projections will be in order to be able to ramp up these additional four lines that I spoke about.  The company will then turn in a white paper to the DOD that will then help move the process forward.  But it’s actively in process.
+        </p>
+        <p>
+         Q    And I fully understand that the need is enormous, but on March 24th — March 21st, the administration promised 27 million tests by the end of March.  So far, roughly 4 million people have been tested.  So where are the other 23 million or so tests?  Did they not materialize?  Are they in the pipeline?  Help us understand that discrepancy.
+        </p>
+        <p>
+         ADMIRAL GIROIR:  So, since I was the one who said that, let me explain where we are — where we were.  So I was getting my information — it was correct information — about the actual tests that are in the marketplace.  So if you want to use those metrics, there’s been over 40 million, quote, “in the marketplace.”  But we have an end-to-end issue that we needed to deal with, and that’s what we’ve been dealing with: the swabs, the transport media.
+        </p>
+        <p>
+         If we don’t have people utilizing the machines the way Dr. Birx is talking about — we have some of our main platforms that are only 10 percent being utilized.  You can have a lot of — you could have a lot of tests in the market, and those are correct numbers, but if the machines aren’t utilizing them and they’re not organized at that level, then they’re not being –they’re not being utilized to its fullest.  And that —
+        </p>
+        <p>
+         THE PRESIDENT:  So, Admiral, you meant if the machines were utilized, that would be the number.
+        </p>
+        <p>
+         ADMIRAL GIROIR:  You would — you would have a lot of those millions of tests already being done.  I think Ambassador Birx has estimated that we have another million tests a week, just on one platform, that could be — that could be done if the machines were utilized more fully.
+        </p>
+        <p>
+         Q    I have a question for Admiral Giroir.
+        </p>
+        <p>
+         THE PRESIDENT:  For this?
+        </p>
+        <p>
+         Q    For Admiral Giroir.  You say that there are — and the Vice President has said this and Mr. Smith said it — that there will be enough tests in place for phase one.
+        </p>
+        <p>
+         THE VICE PRESIDENT:  There are.
+        </p>
+        <p>
+         Q    There are?  The question is: What’s the standard of testing that you now have the capability for?  Is it to test people who are only very ill?  Is it test people who have the sniffles?  Is it test people who come in just because they want to get a test?  I mean, what is the standard here for the testing?
+        </p>
+        <p>
+         ADMIRAL GIROIR:  It is the guidelines, but I tried to be a little specific about this on Friday, and we all tried to.
+        </p>
+        <p>
+         Number one is, you need to test everyone who’s symptomatic, right?  And you need to over test them, because —
+        </p>
+        <p>
+         Q    How — how symptomatic?
+        </p>
+        <p>
+         ADMIRAL GIROIR:  We’re talking any symptoms that would be consistent with COVID, right?  So — and there’s a wide range of symptoms.  You want to test them and you want to over test.  And we talked about the approximate metric with Ambassador Birx — fully supports — because we — you know, this is a good metric that you want to get about one positive for every 10 tests.  Then you know you oversample.
+        </p>
+        <p>
+         Second — and this a really important part of the strategy — is because so many people are asymptomatic, there is no way that you can test enough people to pull one asymptomatic out of 300 people in the population.
+        </p>
+        <p>
+         So the strategy with — Ambassador Birx offered — and, you know, I talk to epidemiologists around the country, and they go, “Wow, I wish I would have thought of that” — is to really focus on the vulnerable population where we know that the asymptomatic rate could be much higher than the rest of the population.  And we are going to be focus- — and this is what my office does in during normal — normal times — focusing on the underserved populations, particularly in inner cities and urban areas.  They have a higher rate because overcrowding, they can’t telework, they’re subject to a lot of comorbid conditions.  Nursing homes: We all know about nursing homes, and there is both symptomatic and asymptomatic spread.  And finally, some of our indigenous populations in the Indian Health Service.
+        </p>
+        <p>
+         So this is a very, very important layer that most of the models and people don’t talk about, because that’s where we’re going to pick up the asymptomatic carriage.  And when you do that, that’s when you focus on track and trace.
+        </p>
+        <p>
+         Q    So just a quick follow-up on that.  If we have enough tests right now for everyone to go into phase one, why is the governor of Maryland having to get half a million tests from South Korea?
+        </p>
+        <p>
+         ADMIRAL GIROIR:  I don’t know what the governor of Maryland is doing in South Korea, but there is excess capacity every day.  If he wanted to send 30- or 40,000 tests to LabCorp and Quest, that — that could be done.  That could be done tomorrow.
+        </p>
+        <p>
+         Q    But he was saying they didn’t have enough that they needed to start to up their testing capacity and make it adequate.  So they had to have these late-night meetings —
+        </p>
+        <p>
+         ADMIRAL GIROIR:  I think — I think we’re seeing all across the country —
+        </p>
+        <p>
+         Q    — with South Korea.
+        </p>
+        <p>
+         ADMIRAL GIROIR:  — that in the states that have been hardest hit, their capacity — not only their capacity, their testing far — far exceeds South Korea.  And they’ve been able to do that on a relatively straightforward basis.  I don’t know what the governor of Maryland — we talked to him today.  He didn’t bring that up today.
+        </p>
+        <p>
+         Q    Haven’t you spoke to him about this?
+        </p>
+        <p>
+         ADMIRAL GIROIR:  We were on the governors’ call today.
+        </p>
+        <p>
+         Q    But you haven’t spoken to him, like, personally on this?
+        </p>
+        <p>
+         THE PRESIDENT:  Go ahead, Mike.
+        </p>
+        <p>
+         THE VICE PRESIDENT:  We spoke to Governor Hogan today.  I’ll follow up, because I heard there was an announcement today about that he had acquired some tests from overseas.
+        </p>
+        <p>
+         Maybe we could put the slide back up that showed the number of facilities, just in the state of Maryland.
+        </p>
+        <p>
+         And part of our process — and I don’t know when the governor placed the order from South Korea.  Wouldn’t — I wouldn’t begrudge him or his health officials for ordering tests.  But the capacity of all the different laboratories and the number of machines that are across Maryland was part of what we were communicating today, including federal facilities.  NIH is in Maryland.  There’s Department of Defense facilities.
+        </p>
+        <p>
+         And what we assured the governor then, and we assured all the governors, is that we’ll open up all of those facilities.
+        </p>
+        <p>
+         But, John, back to your — your point: There was one other element of that; that’s the phase one testing.  And I can’t — I can’t really describe it as well as the doctors here.  But it’s the contact tracing piece.  We really believe that states that meet the criteria of 14 days of cases going down and proper hospital capacity, if they test people that have symptoms, and if they deploy resources to vulnerable populations — nursing homes and other designated vulnerable populations where we believe the threat of serious outcomes from the coronavirus is real, then we also, today, informed the governors that we will be deploying CDC teams to every state and every territory in the country to assist them in contact tracing.
+        </p>
+        <p>
+         Governor Jared Polis raised a very good point about the legislation the President is currently negotiating on Capitol Hill.  He recommended that we make sure that the new bill, that has some $25 billion in testing resources, also cover contact tracing expenses by states.  We assured him our administration strongly supports that.  We communicated that to the Secretary of the Treasury and the rest of our negotiation team, and we’ll be pursuing that.
+        </p>
+        <p>
+         But we were able to tell every one of the governors that we will be deploying teams, we think of 10 or 12, for a start, from CDC to reside in all of our states and territories to supervise and work with contractors and others to do the kind of contact tracing.
+        </p>
+        <p>
+         So it’s: Test people that don’t feel well and may have the coronavirus.  Keep a careful eye and monitor your vulnerable population.  And when you come across a case, have a team on the ground that can do the immediate contact tracing and testing.  And that’s how we — that’s how we restrain and contain the spread of the coronavirus during phase one.  And, frankly, it’s the beginning of the structure for how we contain the coronavirus going forward.
+        </p>
+        <p>
+         THE PRESIDENT:  And take a look at that map.  The governor of Maryland could’ve called Mike Pence, could’ve saved a lot of money.  Look at all of the — look at these different places.  And that’s Maryland, right there.  So, could’ve saved a lot of money, but that’s okay.
+        </p>
+        <p>
+         Q    So you’re saying he didn’t need to go to South Korea for those testing kits?
+        </p>
+        <p>
+         THE PRESIDENT:  No, I don’t think he needed to go to South Korea.
+        </p>
+        <p>
+         Q    Have you guys not spoken to him about this?
+        </p>
+        <p>
+         THE PRESIDENT:  I think he needed to get a little knowledge, would’ve been helpful.
+        </p>
+        <p>
+         Q    Mr. President, on the SBA loans, do you think it’s right that major corporations, major institutions — like the Ritz restaurant chain, like Harvard University — apparently got a lot of money under the CARES Act, money that was supposed to be earmarked for small-business owners.  Do you think that’s fair?
+        </p>
+        <p>
+         THE PRESIDENT:  Well, I know one thing: I didn’t get any. That’s for sure.  I didn’t get any.  We’ll look at individual things, and some people will have to return it if we think it’s inappropriate.
+        </p>
+        <p>
+         Q    But should the criteria be changed so that that money goes to people who need it the most?
+        </p>
+        <p>
+         THE PRESIDENT:  Well, it’s being done by great professionals.  It’s being done by banks and, as you know, community banks all over the country.  They’re — that’s what they do.  They loan money, and they’re supposed to do it according to not only criteria, but according to what we think is right.  But if somebody got something that we think is inappropriate, we’ll get it back.  Okay?  Good — good point.
+        </p>
+        <p>
+         Please. Go ahead.
+        </p>
+        <p>
+         Q    Yes.  Another — a different question about South Korea.  There are reports that you are personally negotiating with President Moon the terms of reduction of U.S. forces on the Korean Peninsula, and that there are four scenarios involved.  Can you confirm that?  And, if so, what is your desired outcome?
+        </p>
+        <p>
+         THE PRESIDENT:  Well, I think that South Korea — I had a great talk with President Moon.  He’s a friend of mine.  I congratulated — he had a wonderful election victory.  I was very happy about that.  He was — as you know, just recently.
+        </p>
+        <p>
+         No, we are negotiating for President Moon and for South Korea to help us monetarily, because we — as you know, we have 32,000 soldiers there.  That varies from 28- to 32,000 in South Korea.  And we think that, before I came aboard, they paid very little, if anything.  So we’re defending a wonderful nation — a nation that we have great relationships, but we’re asking them to pay for a big percentage of what we’re doing.  It’s not fair.  So, it’s not a question of reduction; it’s a question of will they contribute toward the defense of their own nation.
+        </p>
+        <p>
+         We’re defending nations that are very wealthy.  South Korea is a very wealthy nation.  They make our television sets.  They make ships.  They make everything.  And I give them great credit.
+        </p>
+        <p>
+         We’ve been defending them for many, many decades, as you know.  Many, many — over eight decades.  And I’ve gone to them in the past.  Last year, I went to them and now they’re paying a billion dollars a year.  And I went to them again, I said, “Look, I’ll be back because that’s just a fraction.”  And again, the relationship is great, but it’s just not a fair relationship.
+        </p>
+        <p>
+         We renegotiated the trade deal and made it a much more equitable deal than it was in the past.  It was a terrible deal. It was done by Hillary Clinton.  It was a terrible deal.  The new deal is a much more equitable deal — that’s on trade.
+        </p>
+        <p>
+         But, on the military, I mean, we’re paying for the military for — to defend another nation that’s 8,500 miles away.  And they’re not the only one I’m talking to you, by the way, as you know.  I won’t go into names, but I’ve done this.  Nobody talks about it, but I think it’s appropriate.  I think the taxpayer of our country — taxpayers — want to hear these things.  And so now they’re — they’ve offered us a certain amount of money, and I have rejected it.  I just said, “It’s just — look, you know, we’re doing a tremendous service.”  We have a wonderful feeling and a wonderful relationship with each other, but we have to be treated equitably and fairly.  And so that’s where it is right now.  And what’s going to happen, I can’t tell you, but we’ll find out fairly soon.
+        </p>
+        <p>
+         But I congratulate the President, who is a friend of mine — I congratulate President Moon on having a terrific victory.
+        </p>
+        <p>
+         Please.  Yeah.
+        </p>
+        <p>
+         Q    Thank you, sir.  A question for you about Governor Cuomo’s visit, and then also a question for Dr. Birx, if you’ll let me.
+        </p>
+        <p>
+         THE PRESIDENT:  Sure.
+        </p>
+        <p>
+         Q    The New York governor, along with the National Governors Association, in the past, have called for aid to be unrestricted.  As a lot of state and local governments see their revenues drop, are you open to the idea of unrestricted aid or do you want it to be pandemic-specific?
+        </p>
+        <p>
+         THE PRESIDENT:  Well, we’re going to be talking about that in phase four, as you know, which will start very shortly.  And that has to do with infrastructure — hopefully infrastructure, because this country needs infrastructure.
+        </p>
+        <p>
+         We spend all this money in the Middle East — $8 trillion.  Eight trillion — trillion, with a “T” — dollars in the Middle East, but if you have a pothole in a highway someplace, they don’t want you to spend the money to fix it.  How stupid have we been in this country?  How stupid have we been?  And that’s changing rapidly — you know that; you’ve seen that — including things like negotiating with friends.
+        </p>
+        <p>
+         But when we are helping friends, friends should reimburse us for the cost.  I mean, why should we be defending nations for free?  We’re defending a nation for free.  Now I’m getting a billion dollars a year, and we’re — we’ll be getting — we were offered much more than that, but I turned it down.  So that’s where we are with that.
+        </p>
+        <p>
+         As far as — as far as the other is concerned, look, we have to be smart in this country.  We’ve been taken to the cleaner by every — and I mean with allies, not just with the enemies — with allies.  We’ve been to — frankly, the allies have taken us much more so than the enemies.  The enemies we don’t do business with, right?  The allies, we do business with.
+        </p>
+        <p>
+         And whoever made these deals, whoever made these contracts — in many cases, we didn’t have a contract.  Like, we didn’t have a contract — we didn’t have a trade deal with China.  They came in and they took $500 billion a year for many years.  But anywhere from $200- to $550 billion dollars a year out of our hides.
+        </p>
+        <p>
+         Now we made this great trade deal.  Unfortunately, that was a number of months ago.  And it’s a great deal.  They’re paying 25 percent on $250 billion.  They’re — a lot of things are happening.  They’re going to have to purchase $250 billion worth of goods, including farm product — up to $50 billion.
+        </p>
+        <p>
+         So, a lot of good things are happening, but then what happened with China was the plague hit us, right?  The plague. That was after.  This was long after we signed the deal.  The plague hit us, so I’m not happy about that.
+        </p>
+        <p>
+         Okay.  John, please.
+        </p>
+        <p>
+         Q    A question for Dr. Birx, if I could.  Dr. Birx, a question on the virus itself: As it passes from patient to patient, it mutates.  Over time, have you picked up any indication that it has become less virulent?  Have you picked up any indication it has become more virulent?
+        </p>
+        <p>
+         DR. BIRX:  You know, that is an excellent question because we watch that all the time, particularly with RNA viruses, to really track its adaptation to humans.  I mean, you’re really asking: Has this virus become more adapted to humans and more able to spread, or is it becoming less adapted to humans and less able to spread?
+        </p>
+        <p>
+         We don’t have any indication that it’s less able to spread, and we’ll have good analyses that will come from — obviously, the Roosevelt had its incident with a virus outside of the United States, and we’ll be able to look at those parameters.  And the DOD and the military have done a great job in really ensuring the health of the sailors, but also ensuring that this — these questions can really be asked and answered.
+        </p>
+        <p>
+         We have extraordinary evolutionary molecular biologists in this country, all around the United States, and they’re looking at this very question.  And a lot of the work that we’ve been doing and a lot — you’ll see a lot of work happening with testing in New Mexico and testing in other states.  They have extraordinary molecular biologists that are evolutionary biologists, and they’ll be able to look at that, both in — both in New Mexico, that it may have lower transmission rates, and compare that to New York, that has maybe 10x the transmission.
+        </p>
+        <p>
+         But it’s an excellent question, and it’s something that will be able to be answered by what we see in the United States.
+        </p>
+        <p>
+         THE PRESIDENT:  John, what a good question that was.  Where did that come from?
+        </p>
+        <p>
+         Q    You know, once in a while, I pull one out of my hat, Mr. President.
+        </p>
+        <p>
+         THE PRESIDENT:  No, that’s very impressive.
+        </p>
+        <p>
+         You know, when Senator Schumer wrote a letter a couple of months ago, and he said, “You should use admirals and generals.” I said, “Well, that’s where we’ve…”  First of all, we have our Vice President, who has been incredible, but we have the admirals, we have the generals.  And I was just talking to the admiral inside, just before we came out.  I said, “Did you go to Annapolis?”  He said, “No sir.”  I said, “Oh, that’s too bad.  That’s too bad.  Where did you go?”  He said, “I went to Harvard.”  “Oh, that’s okay too, I guess.”  Right?
+        </p>
+        <p>
+         So he went to Harvard and he was a great student at Harvard, and he’s doing a fantastic job.  And this young gentleman was very, very successful.  But he wanted to help the country.  He wanted to come into the country, and we appreciate it very much.  He was a big success — a big, big success.
+        </p>
+        <p>
+         Let’s do here, and there next.  Okay?  We’re all set.  Good.  Go ahead.
+        </p>
+        <p>
+         Q    Thank you, Mr. President.  I was hoping you’d talk about your meeting tomorrow with Governor Cuomo that you mentioned.  Is there a reason he is coming all the way down here?
+        </p>
+        <p>
+         THE PRESIDENT:  I don’t know.  He wanted to, and —
+        </p>
+        <p>
+         Q    Is that sort of travel essential?
+        </p>
+        <p>
+         THE PRESIDENT:  We, believe it or not, have — we get along.  Okay?  He was very generous yesterday, in particular. Said we did a, quote, “phenomenal” deal.  I don’t know if anybody wrote that, but he said that, and I appreciated it.  Because it’s not about me; it’s about these people and thousands behind Mike and the admiral and all of the other people that are working with us.
+        </p>
+        <p>
+         I mean — and you see it.  Look, I don’t understand when — when I see polling and approval ratings for the job.  I mean, this group should get a 95.  It really should.  And we’re really helping the governors a lot.  And the governors call me — the ones I know, or the Republicans, but the ones I know — and they say, “It’s incredible, the job you’re doing.”  Again, not me — the job this group is doing.
+        </p>
+        <p>
+         And you sit here — I just — I’m watching from — from the corner, and I’m just saying, “Boy, it’s incredible stuff.”  When you watch the general get up — General Semonite — and talk about — boom, boom, boom.  You don’t see that.  You don’t see that.  When you hear the admiral speak about the testing — how good it is — and yet people don’t like to say it.
+        </p>
+        <p>
+         But remember, it was all about ventilators a month ago. Ventilators, ventilat- — then we fixed it.  You don’t hear about ventilators.  Where is the ventilator — Jeff, you haven’t asked about ventilators recently.  What’s going on?  What about ventilators?  We’re helping other countries now, because they can’t have — they’re very hard to come by, and they take a long time to make — like, years.  It’s incredible, the job they’ve done — that our people have done and also private companies have done.
+        </p>
+        <p>
+         You know, you talk about the act.  We — we don’t like to use it unless we have to.  Because, a lot of times, just the fact that you have it gets you everything you need.  So, you know, we don’t want to embarrass any of the companies.  But we have used it on a number of occasions and it worked.  But it works just as well before you have to use it, because they don’t want to be embarrassed, and I don’t want to embarrass them because they’ve done a great job.
+        </p>
+        <p>
+         Please, go ahead.
+        </p>
+        <p>
+         Q    Thank you, Mr. President.
+        </p>
+        <p>
+         THE PRESIDENT:  No, I think, right behind you.  I promised. I can’t — I cannot tell a lie.  So, I mean, we’ll get you next.  Okay?
+        </p>
+        <p>
+         Q    Thank you, Mr. President.
+        </p>
+        <p>
+         THE PRESIDENT:  We’ll get you next.
+        </p>
+        <p>
+         Q    Are you talking to her or me?
+        </p>
+        <p>
+         THE PRESIDENT:  No, no.  You.
+        </p>
+        <p>
+         Q    Me.  Okay.  Well, thank you so much, Mr. President.  My question — I have two questions.  The first one is on testing.  You talked about the idea that first it was ventilators, and now it’s testing.  You seem to maybe possibly be implying that talking about testing is a personal attack on you.  Can you explain why you think testing — talking about testing is a personal attack, given that the access to testing has been an issue for a long time?  There’s bipartisan outcries still today that there is not enough testing.  Why do you think it’s a personal attack on you?
+        </p>
+        <p>
+         THE PRESIDENT:  Well, it’s not bipartisan.  It’s mostly partisan.  But more importantly than mostly partisan, it’s incorrect.  You have — you have the experts.  Look at these maps.  I mean, you have the maps with so many different locations.
+        </p>
+        <p>
+         In the case of, as an example, Governor Hogan.  He didn’t really know.  He really — it was very obvious to any of those listening on the call today — even though you weren’t supposed to be on it, I’m sure that some of you were or representatives were.  He really didn’t know about the federal laboratories.  Would you say that’s correct, Mike?  He didn’t know.
+        </p>
+        <p>
+         THE VICE PRESIDENT:  He didn’t know they were available.
+        </p>
+        <p>
+         THE PRESIDENT:  He didn’t know.  And Mike doesn’t like to get into this stuff.  He’s less controversial than I am.  But he didn’t know about it.  And if he did know about it, he would’ve been happy.
+        </p>
+        <p>
+         No, we’ve done a really good job on testing.  Now, with that being said, we have tests coming out perhaps over the next two weeks that will blow the whole industry away.  Now, a lot of people love the Abbott test.  So do I.  You know, the Abbott test is great because it’s, boom, it’s — they touch, they put it in, and in five minutes you have — the problem is that doesn’t do massive numbers like the big machine.  But the big machine takes a day, takes a day and a half, you know, with delivery and everything else.
+        </p>
+        <p>
+         But we have tremendous testing — tremendous testing capability.  Remember this: We’ve tested more than any country in the world by far.  In fact, I think I read where if you add up every other country in the world, we’ve tested more.
+        </p>
+        <p>
+         But remember this: We’re dealing in politics, we’re dealing with a thing called — November 3rd of this year.  Do you know what November 3rd represents, right?  You know better than anybody in the room.  November 3rd of this year — it’s called the presidential election.  No matter what I do, no matter where we go, no matter how well we do, no matter what, if I came up with a tablet, you take it and this plague is gone, they’ll say, “Trump did a terrible job.  Terrible.  Terrible.”  Because that’s their soundbite.  That’s the political soundbite.
+        </p>
+        <p>
+         They know the great job we’ve done.  But with all of that being said and — and also, there is a thing that somebody could talk to if they want, but I don’t want to bore you with it.  Not everybody believes we should do so much testing.  You don’t need so much.  We’re talking about maximum.  Maximum.
+        </p>
+        <p>
+         The reason that the Democrats — and some others, maybe, because they don’t know — they want maximum because they want to be able to criticize.  Because it’s almost impossible to get to the maximum number, and yet we’ve been able to do it already.
+        </p>
+        <p>
+         But with that — and you’ll be seeing this over the next — I think over the next couple of weeks or sooner.  We have a test — if it comes out, it’ll revolutionize the whole world of testing.  It’ll be — it’ll be something really special.
+        </p>
+        <p>
+         So I don’t view it as personal at all.  What I do say is, it’s something that’s not fair to thousands of people that have done such a good job.
+        </p>
+        <p>
+         Q    The second question I had was about your language and how you approached the coronavirus at the beginning.  I interviewed someone who said that his family got sick.  They went to a funeral in mid-March, and they said mainly because the President wasn’t taking it seriously.  He said, “If the President had had a mask on, if he was saying we should stay home, then I would have stayed home.  Instead I had family members…”
+        </p>
+        <p>
+         THE PRESIDENT:  Well, I know.  I understand.
+        </p>
+        <p>
+         Q    I just want to — and he said his family members were sick because they were — they were listening to you.  Do you feel like or are you concerned that downplaying the virus maybe —
+        </p>
+        <p>
+         THE PRESIDENT:  Yeah.
+        </p>
+        <p>
+         Q    — got some people sick?
+        </p>
+        <p>
+         THE PRESIDENT:  And a lot of people love Trump, right?  A lot of people love me.  You see them all the time, right?  I guess I’m here for a reason, you know?  To the best of my knowledge, I won.  And I think we’re going to win again.  I think we’re going to win in a landslide.
+        </p>
+        <p>
+         But just so you understand, you’re talking about March, right?
+        </p>
+        <p>
+         Q    Yeah.  But this is —
+        </p>
+        <p>
+         THE PRESIDENT:  And yet — excuse me.  Excuse me,
+        </p>
+        <p>
+         Q    — this is an American that’s concerned.
+        </p>
+        <p>
+         THE PRESIDENT:  I know.  I understand.  And yet, in January, a certain date — you know the date better than I do — we put on a ban of China, where China can’t come in.  And before March, we put on a ban on Europe, where Europe can’t come in.  So how could you say I wasn’t taking it seriously?
+        </p>
+        <p>
+         You know, I put on a ban on China before anybody in this country died.  I put on a ban.  And so you tell me.  Nancy Pelosi was having — she wanted to have a street party in Chinatown in San Francisco at the end of February.  That’s a month later.  And then they tell me it’s only a political talking point.  But you feed into it, because you’re too good a reporter to let that happen.  Really, you are a good reporter.  You’re too good a reporter to let that happen.
+        </p>
+        <p>
+         Remember this: So at the end of January, I put on a ban.  People that were in that room will tell you — I think there were 21 people — I was the only one in the whole room that wanted to do it.  Fortunately, I was the one that counted for that purpose.  We put on a ban because I was reading bad things about China.  World Health Organization should have told us, but I was reading it, with or without them.  They should have known.  All they had to do is read it.  They didn’t have to even be there.  But they tried to cover up for China — World Health covered up for China.
+        </p>
+        <p>
+         Q    But you did hold — you held rallies in February and March.
+        </p>
+        <p>
+         THE PRESIDENT:  But — no, no.  Wait.  But you can’t say this.  Look, I put on a ban.  In other words, I stopped China from coming to the United States.  I stopped Europe from coming into the United States, long before the March date that you’re talking about.  So people should say I acted very early.  That was a very hard thing to do.  Doing that was a very hard thing.  I didn’t want to do that.
+        </p>
+        <p>
+         Q    But you held rallies in February and March.
+        </p>
+        <p>
+         THE PRESIDENT:  But I did it because I thought — and Dr. Fauci said that, by doing it, President Trump saved tens of thousands of lives.  So I did take it very seriously.
+        </p>
+        <p>
+         Q    You held rallies in February and in March.  And there are some Americans saying —
+        </p>
+        <p>
+         THE PRESIDENT:  Oh, I don’t know — I don’t know about rallies.  I really don’t know about rallies.
+        </p>
+        <p>
+         Q    You had about five rallies in February.
+        </p>
+        <p>
+         THE PRESIDENT:  I know one thing: I haven’t left the White House in months, except for a brief moment to give a wonderful ship, the Comfort —
+        </p>
+        <p>
+         Q    You held a rally in March.
+        </p>
+        <p>
+         THE PRESIDENT:  I don’t know.  Did I hold a rally?  I’m sorry I hold a rally.  Did I hold a rally?  Let me tell you, in January, when I did this, you had virtually no cases and no deaths, and yet I put it on.  So how could I not?
+        </p>
+        <p>
+         Why was Nancy Pelosi — right? — Nancy Pelosi is holding a street fair.  She wants a street fair in San Francisco, in Chinatown, to prove — you know what the purpose of it was — to prove that there’s no problem.  Many other politicians did the same thing.  They wanted to prove —
+        </p>
+        <p>
+         Q    So you (inaudible) —
+        </p>
+        <p>
+         THE PRESIDENT:  While I was — no, of course not.  No, no, no.  I’ve been — people are amazed at how early I acted, and I did act early.  With that being said, it’s very hard to say, “Let’s close down the greatest economy in the history of the world.”  I had it closed down.  I, and everybody else that works with me, and 300 and — close to 350 million people built the greatest economy in the history of the world: best employment numbers, best stock market numbers, best numbers in virtually every category.  Even good manufacturing numbers.  The previous administration said manufacturing was dead for our country.  Even great manufacturing numbers.
+        </p>
+        <p>
+         And you know what?  I did that, and somebody walked into my office and said, “Sir, you’re going to have to close down the economy.  You’re going to have to close the country.”  But you know what I say to you?  We’re going to rebuild it.  And we’re going to rebuild it better, and it’s going to go faster than people think.  I built it once; I’ll built it a second time.
+        </p>
+        <p>
+         Please.
+        </p>
+        <p>
+         Q    Mr. President, thank you.  Chanel Rion with One America News.
+        </p>
+        <p>
+         THE PRESIDENT:  Please.  Go ahead.
+        </p>
+        <p>
+         Q    We have — in going back to the topic of friendship and bipartisanship — Americans — with the exception of Pelosi, Schumer, and even Romney — Americans have seen an unprecedented chapter of bipartisanship and cooperation on the political landscape.  On a personal note, what has been the most significant signal that your relationship with Democrats, below the leadership level, have changed for the good of America?
+        </p>
+        <p>
+         THE PRESIDENT:  I think it’s a great question, because there is bipartisanship.  Look, we’re getting the Paycheck Plan.  It’s — already $350 billion was approved, essentially unanimously.  And we have another 250, which I think you’re going to find out is going to be a higher number than that.  Okay?  I won’t say it now, because I don’t know if they’ve released it or not, but it’s going to end up being more than $250 billion.  And this is going to small businesses and it’s going to workers.
+        </p>
+        <p>
+         And these are really bipartisan plans.  It’s a great thing that’s happening.  So I think the fact that we’re able to do all of this in a bipartisan way is great.
+        </p>
+        <p>
+         Now, the tax cuts that the Republicans did, we had no help from the Democrats, so you can’t say that’s bipartisan.  But this whole thing, getting our country back — and, you know, Nancy Pelosi has been — she’s very nasty.  She, you know, wasted a lot of time with the impeachment hoax.  It was a total hoax.  It went nowhere.  But — and that was not good.  And Schumer, I guess, did the same thing, but he sort of accepted it.  He just did what he was supposed to do, and he didn’t do very well with it.  But, you know, that was not appropriate.  That was a bad thing for our country.  But it was fine.  I mean, I understand the game.
+        </p>
+        <p>
+         They have a little bit of a majority.  So they say, “Let’s do something and let’s try and stir it up.”  But they wasted a year.  They wasted tremendous — we could’ve been doing things that would have been great for our country.  They could have been looking into China.  They should have been looking into China, as an example.  A lot of people are blaming the Democrats for wasting all that time, because it was during that period of time, as you know, that it was fomenting.
+        </p>
+        <p>
+         But I think we’ve had a great spirit of bipartisanship, in a certain way.  It’s not — I wouldn’t say we’re going to set records throughout the world, but things are happening that are very good.  The country is coming together.  And I’ll tell you what: The people are coming together.  The people are really coming together.  I think you’re going to find that our country is much more unified.
+        </p>
+        <p>
+         I do think that the press, the media, foments a lot of this — a lot of anger.  I really believe it.  It foments tremendous anger.  For instance, I’ll be asked a tremendously hostile question from somebody, and then I’ll answer to — in a hostile way, which is appropriate; otherwise, you look foolish.  Otherwise, it looks like just walk off the stage and bow your head.  I can’t do that.  You know, I just can’t do that.
+        </p>
+        <p>
+         But a lot of these questions that are asked from certain networks are so hostile, and there’s no reason for it.  There’s no reason for it.  We are in a war.  This is a World War Two, this is a World War One — where, by the way, the war essentially ended because of a plague.  That was one of the worst ever.  They lost almost 100 million people.  But we’re in a big war.
+        </p>
+        <p>
+         And I’ll say one thing about — because I think it’s important.  The last person — I did it early, but I was the last person that wanted to close down one of the great economic — you can’t call it an experiment, but everything, I guess, in life is an experiment.  So I say experiments.  But one of the great economic stories in history.  I’m the last person who wanted to do it.
+        </p>
+        <p>
+         But we did the right thing, because if we didn’t do it, you would have had a million people, a million and a half people, maybe 2 million people dead.  Now, we’re going toward 50, I’m hearing, or 60,000 people.  One is too many.  I always say it: One is too many.  But we’re going toward 50- or 60,000 people.  That’s at the lower — as you know, the low number was supposed to be 100,000 people.  We — we could end up at 50 to 60.  Okay?  It’s horrible.  If we didn’t do what we did, we would have had, I think, a million people, maybe 2 million people, maybe more than that.
+        </p>
+        <p>
+         And you look — there’s one country in particular that decided, “Let’s wing it.  Let’s just keep going.”  They are being inundated with death.  Now, if you take a look at some of the hospitals where — one of them I knew growing up in Queens, and I’m looking at the bodies laying in hallways, being brought into refrigerated trucks.  The trucks — these massive trucks, bodies going in.  Multiply that times 10.  It’s not sustainable.
+        </p>
+        <p>
+         And many of the people that have this theory, “Oh, let’s — you know, maybe we could have just gone right through it,” I was — I was somebody that would have loved to have done that, but it wouldn’t have been sustainable.  You can’t lose a million people.  That’s more than — that’s almost double what we lost in the Civil War.  I use that as a guide.  Civil War: 600,000 people died.  So it’s not sustainable.  But it could have been much more than a million people.
+        </p>
+        <p>
+         I mean, if you took a number and cut it half, and half, and in half again, you’d end up at 500,000 people — okay? — if you want to make a very conservative guesstimate.  Five hundred thousand people is not acceptable.  Is that a correct sort of an analogy?
+        </p>
+        <p>
+         So, I mean, I see it all the time by friends of mine, by people that I have great respect for: “Well, we could have done this.  We could have done…”  And remember this: When we say 50 and they compare 50 to the 35 of the flu — because it averaged 35, 36,000 over a 10-year period.  It’s a lot.  Who would think that?  But we’re not talking about with the flu.  That’s just — it just goes.  We’re not locking ourselves in our units.  We’re not locking ourselves in our apartments and not moving and not touching anybody, and just saying — you know, the world.  In this case, we are.  And we’re still going to lose between 50 and 60.
+        </p>
+        <p>
+         But if we just kept it going on a normal basis, which is really the only standard that you can compare it to with the flu, because that was a normal basis.  You get into an airplane, you travel to Florida, you go to Texas.  You go wherever you’re going.
+        </p>
+        <p>
+         But, in this case, if we didn’t do anything, the number wouldn’t be 50 to 60,000.  The number would be a million people dead.  It would be a million-five, a million-two.  Maybe 700,000.  It would have been a number in — like that.
+        </p>
+        <p>
+         Because — because — and it’s so important because I see so much: “Oh, well, you know, they can…”  You can’t compare it, because I’ll tell you what: The people of this country, what they’ve done — they’ve gone out of their way — what they — the way they’ve lived, it hasn’t — it’s not — it’s not great.  It’s terrible.  Maybe the first three days, and then all of a sudden — you see what’s going on; they want to get going.  And I get that fully.
+        </p>
+        <p>
+         But I just say this: If we would have done that, we would have lost anywhere from a million to more than 2 million people.  Now, with all of the death that we’ve seen — and 50- or 60,000 people, heading toward — right now it’s at 40.  But 50- or 60,000 people; probably over 50, from what I see.  But that’s with our guard up.  If we took our guard down and just said, “Okay, we’re just going to keep this open,” we would have lost millions of people.  Can you imagine?
+        </p>
+        <p>
+         Look how bad it looks now, when you look at the bodies.  When you look at Hart Island in New York, where they have the mass grave, and all of the things that you see.  Can you imagine if we had the guard down, if we didn’t do anything and we just said, “Let’s ride it out”?  It would not have been sustainable in any way.  It would have been an atrocity.
+        </p>
+        <p>
+         So we’ve done the right thing.  We’ve really done the right thing.  And the people that have worked so hard — and dangerously.  I’ll tell you — again, I say it, but I watch those doctors and nurses and medical people running into those hospitals, and they don’t even have their gear on.  Forget about gear, whether it’s great gear or not.  And we’re bringing in the best gear in the world.  But they’re running in with open everything, and they’re pushing.  I mean, the job — they’re like warriors, the job they’re doing.
+        </p>
+        <p>
+         But if we didn’t do the moves that we made, you would have had a million, a million and a half, 2 million people dead.  So multiply that times 50; you’re talking about — you would have had 10 to 20 to 25 times more people dead than all of the people that we’ve been watching.  That’s not acceptable.  The 50,000 is not acceptable.  It’s so horrible.  But can you imagine multiplying that out by 20 or more?  It’s not acceptable.
+        </p>
+        <p>
+         So it’s a very good question.  I appreciate it.  We’ll see you tomorrow.  We’ll see you tomorrow.
+        </p>
+        <p>
+         END                 7:18 P.M. EDT
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </main>
+   <!-- end main -->
+   <footer class="footer">
+    <div class="footer__wrap">
+     <div class="footer__logo">
+      <a href="https://www.whitehouse.gov">
+       <img alt="White House Logo" class="footer__img" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-footer-sm.png" srcset="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-footer-sm.png 1x, https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-footer-md.png 2x, https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-footer-lg.png 3x"/>
+      </a>
+     </div>
+     <div class="footer__site-title">
+      The White House
+     </div>
+     <span class="footer__divider divider">
+      <hr/>
+      <hr/>
+     </span>
+     <div class="footer__nav">
+      <nav class="nav nav--footer">
+       <ul class="nav__menu nav__menu--depth0 menu">
+        <li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-page menu-item-17230">
+         <a class="nav__link" href="https://www.whitehouse.gov/live/">
+          Live
+         </a>
+        </li>
+        <li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-custom menu-item-object-custom menu-item-8288">
+         <a class="nav__link" href="https://apply.whitehouse.gov/">
+          Jobs
+         </a>
+        </li>
+        <li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-page menu-item-8093">
+         <a class="nav__link" href="https://www.whitehouse.gov/get-involved/">
+          Get Involved
+         </a>
+        </li>
+        <li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-page menu-item-8092">
+         <a class="nav__link" href="https://www.whitehouse.gov/copyright/">
+          Copyright Policy
+         </a>
+        </li>
+        <li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-8095">
+         <a class="nav__link" href="https://www.whitehouse.gov/privacy-policy/">
+          Privacy Policy
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+    </div>
+    <div class="footer__social">
+     <nav class="nav nav--social-links-menu">
+      <ul class="nav__menu nav__menu--depth0 menu">
+       <li class="nav__menu-item nav__menu-item--depth0 footer__social-link__twitter menu-item menu-item-type-custom menu-item-object-custom menu-item-21">
+        <a class="nav__link" href="https://twitter.com/whitehouse" rel="noopener noreferrer" target="_blank">
+         <span>
+          Twitter
+         </span>
+        </a>
+       </li>
+       <li class="nav__menu-item nav__menu-item--depth0 footer__social-link__facebook menu-item menu-item-type-custom menu-item-object-custom menu-item-20">
+        <a class="nav__link" href="https://www.facebook.com/WhiteHouse/" rel="noopener noreferrer" target="_blank">
+         <span>
+          Facebook
+         </span>
+        </a>
+       </li>
+       <li class="nav__menu-item nav__menu-item--depth0 footer__social-link__instagram menu-item menu-item-type-custom menu-item-object-custom menu-item-22">
+        <a class="nav__link" href="https://www.instagram.com/whitehouse/" rel="noopener noreferrer" target="_blank">
+         <span>
+          Instagram
+         </span>
+        </a>
+       </li>
+       <li class="nav__menu-item nav__menu-item--depth0 footer__social-link__email menu-item menu-item-type-custom menu-item-object-custom menu-item-23">
+        <a class="nav__link" href="https://www.whitehouse.gov/contact/">
+         <span>
+          Contact
+         </span>
+        </a>
+       </li>
+      </ul>
+     </nav>
+    </div>
+   </footer>
+  </div>
+  <!-- end .body-overflow -->
+  <section id="wp-footer">
+   <script src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/vendor/jquery/dist/jquery.min.js?ver=fb3993a9" type="text/javascript">
+   </script>
+   <script src="https://www.whitehouse.gov/wp-includes/js/clipboard.min.js?ver=5.4" type="text/javascript">
+   </script>
+   <script src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/vendor/bows/dist/bows.min.js?ver=fb3993a9" type="text/javascript">
+   </script>
+   <script src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/dist/site.min.js?ver=fb3993a9" type="text/javascript">
+   </script>
+   <script type="text/javascript">
+    window.site = new Site();
+   </script>
+  </section>
+  <div class="popover" role="dialog">
+   <div class="popover__bar">
+    <button class="popover__hamburger-toggle" type="button">
+     <img alt="Close Menu" class="popover__hamburger-toggle-close" height="20" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/close.svg" width="20"/>
+     <img alt="Open Menu" class="popover__hamburger-toggle-open" height="20" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/hamburger.svg" width="28"/>
+    </button>
+    <button class="popover__search-toggle" type="button">
+     <img alt="Close Search" class="popover__search-toggle-close" height="20" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/close.svg" width="20"/>
+     <img alt="Open Search" class="popover__search-toggle-open" height="20" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/search.svg" width="20"/>
+    </button>
+   </div>
+   <div class="popover__content">
+    <div class="popover__hamburger">
+     <div class="popover__nav">
+      <nav class="nav nav--popover">
+       <ul class="nav__menu nav__menu--depth0 menu">
+        <li class="nav__menu-item nav__menu-item--depth0 nav__menu-item--has-submenu nav__menu-item--active-ancestor menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children current-menu-parent current-menu-ancestor nav__menu-item--has-menu-5 menu-item-658">
+         <a class="nav__link" href="https://www.whitehouse.gov/news/">
+          News
+         </a>
+         <ul class="nav__menu nav__menu--depth1 sub-menu">
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-152066">
+           <a class="nav__link" href="https://www.whitehouse.gov/remarks/">
+            Remarks
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 nav__menu-item--active menu-item menu-item-type-post_type_archive menu-item-object-briefing-statement current-menu-item menu-item-105680">
+           <a class="nav__link" href="https://www.whitehouse.gov/briefings-statements/">
+            Briefings &amp; Statements
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type_archive menu-item-object-presidential-action menu-item-105687">
+           <a class="nav__link" href="https://www.whitehouse.gov/presidential-actions/">
+            Presidential Actions
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-105701">
+           <a class="nav__link" href="https://www.whitehouse.gov/articles/">
+            Articles
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-105694">
+           <a class="nav__link" href="https://www.whitehouse.gov/news/">
+            All News
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav__menu-item nav__menu-item--depth0 nav__menu-item--has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav__menu-item--has-menu-6 menu-item-659">
+         <a class="nav__link" href="https://www.whitehouse.gov/issues/">
+          Issues
+         </a>
+         <ul class="nav__menu nav__menu--depth1 sub-menu">
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-issue menu-item-105708">
+           <a class="nav__link" href="https://www.whitehouse.gov/issues/education/">
+            Education
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-issue menu-item-105715">
+           <a class="nav__link" href="https://www.whitehouse.gov/issues/national-security-defense/">
+            National Security &amp; Defense
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-issue menu-item-105729">
+           <a class="nav__link" href="https://www.whitehouse.gov/issues/budget-spending/">
+            Budget &amp; Spending
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-issue menu-item-105722">
+           <a class="nav__link" href="https://www.whitehouse.gov/issues/immigration/">
+            Immigration
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-issue menu-item-105736">
+           <a class="nav__link" href="https://www.whitehouse.gov/issues/healthcare/">
+            Healthcare
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-105743">
+           <a class="nav__link" href="https://www.whitehouse.gov/issues/">
+            All Issues
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav__menu-item nav__menu-item--depth0 nav__menu-item--has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav__menu-item--has-menu-6 menu-item-795">
+         <a class="nav__link" href="https://www.whitehouse.gov/the-trump-administration/">
+          The Administration
+         </a>
+         <ul class="nav__menu nav__menu--depth1 sub-menu">
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-authors menu-item-105757">
+           <a class="nav__link" href="https://www.whitehouse.gov/people/donald-j-trump/">
+            President Donald J. Trump
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-authors menu-item-105764">
+           <a class="nav__link" href="https://www.whitehouse.gov/people/mike-pence/">
+            Vice President Michael R. Pence
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-authors menu-item-105750">
+           <a class="nav__link" href="https://www.whitehouse.gov/people/melania-trump/">
+            First Lady Melania Trump
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-authors menu-item-105771">
+           <a class="nav__link" href="https://www.whitehouse.gov/people/karen-pence/">
+            Second Lady Karen Pence
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-105778">
+           <a class="nav__link" href="https://www.whitehouse.gov/the-trump-administration/the-cabinet/">
+            The Cabinet
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-105785">
+           <a class="nav__link" href="https://www.whitehouse.gov/disclosures/">
+            Disclosures
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav__menu-item nav__menu-item--depth0 nav__menu-item--has-submenu menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav__menu-item--has-menu-6 menu-item-105792">
+         <a class="nav__link" href="#">
+          Executive Offices
+         </a>
+         <ul class="nav__menu nav__menu--depth1 sub-menu">
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-eop-component menu-item-105806">
+           <a class="nav__link" href="https://www.whitehouse.gov/cea/">
+            Council of Economic Advisers
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-eop-component menu-item-105799">
+           <a class="nav__link" href="https://www.whitehouse.gov/ceq/">
+            Council on Environmental Quality
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-eop-component menu-item-105813">
+           <a class="nav__link" href="https://www.whitehouse.gov/nsc/">
+            National Security Council
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-eop-component menu-item-106142">
+           <a class="nav__link" href="https://www.whitehouse.gov/omb/">
+            Office of Management and Budget
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-eop-component menu-item-105827">
+           <a class="nav__link" href="https://www.whitehouse.gov/ondcp/">
+            Office of National Drug Control Policy
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-eop-component menu-item-105834">
+           <a class="nav__link" href="https://www.whitehouse.gov/ostp/">
+            Office of Science and Technology Policy
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav__menu-item nav__menu-item--depth0 nav__menu-item--has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav__menu-item--has-menu-5 menu-item-1548">
+         <a class="nav__link" href="https://www.whitehouse.gov/about-the-white-house/">
+          About The White House
+         </a>
+         <ul class="nav__menu nav__menu--depth1 sub-menu">
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-105848">
+           <a class="nav__link" href="https://www.whitehouse.gov/about-the-white-house/tours-events/">
+            Tours &amp; Events
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-105855">
+           <a class="nav__link" href="https://www.whitehouse.gov/about-the-white-house/presidents/">
+            Past Presidents
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-105862">
+           <a class="nav__link" href="https://www.whitehouse.gov/about-the-white-house/first-ladies/">
+            Past First Ladies
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 nav__menu-item--has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav__menu-item--has-menu-5 menu-item-105995">
+           <a class="nav__link" href="https://www.whitehouse.gov/about-the-white-house/the-grounds/">
+            The Grounds
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 nav__menu-item--has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav__menu-item--has-menu-7 menu-item-106079">
+           <a class="nav__link" href="https://www.whitehouse.gov/about-the-white-house/our-government/">
+            Our Government
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav__menu-item nav__menu-item--depth0 nav__menu-item--has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav__menu-item--has-menu-3 menu-item-5738">
+         <a class="nav__link" href="https://www.whitehouse.gov/get-involved/">
+          Get Involved
+         </a>
+         <ul class="nav__menu nav__menu--depth1 sub-menu">
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-105869">
+           <a class="nav__link" href="https://www.whitehouse.gov/get-involved/write-or-call/">
+            Write or Call the White House
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 nav__menu-item--has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav__menu-item--has-menu-3 menu-item-105876">
+           <a class="nav__link" href="https://www.whitehouse.gov/get-involved/internships/">
+            White House Internship Program
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 nav__menu-item--has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav__menu-item--has-menu-4 menu-item-105904">
+           <a class="nav__link" href="https://www.whitehouse.gov/get-involved/fellows/">
+            White House Fellows
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-page menu-item-105988">
+         <a class="nav__link" href="https://www.whitehouse.gov/contact/">
+          Contact
+         </a>
+        </li>
+        <li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-page nav__menu-item--live menu-item-105974">
+         <a class="nav__link" href="https://www.whitehouse.gov/live/">
+          <span class="nav__menu-item-label">
+           Live
+          </span>
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+     <div class="popover__seal">
+      <img alt="Presidential Crest" height="435" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/presidential-crest-gray.svg" width="435"/>
+     </div>
+    </div>
+    <div class="popover__search">
+     <form action="https://www.whitehouse.gov/search/" class="popover__search-form">
+      <label class="visually-hidden" for="popover__search-input">
+       Type Your Search
+      </label>
+      <input autocomplete="off" class="popover__search-input" id="popover__search-input" name="s" placeholder="Type Your Search..." type="search"/>
+      <button class="popover__search-submit" type="submit">
+       <span>
+        Press enter to search
+       </span>
+      </button>
+     </form>
+    </div>
+   </div>
+  </div>
+  <script type="text/javascript">
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"9360826e15","applicationID":"80795461,484304241,484396381","transactionName":"MVNbZhQFXEAEVBBfWQgZeFESDV1dSkQNWFEKUxRQFA1XVQxZAxtFEldNVwsBXEc=","queueTime":0,"applicationTime":325,"atts":"HRRYEFwfT04=","errorBeacon":"bam.nr-data.net","agent":""}
+  </script>
+ </body>
+</html>

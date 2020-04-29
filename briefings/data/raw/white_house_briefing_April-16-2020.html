@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+ <head>
+  <script>
+   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
+		document.createElement('picture');
+  </script>
+  <meta charset="utf-8"/>
+  <meta content="ie=edge" http-equiv="x-ua-compatible"/>
+  <script type="text/javascript">
+   (window.NREUM||(NREUM={})).loader_config={xpid:"VQ4FUVdTCBAIVVFUBQUGUw==",licenseKey:"9360826e15",applicationID:"81062415"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(21),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(22),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),c.xhrWrappable&&t(10),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(9),s=t(8),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof x&&(this.bstStart=y.now())}),o.on(w,function(t,n){var e=t[0];e instanceof x&&i("bst",[e,n,this.bstStart,y.now()])}),a.on(m,function(t,n,e){this.bstStart=y.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),this.bstType])}),s.on(m,function(){this.bstStart=y.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),"requestAnimationFrame"])}),o.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),o.on(g+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){function r(t,n,e){var r=t[n];"function"==typeof r&&(t[n]=function(){var t=i(arguments),n={};o.emit(e+"before-start",[t],n);var a;n[m]&&n[m].dt&&(a=n[m].dt);var s=r.apply(this,t);return o.emit(e+"start",[t,a],s),s.then(function(t){return o.emit(e+"end",[null,t],s),t},function(t){throw o.emit(e+"end",[t],s),t})})}var o=t("ee").get("fetch"),i=t(22),a=t(21);n.exports=o;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,n){r(d[h],n,f),r(l[h],n,f)}),r(s,"fetch",c),o.on(c+"end",function(t,n){var e=this;if(n){var r=n.headers.get("content-length");null!==r&&(e.rxSize=r),o.emit(c+"done",[null,n],e)}else o.emit(c+"done",[t],e)}))},{}],7:[function(t,n,e){var r=t("ee").get("history"),o=t("wrap-function")(r);n.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,n,e){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],9:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t("wrap-function")(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],10:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",s)}function i(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];n.exports=u;var x=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,n,e){function r(t){if(!i(t))return null;var n=window.NREUM;if(!n.loader_config)return null;var e=(n.loader_config.accountID||"").toString()||null,r=(n.loader_config.agentID||"").toString()||null,s=(n.loader_config.trustKey||"").toString()||null;if(!e||!r)return null;var c=a.generateCatId(),f=a.generateCatId(),u=Date.now(),d=o(c,f,u,e,r,s);return{header:d,guid:c,traceId:f,timestamp:u}}function o(t,n,e,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:n,ti:e}};return i&&r!==i&&(s.d.tk=i),btoa(JSON.stringify(s))}function i(t){var n=!1,e=!1,r={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(r=NREUM.init.distributed_tracing,e=!!r.enabled),e)if(t.sameOrigin)n=!0;else if(r.allowed_origins instanceof Array)for(var o=0;o<r.allowed_origins.length;o++){var i=s(r.allowed_origins[o]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){n=!0;break}}return e&&n}var a=t(19),s=t(13);n.exports={generateTracePayload:r,shouldGenerateTrace:i}},{}],12:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);n.aborted||(e.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):i(this,t),e.cbTime=this.cbTime,u.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime]))}}function o(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.parsedOrigin=c(n),t.sameOrigin=t.parsedOrigin.sameOrigin}function i(t,n){t.params.status=n.status;var e=w(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){i(n,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=f(this.parsedOrigin);e&&e.header&&(n.setRequestHeader("newrelic",e.header),this.dt=e)}),u.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=m(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<l;s++)n.addEventListener(d[s],this.listener,!1)}),u.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),u.on("xhr-load-added",function(t,n){var e=""+p(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,n){var e=""+p(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],n)}),u.on("removeEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],n)}),u.on("fn-start",function(t,n,e){n instanceof v&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,n){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)}),u.on("fetch-before-start",function(t){var n,e=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url&&(n=t[0].url),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var r=f(this.parsedOrigin);if(r&&r.header){var o=r.header;if("string"==typeof t[0]){var i={};for(var a in e)i[a]=e[a];i.headers=new Headers(e.headers||{}),i.headers.set("newrelic",o),this.dt=r,t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&(t[0].headers.append("newrelic",o),this.dt=r)}})}},{}],13:[function(t,n,e){var r={};n.exports=function(t){if(t in r)return r[t];var n=document.createElement("a"),e=window.location,o={};n.href=t,o.port=n.port;var i=n.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("/")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=n.hostname||e.hostname,o.pathname=n.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!n.protocol||":"===n.protocol||n.protocol===e.protocol,s=n.hostname===document.domain&&n.port===e.port;return o.sameOrigin=a&&(!n.hostname||s),"/"===o.pathname&&(r[t]=o),o}},{}],14:[function(t,n,e){function r(t,n){var e=t.responseType;return"json"===e&&null!==n?n:"arraybuffer"===e||"blob"===e||"json"===e?o(t.response):"text"===e||"document"===e||""===e||void 0===e?o(t.responseText):void 0}var o=t(16);n.exports=r},{}],15:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(21),s=t(22),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],16:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],17:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],18:[function(t,n,e){function r(t,n){var e=t.getEntries();e.forEach(function(t){"first-paint"===t.name?c("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&c("timing",["fcp",Math.floor(t.startTime)])})}function o(t,n){var e=t.getEntries();e.length>0&&c("lcp",[e[e.length-1]])}function i(t){if(t instanceof u&&!l){var n,e=Math.round(t.timeStamp);n=e>1e12?Date.now()-e:f.now()-e,l=!0,c("timing",["fi",e,{type:t.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,s,c=t("handle"),f=t("loader"),u=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),s=new PerformanceObserver(o);try{a.observe({entryTypes:["paint"]}),s.observe({entryTypes:["largest-contentful-paint"]})}catch(d){}}if("addEventListener"in document){var l=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(t){document.addEventListener(t,i,!1)})}}},{}],19:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],20:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],21:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],22:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],23:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([x,e,r,a]),a}}function p(t,n){g[t]=m(t).concat(n)}function h(t,n){var e=g[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return g[t]||[]}function w(t){return d[t]=d[t]||o(e)}function v(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var g={},y={},x={on:p,addEventListener:p,removeEventListener:h,emit:e,get:w,listeners:m,context:n,buffer:v,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(21),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(21),u=t("ee"),d=t(20),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:g,features:{},xhrWrappable:x,userAgent:d};t(15),t(18),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(23)},{}],"wrap-function":[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(22),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}]},{},["loader",2,12,4,3]);
+  </script>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Remarks by President Trump, Vice President Pence, and Members of the Coronavirus Task Force in Press Briefing | The White House
+  </title>
+  <script type="application/ld+json">
+   [{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"News","item":"https://www.whitehouse.gov/news/"},{"@type":"ListItem","position":2,"name":"Briefing Statements","item":"https://www.whitehouse.gov/briefings-statements/"},{"@type":"ListItem","position":3,"name":"Remarks by President Trump, Vice President Pence, and Members of the Coronavirus Task Force in Press Briefing"}]}]
+  </script>
+  <meta content="James S. Brady Press Briefing Room 6:06 P.M. EDT THE PRESIDENT:  Thank you very much.  Our nation is engaged in a historic battle against the invisible ene" name="description"/>
+  <link href="https://www.whitehouse.gov/briefings-statements/remarks-president-trump-vice-president-pence-members-coronavirus-task-force-press-briefing-27/" rel="canonical"/>
+  <meta content="en_US" property="og:locale"/>
+  <meta content="article" property="og:type"/>
+  <meta content="Remarks by President Trump, Vice President Pence, and Members of the Coronavirus Task Force in Press Briefing | The White House" property="og:title"/>
+  <meta content="James S. Brady Press Briefing Room 6:06 P.M. EDT THE PRESIDENT:  Thank you very much.  Our nation is engaged in a historic battle against the invisible ene" property="og:description"/>
+  <meta content="https://www.whitehouse.gov/briefings-statements/remarks-president-trump-vice-president-pence-members-coronavirus-task-force-press-briefing-27/" property="og:url"/>
+  <meta content="The White House" property="og:site_name"/>
+  <meta content="https://facebook.com/whitehouse" property="article:publisher"/>
+  <meta content="1790466490985150" property="fb:app_id"/>
+  <meta content="https://www.whitehouse.gov/wp-content/uploads/2017/12/wh.gov-share-img_03-1024x538.png" property="og:image"/>
+  <meta content="https://www.whitehouse.gov/wp-content/uploads/2017/12/wh.gov-share-img_03-1024x538.png" property="og:image:secure_url"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="James S. Brady Press Briefing Room 6:06 P.M. EDT THE PRESIDENT:  Thank you very much.  Our nation is engaged in a historic battle against the invisible ene" name="twitter:description"/>
+  <meta content="Remarks by President Trump, Vice President Pence, and Members of the Coronavirus Task Force in Press Briefing | The White House" name="twitter:title"/>
+  <meta content="@whitehouse" name="twitter:site"/>
+  <meta content="https://www.whitehouse.gov/wp-content/uploads/2017/12/wh.gov-share-img_03-1024x538.png" name="twitter:image"/>
+  <meta content="@whitehouse" name="twitter:creator"/>
+  <link crossorigin="" href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900,900i&amp;subset=latin-ext" id="google-fonts-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/dist/site.min.css?ver=fb3993a9" id="site-css" media="all" rel="stylesheet" type="text/css"/>
+  <script src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/dist/polyfills.min.js?ver=fb3993a9" type="text/javascript">
+  </script>
+  <script src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/vendor/picturefill/dist/picturefill.min.js?ver=fb3993a9" type="text/javascript">
+  </script>
+  <link href="/favicon.ico?ver=fb3993a9" rel="icon" type="image/x-icon"/>
+  <link href="/favicon-32x32.png?ver=fb3993a9" rel="icon" sizes="32x32" type="image/png"/>
+  <link href="/favicon-16x16.png?ver=fb3993a9" rel="icon" sizes="16x16" type="image/png"/>
+  <link href="/apple-touch-icon-precomposed.png?ver=fb3993a9" rel="apple-touch-icon-precomposed" sizes="180x180"/>
+  <link href="/touch-icon-256x256.png?ver=fb3993a9" rel="icon" sizes="256x256" type="image/png"/>
+  <link href="/touch-icon-192x192.png?ver=fb3993a9" rel="icon" sizes="192x192" type="image/png"/>
+  <link href="/site.webmanifest?ver=fb3993a9" rel="manifest"/>
+  <link color="#336799" href="/safari-pinned-tab.svg?ver=fb3993a9" rel="mask-icon"/>
+  <meta content="The White House" name="apple-mobile-web-app-title"/>
+  <meta content="The White House" name="application-name"/>
+  <meta content="#0c2644" name="msapplication-TileColor"/>
+  <meta content="#f5f5f5" name="theme-color"/>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-12099831-10">
+  </script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-12099831-10');
+		window.gtag_id = 'UA-12099831-10';
+  </script>
+  <script>
+   !function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="B75PJ-VWDMF-FF8GY-2P7NB-DC3RE",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,o,_,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",_=document.getElementsByTagName("script")[0],_.parentNode.insertBefore(r,_);try{o=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",o=r.contentWindow.document}o.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"B75PJ-VWDMF-FF8GY-2P7NB-DC3RE",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},o.write("<bo"+'dy onload="document._l();">'),o.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e=""=="true"?1:0,t="",n="qasaoyyxanpcexvj5asq-f-9dda98847-clientnsv4-s.akamaihd.net",i={"ak.v":"27","ak.cp":"653138","ak.ai":parseInt("351244",10),"ak.ol":"0","ak.cr":91,"ak.ipv":4,"ak.proto":"","ak.rid":"7ed2eb1","ak.r":35636,"ak.a2":e,"ak.m":"dscb","ak.n":"essl","ak.bpcip":"128.36.7.0","ak.cport":43188,"ak.gh":"172.232.11.15","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.csrc":"-","ak.acc":"fast","ak.t":"1588193317","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==0w8jOJcO0K6LG368hFQdTc6e8I3rZNkg15Fg8yLeI7AoUoKytWGv6I6dKjfXFIbwkREWDcpQb7pyGM8iKsYhV3BpXgUespdIpr+3bUq9dvXyJA8NnmBtZC7d0+43bCK5Iy9/X85lpK8+TcxmHm6wSdDWUQv/iPkPy0b/j7rF9/hCdNiQgseYdpmTaL4TvICgPJhmoOgEJ+LiP3dwVN6Eaf5k+uIOqyR3ptstntICVL6/4hWbLd5BRNT8QODwUn/t0uY+QFA+BCW0uKh5L/fnZuRbC0DEGntlCAiKQryVz6vkU7ENzzAgC3GbLx40tmOXEZ2yvUT9HRCRea7czlJmalXWdmVIPpZuTQkegvy5bFoY8rzqnIhmwc5us/fZ54FMq1H3P2q8AdoTXZgMwARkAenLTxmOTOfE4CWkr8WW2KA=","ak.pv":"203"};if(""!==t)i["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))i["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);
+  </script>
+ </head>
+ <body class="briefing-statement-template-default single single-briefing-statement postid-233459">
+  <a class="skip-link" href="#main-content">
+   <span>
+    Skip to content
+   </span>
+  </a>
+  <div class="body-overflow">
+   <header class="header header--has-share">
+    <div class="header__container">
+     <div class="header__inner">
+      <button class="header__hamburger" type="button">
+       <b class="svg svg--hamburger" data-icon="hamburger" data-img-url="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/hamburger.png" data-svg-url="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/hamburger.svg">
+        <svg aria-label="Open Menu" focusable="false" height="20" role="img" viewbox="0 0 24 14" width="28" xmlns="http://www.w3.org/2000/svg">
+         <title>
+          Open Menu
+         </title>
+         <path d="M.64,12H16.36c.36,0,.64.43.64,1s-.28,1-.64,1H.64C.28,14,0,13.57,0,13s.28-1,.64-1M23.1,2H.9A.94.94,0,0,1,0,1,.94.94,0,0,1,.9,0H23.1A.94.94,0,0,1,24,1a.94.94,0,0,1-.9,1M.9,8A.94.94,0,0,1,0,7,.94.94,0,0,1,.9,6H23.1A.94.94,0,0,1,24,7a.94.94,0,0,1-.9,1Z" fill="#a98860">
+         </path>
+        </svg>
+       </b>
+      </button>
+      <div class="header__wrap">
+       <div class="header__logo">
+        <a href="https://www.whitehouse.gov">
+         <img alt="" class="logo--white" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-sm-wh.png" srcset="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-sm-wh.png 1x, https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-md-wh.png 2x, https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-lg-wh.png 3x"/>
+         <img alt="" class="logo--blue" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-sm-bl.png" srcset="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-sm-bl.png 1x, https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-md-bl.png 2x, https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-lg-bl.png 3x"/>
+         <span class="visually-hidden">
+          White House Logo
+         </span>
+        </a>
+       </div>
+       <div class="header__share">
+        <a class="header__share--copy" data-clipboard-text="https://www.whitehouse.gov/briefings-statements/remarks-president-trump-vice-president-pence-members-coronavirus-task-force-press-briefing-27/?utm_source=link&amp;utm_medium=header" href="https://www.whitehouse.gov/briefings-statements/remarks-president-trump-vice-president-pence-members-coronavirus-task-force-press-briefing-27/?utm_source=link&amp;utm_medium=header">
+         <b class="svg svg--share-link" data-icon="share-link" data-svg-url="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/share-link.svg">
+          <svg aria-label="Copy URL to your clipboard" focusable="false" height="15" role="img" width="17">
+           <title>
+            Copy URL to your clipboard
+           </title>
+           <g fill="#30669B">
+            <path d="M3.96 9.65c.85.8 2 1.22 3.2 1.22 1.2 0 2.35-.43 3.2-1.22l.94-.88c.35-.33.35-.85 0-1.2-.36-.32-.92-.32-1.28 0l-.94.9c-.5.47-1.2.74-1.92.74-.74 0-1.4-.26-1.93-.74L2.66 6.08c-1.07-1-1.07-2.6 0-3.6 1.08-.98 2.8-.98 3.85 0l.84.77c.35.33.9.33 1.27 0s.37-.85 0-1.2L7.8 1.3c-1.76-1.65-4.63-1.65-6.4 0-1.74 1.64-1.74 4.3 0 5.93l2.58 2.42zM5.7 6.25c-.35.33-.35.85 0 1.2.36.32.92.32 1.28 0l.94-.9c.5-.47 1.2-.74 1.92-.74s1.4.28 1.93.76l2.57 2.4c1.07 1 1.07 2.6 0 3.6-1.08 1-2.8 1-3.87 0l-.83-.77c-.36-.34-.92-.34-1.27 0-.36.32-.36.85 0 1.18l.82.77c.87.8 2.03 1.23 3.2 1.23 1.16 0 2.3-.42 3.2-1.23 1.76-1.65 1.76-4.3 0-5.96l-2.56-2.45c-.85-.8-2-1.22-3.2-1.22-1.2 0-2.35.43-3.2 1.22l-.94.9z">
+            </path>
+           </g>
+          </svg>
+         </b>
+         Share
+        </a>
+       </div>
+       <nav class="nav nav--primary header__nav">
+        <ul class="nav__menu nav__menu--depth0 menu">
+         <li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-issue menu-item-692">
+          <a class="nav__link" href="https://www.whitehouse.gov/issues/economy-jobs/">
+           Economy
+          </a>
+         </li>
+         <li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-issue menu-item-693">
+          <a class="nav__link" href="https://www.whitehouse.gov/issues/national-security-defense/">
+           National Security
+          </a>
+         </li>
+         <li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-issue menu-item-16229">
+          <a class="nav__link" href="https://www.whitehouse.gov/issues/budget-spending/">
+           Budget
+          </a>
+         </li>
+         <li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-issue menu-item-16236">
+          <a class="nav__link" href="https://www.whitehouse.gov/issues/immigration/">
+           Immigration
+          </a>
+         </li>
+         <li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-custom menu-item-object-custom menu-item-227001">
+          <a class="nav__link" href="http://www.coronavirus.gov">
+           Coronavirus.gov
+          </a>
+         </li>
+        </ul>
+       </nav>
+      </div>
+      <a class="header__search" href="https://www.whitehouse.gov/search/">
+       <span class="visually-hidden">
+        Search WhiteHouse.gov
+       </span>
+       <b class="svg svg--search" data-icon="search" data-img-url="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/search.png" data-svg-url="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/search.svg">
+        <svg aria-label="Open Search" focusable="false" height="20" role="img" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+         <title>
+          Open Search
+         </title>
+         <path d="M20,18.7l-5.1-5.1c2.6-3.3,2.4-8.1-0.6-11.2C12.7,0.9,10.6,0,8.4,0C6.1,0,4,0.9,2.5,2.5
+	C0.9,4,0,6.1,0,8.4s0.9,4.3,2.5,5.9c1.6,1.6,3.7,2.5,5.9,2.5c1.9,0,3.8-0.7,5.3-1.8l5.1,5.1L20,18.7z M8.5,15
+	c-1.7,0-3.4-0.7-4.6-1.9C2.7,11.9,2,10.2,2,8.5s0.7-3.4,1.9-4.6C5.1,2.7,6.8,2,8.5,2c1.7,0,3.4,0.7,4.6,1.9c2.5,2.5,2.5,6.7,0,9.2
+	C11.9,14.3,10.2,15,8.5,15z" fill="#A98860">
+         </path>
+        </svg>
+       </b>
+      </a>
+     </div>
+    </div>
+   </header>
+   <main id="main-content">
+    <div class="page-header page-header--small-title">
+     <div class="page-header__wrap">
+      <p class="page-header__section">
+       Remarks
+      </p>
+      <h1 class="page-header__title">
+       Remarks by President Trump, Vice President Pence, and Members of the Coronavirus Task Force in Press Briefing
+      </h1>
+      <div class="meta meta--mobile-wrap">
+       <div class="meta__issue">
+        <p class="issue-flag">
+         <a href="https://www.whitehouse.gov/issues/healthcare/">
+          Healthcare
+         </a>
+        </p>
+       </div>
+       <p class="meta__date">
+        <span class="meta__label">
+         Issued on:
+        </span>
+        <time>
+         April 16, 2020
+        </time>
+       </p>
+      </div>
+      <span class="divider">
+       <hr/>
+       <hr/>
+      </span>
+     </div>
+    </div>
+    <div class="page-content">
+     <div class="page-content__wrap">
+      <div class="page-content__content editor">
+       <aside class="editor__module editor__module--left editor__module--named editor__module-share">
+        <div class="share">
+         <ul>
+          <li class="share__item share__label">
+           Share:
+          </li>
+          <li class="share__item share__item--facebook">
+           <a class="share__link share__link--facebook" href="https://www.facebook.com/dialog/share?app_id=1790466490985150&amp;display=popup&amp;quote=Remarks%20by%20President%20Trump%2C%20Vice%20President%20Pence%2C%20and%20Members%20of%20the%20Coronavirus%20Task%20Force%20in%20Press%20Briefing&amp;href=https%3A%2F%2Fwww.whitehouse.gov%2Fbriefings-statements%2Fremarks-president-trump-vice-president-pence-members-coronavirus-task-force-press-briefing-27%2F%3Futm_source%3Dfacebook" rel="noopener noreferrer" target="_blank">
+            <b class="svg svg--share-facebook" data-icon="share-facebook" data-svg-url="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/share-facebook.svg">
+             <svg aria-label="Share this page on Facebook" focusable="false" height="18" role="img" width="10">
+              <title>
+               Share this page on Facebook
+              </title>
+              <g fill="#30669B">
+               <path d="M2.86 6.56V4.94c0-.6.1-1.15.3-1.68.2-.52.5-.97.84-1.35.36-.37.77-.67 1.25-.9.47-.22.98-.33 1.52-.33H9.4v3.2H6.76c-.15 0-.3.1-.44.3-.13.2-.2.43-.2.7v1.7H9.4V9.8H6.12v7.92H2.86V9.82H.24V6.56h2.62z">
+               </path>
+              </g>
+             </svg>
+            </b>
+           </a>
+          </li>
+          <li class="share__item share__item--twitter">
+           <a class="share__link share__link--twitter" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.whitehouse.gov%2Fbriefings-statements%2Fremarks-president-trump-vice-president-pence-members-coronavirus-task-force-press-briefing-27%2F%3Futm_source%3Dtwitter&amp;text=Remarks%20by%20President%20Trump%2C%20Vice%20President%20Pence%2C%20and%20Members%20of%20the%20Coronavirus%20Task%20Force%20in%20Press%20Briefing&amp;via=whitehouse" rel="noopener noreferrer" target="_blank">
+            <b class="svg svg--share-twitter" data-icon="share-twitter" data-svg-url="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/share-twitter.svg">
+             <svg aria-label="Share this page on Twitter" focusable="false" height="14" role="img" width="17">
+              <title>
+               Share this page on Twitter
+              </title>
+              <path d="M16.75 2.13c-.44.65-1 1.24-1.67 1.76v.38c0 1.1-.2 2.24-.63 3.4-.42 1.13-1.03 2.16-1.84 3.08-.8.93-1.8 1.67-2.98 2.25-1.18.6-2.54.88-4.08.88-.95 0-1.86-.14-2.72-.4-.87-.28-1.68-.66-2.44-1.14.13.02.26.03.4.03h.4c1.6 0 3-.48 4.16-1.42-.74-.02-1.4-.25-1.96-.7-.57-.42-.96-.98-1.16-1.65.22.06.43.1.6.1.18 0 .33-.02.47-.04.13-.02.28-.05.42-.1-.78-.15-1.42-.54-1.94-1.14-.5-.6-.76-1.32-.76-2.14v-.03c.22.12.46.2.7.28.26.08.54.1.86.1-.48-.28-.86-.67-1.12-1.16-.26-.48-.4-1.02-.4-1.62 0-.6.16-1.16.46-1.7.84 1.04 1.85 1.88 3.04 2.5 1.2.62 2.48.96 3.88 1.02-.06-.23-.08-.47-.08-.73 0-.46.08-.9.26-1.32.18-.42.42-.78.73-1.1.3-.3.66-.54 1.06-.72.4-.17.84-.26 1.3-.26.5 0 .96.1 1.37.3.4.2.77.44 1.1.76.36-.06.73-.16 1.1-.3.38-.16.72-.3 1.04-.48-.3.78-.78 1.4-1.47 1.84.35-.04.7-.1 1-.2.32-.1.63-.2.92-.33z" fill="#30669B">
+              </path>
+             </svg>
+            </b>
+           </a>
+          </li>
+          <li class="share__item share__item--clipboard">
+           <a class="share__link share__link--copy" data-clipboard-text="https://www.whitehouse.gov/briefings-statements/remarks-president-trump-vice-president-pence-members-coronavirus-task-force-press-briefing-27/?utm_source=link" href="https://www.whitehouse.gov/briefings-statements/remarks-president-trump-vice-president-pence-members-coronavirus-task-force-press-briefing-27/?utm_source=link">
+            <b class="svg svg--share-link" data-icon="share-link" data-svg-url="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/share-link.svg">
+             <svg aria-label="Copy URL to your clipboard" focusable="false" height="15" role="img" width="17">
+              <title>
+               Copy URL to your clipboard
+              </title>
+              <g fill="#30669B">
+               <path d="M3.96 9.65c.85.8 2 1.22 3.2 1.22 1.2 0 2.35-.43 3.2-1.22l.94-.88c.35-.33.35-.85 0-1.2-.36-.32-.92-.32-1.28 0l-.94.9c-.5.47-1.2.74-1.92.74-.74 0-1.4-.26-1.93-.74L2.66 6.08c-1.07-1-1.07-2.6 0-3.6 1.08-.98 2.8-.98 3.85 0l.84.77c.35.33.9.33 1.27 0s.37-.85 0-1.2L7.8 1.3c-1.76-1.65-4.63-1.65-6.4 0-1.74 1.64-1.74 4.3 0 5.93l2.58 2.42zM5.7 6.25c-.35.33-.35.85 0 1.2.36.32.92.32 1.28 0l.94-.9c.5-.47 1.2-.74 1.92-.74s1.4.28 1.93.76l2.57 2.4c1.07 1 1.07 2.6 0 3.6-1.08 1-2.8 1-3.87 0l-.83-.77c-.36-.34-.92-.34-1.27 0-.36.32-.36.85 0 1.18l.82.77c.87.8 2.03 1.23 3.2 1.23 1.16 0 2.3-.42 3.2-1.23 1.76-1.65 1.76-4.3 0-5.96l-2.56-2.45c-.85-.8-2-1.22-3.2-1.22-1.2 0-2.35.43-3.2 1.22l-.94.9z">
+               </path>
+              </g>
+             </svg>
+            </b>
+           </a>
+          </li>
+         </ul>
+        </div>
+       </aside>
+       <aside class="editor__module editor__module--left editor__module--named editor__module-all">
+        <div class="sidebar-button">
+         <a class="sidebar-button__text" href="https://www.whitehouse.gov/news/">
+          <img alt="menu" class="sidebar-button__icon" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/menu-large.svg"/>
+          All News
+         </a>
+        </div>
+       </aside>
+       <!-- The Content -->
+       <p>
+        James S. Brady Press Briefing Room
+       </p>
+       <p>
+        6:06 P.M. EDT
+       </p>
+       <p>
+        THE PRESIDENT:  Thank you very much.  Our nation is engaged in a historic battle against the invisible enemy.  To win this fight, we have undertaken the greatest national mobilization since World War Two.  And that’s exactly what it’s been.
+       </p>
+       <p>
+        We’ve marshaled every instrument of American power, and we’ve unleashed our most potent weapon of all: the courage of the American people.
+       </p>
+       <p>
+        These have been trying times.  A cruel virus from a distant land has unfairly claimed thousands of precious American lives.  To every citizen who has lost a cherished loved one: Your pain is our pain.  We mourn as one national family.  Our country has come together.  We draw solace from the faith that God has received, and the departed — He has taken the departed into his eternal and loving embrace.  They will never be forgotten.
+       </p>
+       <p>
+        Over the last weeks and months, millions of Americans have joined together in a shared national sacrifice to halt the spread of this horrible disease.  The Army built field hospitals and sports arenas and convention centers.  The Army Corps of Engineers is great.  Over 20,000 beds in record time.
+       </p>
+       <p>
+        The Navy sailed hospital ships to our biggest cities.  Lifesaving supplies and experimental medicines were rushed to the frontlines as we launched a rapid search for groundbreaking treatments and vaccines.
+       </p>
+       <p>
+        We built the most advanced and robust testing anywhere in the world, and we’ve done more testing than any country anywhere in the world.
+       </p>
+       <p>
+        We suspended dangerous foreign travel.  We leveraged our industrial base to produce vast quantities of critical medical gear and enacted a historic 2-trillion-dollar relief package.
+       </p>
+       <p>
+        Through it all, we have seen the heroism of our doctors and nurses like never before — these are our warriors — the bravery of our truck drivers — such bravery — and food suppliers — such incredible bravery, and the determination and drive of our citizens.  Through this unified national endeavor, we have made great progress.  You could really say incredible progress.
+       </p>
+       <p>
+        Our experts and scientists report that our strategy to slow the spread has saved hundreds of thousands of lives.  Models predicted between 1.5 million and 2.2 million U.S. deaths — if there was no mitigation, it could have even been higher than that — and between 100,000 and 240,000 deaths with mitigation.  It’s looking like we will come far under even these lowest numbers.
+       </p>
+       <p>
+        Thanks to our all-out military operation and the extraordinary devotion of our people, we believe we will experience far fewer deaths than even the optimistic projection.  But there is no such thing as an optimistic projection on death.  One person is too many.
+       </p>
+       <p>
+        Our experts say the curve has flattened and the peak in new cases is behind us.  Nationwide, more than 850 counties, or nearly 30 percent of our country, have reported no new cases in the last seven days.
+       </p>
+       <p>
+        Because of our early and aggressive action, we have avoided the tragedy of healthcare rationing and deadly shortfalls that have befallen many other nations — nations which, wherever possible, we are helping.  In America, no person who has needed a ventilator has been denied a ventilator.  We’re making hundreds of thousands of ventilators.  We’ve delivered thousands and thousands of ventilators to the states.
+       </p>
+       <p>
+        And actually, it’s been an incredible operation.  We started with very little and we ended with a lot.  The United States has achieved a significant lower mortality rate than almost all other countries.
+       </p>
+       <p>
+        Based on the latest data, our team of experts now agrees that we can begin the next front in our war, which we’re calling, “Opening Up America Again.”  And that’s what we’re doing: We’re opening up our country.  And we have to do that.  America wants to be open, and Americans want to be open.
+       </p>
+       <p>
+        As I have said for some time now, a national shutdown is not a sustainable long-term solution.  To preserve the health of our citizens, we must also preserve the health and functioning of our economy.  Over the long haul, you can’t do one without the other.  It cannot be done.  To keep vital supply chains running, these chains have to be taken care of so delicately.  They’re delicate.  The balance is delicate.
+       </p>
+       <p>
+        We want to deliver food and medical supply.  We must have a working economy.  And we want to get it back very, very quickly, and that’s what’s going to happen.  I believe it will boom.
+       </p>
+       <p>
+        A prolonged lockdown combined with a forced economic depression would inflict an immense and wide-ranging toll on public health.  This includes a sharp rise in drug abuse, alcohol abuse, suicide, heart disease, and many other dimensions of physical and mental wellbeing.  Moreover, many patients have put needed medical care on hold, creating entirely new hazards for public health.
+       </p>
+       <p>
+        Our country has suffered.  The world has suffered.  One hundred and eighty-four other countries have suffered.
+       </p>
+       <p>
+        Therefore, my administration is issuing new federal guidelines that will allow governors to take a phased and deliberate approach to reopening their individual states.  I’ve dealt with them now a long time, and we’ve had a great relationship — Democrat, Republican.  The relationship has been good.  This strategy is based on hard, verifiable data.
+       </p>
+       <p>
+        I want to thank Dr. Birx for her incredible leadership in crafting these guidelines in consultation with scientists, experts, and medical professionals across government.  Dr. Birx will explain the guidelines in more detail in a few moments.  And Dr. Fauci has been absolutely terrific.  We’ve all worked together, and we’ve worked together well.
+       </p>
+       <p>
+        They are interested in the health of our country.  And we’re all interested in the viability and making us truly great again.  We took the greatest economy in the history of the world, and we closed it in order to win this war.  And we’re in the process of winning it now.
+       </p>
+       <p>
+        Our approach outlines three phases in restoring our economic life.  We are not opening all at once, but one careful step at a time.  And some states will be able to open up sooner than others.  Some states are not in the kind of trouble that others are in.
+       </p>
+       <p>
+        Now that we have passed the peak in new cases, we’re starting our life again, we’re starting rejuvenation of our economy again, in a safe and structured and very responsible fashion.
+       </p>
+       <p>
+        Our strategy will continue to protect senior citizens and other vulnerable populations while allowing military and other groups of incredibly talented people to go about their real business and the business that’s supposed to be hard at work at doing.  And nobody does it better.  Our military is the greatest anywhere in the world, and we’re so thankful for what they’ve done.
+       </p>
+       <p>
+        Healthy Americans will now be able to return to work as conditions on the ground allow.  Instead of a blanket shutdown, we will pursue a focus on sheltering the highest-risk individuals.  So important.  We’re establishing clear scientific, metric, and — benchmarks on testing, new case growth, and hospital capacity that must be met before advancing to each phase.  And that’s each phase specifically in the reopening of our country.
+       </p>
+       <p>
+        This is a gradual process.  As the caseload in a state continues to go down, restrictions can continue to be eased and come off.  Throughout the process, citizens will continue to be called upon to use all of their weapons in this war: vigorous hygiene, teleworking when possible, staying at home if you feel sick, maintaining social distance, sanitizing commonly used surfaces, and being highly conscious of their surroundings.  Those are our weapons, and they’re very powerful weapons indeed.
+       </p>
+       <p>
+        Governors will be empowered to tailor an approach that meets the diverse circumstances of their own states.  Every state is very different.  They’re all beautiful.  We love them all.  But they’re very, very different.  If they need to remain closed, we will allow them to do that.  And if they believe it is time to reopen, we will provide them the freedom and guidance to accomplish that task — and very, very quickly — depending on what they want to do.
+       </p>
+       <p>
+        We are also encouraging states to work together to harmonize their regional efforts.  We’ll have numerous cases where states have worked and will be working very, very closely together.
+       </p>
+       <p>
+        As we reopen, we know that there will be continued hardships and challenges ahead.  Our goal will be to quickly identify and address any outbreaks and put them out rapidly.  If the virus returns in the fall, as some scientists think it may possibly, these guidelines will ensure that our country is up and running so that we can likewise put it out quickly.
+       </p>
+       <p>
+        At the heart of our strategy is the vital role of medical research, especially for therapies that will significantly improve outcomes for high-risk patients and reduce the need for urgent care.  This will be tremendously valuable in allowing life to eventually return to normal.  At least 35 clinical trials are already underway, including antiviral therapies, immune therapies, and blood therapies in the form of convalescent plasma.  You’ve all heard about some of these events and some of these therapies.  They’ve come a long way.  What’s been done in the last four weeks is incredible.
+       </p>
+       <p>
+        We will also continue to expand our testing capacity.  We have now completed more than 3.5 million tests — by far the most anywhere in the world.  Areas of our country that have been hotspots have done much more testing, on a per capita basis, than South Korea.  We’ve done more than South Korea — and South Korea has done a good job, but we’ve done more.
+       </p>
+       <p>
+        We will continue to work with governors to advise them on how to conduct both surveillance and diagnostic testing.  We have now distributed over 600,000 Abbott ID NOW point-of-care diagnostic tests.  These are tests that are done on site, and, within five minutes, you know the answer: positive or negative.
+       </p>
+       <p>
+        In recent days, we have seen a dramatic increase in the number of tests performed by hospitals and academic institutions, with more than 120,000 tests recently reported in a single day — far more than any country in the world has ever been able to do.  And our numbers are actually going up.
+       </p>
+       <p>
+        As these new and better testing solutions come online, we’re seeing this additional capacity reflected in the numbers.  For this reason, the number of tests processed in commercial laboratories has dropped from approximately 100,000 to roughly 75,000 tests over the last week.  The reason it dropped is because we have so many other tests and we don’t even have to go through the laboratories.  But the laboratories have tremendous additional capacity, and states feel free to use that capacity.
+       </p>
+       <p>
+        Some in the media falsely reported this as a bad thing, when, in fact, it is a great thing because it indicates that the states are moving to faster, more local testing solutions, including on-the-spot tests.
+       </p>
+       <p>
+        So this drop in the utilization of commercial laboratories is an affirmation that testing, which is at an all-time high, is growing at a historic rate.  In other words, the laboratories are great, but now we have forms of testing that are much quicker, much better, and we don’t have to use the laboratories.  But they’re there, and they have a great capacity to do the work.
+       </p>
+       <p>
+        As Dr. Birx has been advising our governors for weeks, we continue to have an excess testing capacity of 1 million tests per week available for use.  And our capabilities are growing every single day, especially with the new tests that are coming onto the market rapidly.
+       </p>
+       <p>
+        As we begin a science-based reopening, we must be extra vigilant in blocking the foreign entry of the virus from abroad.  Border control, travel restrictions, and other limitations on entry are more important than ever to keep the virus in check and allow Americans to get back to work.
+       </p>
+       <p>
+        The sacrifices our citizens have made in this time of crisis will be remembered, studied, honored, and praised for generations to come.  We’re really all working together.  Democrat, Republican, conservative, liberal — we’re all working together.  This is not about parties; this is about our country.
+       </p>
+       <p>
+        Now the American people are ready to rise to the occasion once again.  They are ready to show the world once more that Americans can defeat any challenger.  Together, we will rebuild this land that we love, we will reclaim the magnificent destiny that we share, and we will carry our nation forward to new heights of greatness and glory.
+       </p>
+       <p>
+        I would now like to ask Vice President Mike Pence and Dr. Birx to further explain the new guidelines.  I want to thank Dr. Birx.  I want to thank Dr. Fauci.  And I want to thank, really especially, a man who has devoted 24 hours a day to his task force and done such an incredible job — our great Vice President, Mike Pence.
+       </p>
+       <p>
+        Please, Mike.
+       </p>
+       <p>
+        THE VICE PRESIDENT:  Thank you, Mr. President.  The members of the White House Coronavirus Task Force today joined the President to meet with a bipartisan group of members of the House and of the Senate to get their counsel on the development of what the President unveiled to America’s governors this afternoon.
+       </p>
+       <p>
+        The new guidelines for “Opening Up America Again” are a product of the best science and the best common sense that the President has marshaled on this team and from a broad range of advisors from all across the nation.
+       </p>
+       <p>
+        From the moment President Trump established the White House Coronavirus Task Force, early on he made it clear that we have no higher priority than the health and safety of the American people.
+       </p>
+       <p>
+        The President launched a whole-of-government approach.  And while we stand here, on this day, with more than 640,000 Americans having contracted the coronavirus — and our hearts go out to the families of the more than 31,000 Americans who lost their lives and those who continue to struggle with serious consequences of the coronavirus — the truth is that because of the decisive action that our President took early on, suspending travel from China and thereafter from portions of Europe and South Korea; screening passengers; because of the strong actions in partnership with every governor across America; because of the extraordinary efforts of America’s healthcare workers on the frontlines; and because of the cooperation of the American people and God’s grace, we are slowing the spread, we are flattening the curve, we have preserved the capacity of our healthcare system, and we’ve protected the most vulnerable.
+       </p>
+       <p>
+        In a word, because of the actions of this President, this administration, governors at every level, our healthcare workers, and our fellow Americans, we’ve saved lives.  And every American should be comforted by that.
+       </p>
+       <p>
+        And we can see it in the numbers, in the charts that I’ll present today.  These three maps track influenza-like illness, which, in this instance, is mostly coronavirus across America.  The first map reflects the total number of cases on the week ending March the 28th.  The next map reflects our data about the total number of cases on the week ending April 4.  And we stand here today with the final map reflecting the total number of cases across America, as of April the 11th.
+       </p>
+       <p>
+        With these trends underway, President Trump tasked the White House Coronavirus Task Force to develop new guidelines for “Opening Up America Again.”  Those guidelines were presented today — first, to our nation’s governors.  And it is our intention, at the President’s direction, to provide these guidelines to assist governors and state health officials in evaluating the most responsible manner to reopen the economies of their states at a time and manner of their choosing.
+       </p>
+       <p>
+        The guidelines, as Americans who are looking on will note, begin with what is the best criteria that our experts have developed — a downward trajectory in cases over a 14-day period of time — ensuring that states have proper capacity in their healthcare facilities.
+       </p>
+       <p>
+        The second set of proposals includes a description of recommendations for state preparedness.  And let me say to the American people what President Trump made clear to our governors today: that our administration will continue to work day in and day out — through our task force, through FEMA — to ensure that our states have not only the medical supplies, but that we continue to rapidly expand testing across the nation.
+       </p>
+       <p>
+        The President reflected on the progress we’ve made on testing, but a few statistics for that as well, which I hope are an encouragement to the American people.  On March 11, we had performed a total of 23,588 tests.  Because of the public-private partnership that President Trump initiated with commercial labs across the country, that number was 83,500 by March 18.  And as the President just said, that number is 3.5 million today.  It is our expectation that we will have tested more than 5 million Americans before the end of the month of April, and we’ll continue to scale those resources.
+       </p>
+       <p>
+        So, testing and medical supplies will continue to be an ongoing partnership with our states, and we want our healthcare workers and people all across the country to know of our commitment to that.
+       </p>
+       <p>
+        Finally, the President directed us to propose a phased approach to reopening — to reopening our economy.  It is based on up-to-date data and readiness, and we’ll continue to provide the very best data to our states, working with their health officials.
+       </p>
+       <p>
+        The focus is on the mitigation of any risk of resurgence or the emergence of the coronavirus in states where it’s not yet emerged.  There is a focus in the President’s new guidelines on the most vulnerable.
+       </p>
+       <p>
+        And it’s — we made this very clear to the governors today: These new guidelines for “Opening Up America Again” can be implemented on a statewide basis or on a county-by-county basis.
+       </p>
+       <p>
+        With that, I’m happy to turn it over to Dr. Deborah Birx and, if I may, Mr. President, I’d like to also extend my admiration and appreciation to Dr. Birx, Dr. Fauci, and every member of our task force that worked around the clock to develop these recommendations for opening up America.  I know every American is grateful for your leadership and for theirs.
+       </p>
+       <p>
+        Deborah.
+       </p>
+       <p>
+        DR. BIRX:  Thank you.  Thank you, Mr. President, Mr. Vice President.  We’re going to go through these quickly because I know you have them, and many of you have already spoken to them on television.
+       </p>
+       <p>
+        Next slide, please.
+       </p>
+       <p>
+        This is a very important slide.  It talks about the gatekeeping — on the gatekeeping criteria to moving into phase one.  It’s very much related to what you just saw about influenza-like illness.  And the United States has been tracking influenza-like illnesses through the Centers of Disease Control for years.
+       </p>
+       <p>
+        Both the state and public health officials are used to watching this, county health officials are used to watching it, and frankly, every family around the United States knows how to access this on the CDC website in order to get update — up-to-date information to the communities.
+       </p>
+       <p>
+        It also looks at a syndromic emergency room-type visits — again, housed at the CDC — and really is our surveillance program that can be utilized for a lot of different illnesses, but in this case, will be utilized for respiratory diseases.
+       </p>
+       <p>
+        In addition, we are tracking the number of cases, and it must have a downward trajectory for 14 days — as well as the influenza-like illness and the syndromic illnesses — and a downward trajectory in the number of positive tests with persistence of high levels of testing.
+       </p>
+       <p>
+        For the hospitals, it’s to ensure that we can treat all patients without resorting to any crisis care and ensuring that there’s a robust testing program in place for at-risk healthcare workers, including frontline responders with the emerging antibody tests.
+        <br/>
+        Next slide.
+       </p>
+       <p>
+        Now, just to show you what this looks like: So what the CDC did for me, under the direction of Bob Redfield, was to chart what would the syndromic illnesses were reporting throughout the early part of March.  And you can see, in New Orleans, respiratory diseases were starting to be seen in the emergency room.  That is the red line.  The cases are shown in the dark blue line.  The gray mountain is testing, and underneath that is the blue mountain of positives.  And you can see that the early alert was present from the emergency room about early respiratory disease.  You can see it predated the cases.
+       </p>
+       <p>
+        So, throughout the summer, when we do not have flu to contaminate this picture, we’ll be able to follow this syndromic pattern city by city, county by county, community by community, state by state.
+       </p>
+       <p>
+        Next slide.
+       </p>
+       <p>
+        In addition, the CDC has the influenza-like illness net distributed throughout the United States — very useful in the wintertime.  That first peak is influenza B in the red; that’s this season.  I showed you all the seasons here so you could see the seasons as they are displayed.
+       </p>
+       <p>
+        The first peak is influenza B, second peak influenza A.  And then you can see the coronavirus.  And you can see its decline, and it’s declining towards the baseline.  This will allow us — again, city by city, community by community, state by state — to look for variations and an early response mode in those localities that I described.
+       </p>
+       <p>
+        Next slide.
+       </p>
+       <p>
+        So hopefully you see that we’ve brought CDC and their amazing talent of individuals at the Center for Disease Control and Prevention and all of their abilities to this response and also to the surveillance that we need in this response.
+       </p>
+       <p>
+        But I want to call your attention to the third bullet on this graphic.  So we’re tracking those two pieces that I described.  But the third bullet is about setting up sentinel surveillance sites to be able to distinguish and find asymptomatic individuals — individuals that you have heard about that may be either pre-symptomatic or asymptomatic throughout their entire disease course.  We want to be able to find them in communities of particular vulnerability.
+       </p>
+       <p>
+        So we’ll be doing sentinel surveillance throughout nursing homes, throughout inner-city federal clinics, throughout indigenous populations, to really be able to find early alerts of asymptomatic individuals in the community.  And both for the syndromic cases that are tested, the influenza-like cases, and the asymptomatic cases: doing contact tracing, again, with support from the Centers for Disease Control, working with each state and local government.
+       </p>
+       <p>
+        In addition, we want to make sure that all the healthcare facilities have adequate protective — personal protective devices and the equipment to handle the surge and to ensure the ICUs can handle increased capacity.
+       </p>
+       <p>
+        We want every state to have a plan for the health and safety of its workers in critical industries, and to protect the health and safety of those living in high-risk facilities, including senior care facilities, as we discussed with sentinel surveillance but also additional surveillance.
+       </p>
+       <p>
+        When we talked with all of the states that had not had a major metro outbreak, their sentinel surveillances picked up, always, the first cases in nursing homes.  And so this is very much a big focus of the plan moving forward.  I won’t go into the rest of the details on this slide, but there’s quite a bit of details on the expectations of every state and local government.
+       </p>
+       <p>
+        Next slide.
+       </p>
+       <p>
+        You’ll recognize this slide, it’s a — next slide, please.  You’ll recognize this slide; it’s what we’ve been talking about in the 15 and 30 days to prevent the spread.  It’s continuing those critical handwashing or sanitizer; avoiding touching your face at all times; disinfecting surfaces; using face covering while in public; following state and local guidelines; and, critically, staying home if you are sick.
+       </p>
+       <p>
+        I know a lot of people go to the workplace when they are feeling ill.  You know when you’re feeling ill.  It won’t get better by going to work.  So we’re asking again for people to stay home when they’re sick.
+       </p>
+       <p>
+        Next slide is for employers to ensure that there can be social distancing and protective equipment; temperature checks; use of disinfectant in high-traffic areas, including break rooms; and ensuring that we don’t do — there’s no non-essential business travel; and then monitoring for any symptomatic individuals in the workplace.  And again, if you come — become ill at work, to immediately to go home and ensure that there’s contact tracing of all the individuals that become sick.
+       </p>
+       <p>
+        I’m going to go through the phases very quickly, but you have the details.
+       </p>
+       <p>
+        Phase one: Again, you have to go through those gating criterias related to 14 days of decreasing evidence of illness and decreasing testing, despite adequate testing.  So phase one begins with all vulnerable individuals, including those with comorbidities continuing to shelter in place and ensuring that those — the first to go out into the public are not those that are most vulnerable to bad outcomes in this disease.  And then ensuring that we continue to do six-feet maximum physical distancing in public spaces, continuing to avoid large gatherings and all non-essential travel.
+       </p>
+       <p>
+        For the employers — next slide — again, if a vulnerable population needs to return to work and cannot be teleworking, there should be special accommodations for all vulnerable populations, as well as options for teleworking.  We believe every employee should encourage work return in phases: from 20 percent or 25 percent, to 40 percent, to 50 percent.  And again, minimize all non-essential travel.
+       </p>
+       <p>
+        Phase one continued — next slide.  If the schools are already closed, they should remain closed.  All visits to senior living facilities and hospitals should be continued to be prohibited.  Large venues, including sit-down dining, can only be operated under strict physical distancing protocols and maintaining those six feet.  Gyms could open if they, again, adhere to strict physical distancing.  And elective surgeries can resume on an outpatient basis.
+       </p>
+       <p>
+        Phase two — next slide.  Next slide.  Again, you have to go through the criteria, again, of a continuation of another 14-day decline among those criterias that were in the gating.  Again, we’re asking for all vulnerable individuals: Shelter in place.
+       </p>
+       <p>
+        We did not put a timeline on any of the phases.  We want the governors, with the data that they have, community by community, to be setting up those timelines.  Again, we’re asking for the public to continue to maximize physical distance; however, we increased social settings to be able to now have 50 individuals, and non-essential travel can resume.
+       </p>
+       <p>
+        Next slide.
+       </p>
+       <p>
+        This is for the employers.  We still would like to encourage telework, and the common areas should remain closed or be physically distant.  All non-essential travel for employees can resume.  And then, again, special accommodations for vulnerable.
+       </p>
+       <p>
+        Next slide.
+       </p>
+       <p>
+        This should be a relief to many of — households that have small children.  Schools, daycares, and camps can reopen in phase two.  Visits to senior-living facilities, however, should remain — and hospitals — prohibited.  Large venues can operate but solely under moderate physical distancing.  And elective surgeries can resume on an outpatient and inpatient basis.
+       </p>
+       <p>
+        Phase three: And so phase three — I won’t go through in detail — it’s essentially returning to our new normal, with all of what we talked about through all phases: continuing the good hygiene practices, continuing the respect for spaces between individuals, because we know that we still have an issue with asymptomatic spread.
+       </p>
+       <p>
+        I do believe with this plan that we’re both confronting the issue of finding symptomatic individuals through our networks with early alert, as well as those who come and present to different hospitals and emergency room with testing and contact tracing, but critically have put in place what we believe is a safety net through asymptomatic sentinel surveillance that is centered around our most vulnerable groups — between nursing homes and our Native American people and indigenous populations, and our inner city groups that we know may be in multi-generational households and have unique risk.
+       </p>
+       <p>
+        I’ll stop there, Mr. President.
+       </p>
+       <p>
+        THE PRESIDENT:  Thank you very much.  Please, Tony.
+       </p>
+       <p>
+        DR. FAUCI:  Thank you very much, Mr. President, Mr. Vice President.  So as you’ve seen just now from the detailed presentation from Dr. Birx, this is a rather robust program for re-entering into normality.
+       </p>
+       <p>
+        There’s a lot of details here, and I know it’ll take a little bit of time to digest them all.  So what I thought would be good, since I really want to be brief to allow time for questions, is to kind of take us back to the discussions that we’ve had here before and why this is a natural evolution from what we had said before.
+       </p>
+       <p>
+        You might recall that, on a few occasions when I was up here before you, I told you that when we get to the point where we’re going to take those steps towards trying to get back to some form of normality, that it would not be a light switch that you could turn on and off.  I meant that in two different components.
+       </p>
+       <p>
+        First of all, that we are a very large country and we have different dynamics in the country.  We have areas of the country that have gone through a terrible ordeal, and others that fortunately have gone and gotten — gotten through this rather lightly.  So that’s the first thing.
+       </p>
+       <p>
+        The second thing is that light switch, on and off, is the exact opposite of what you see here, which is a gradual gradation.  But the first thing and the only thing in mind, as the health people here — and my colleagues, who are either physicians, scientists, or public health issues — the predominant and completely driving element that we put into this was the safety and the health of the American public.
+       </p>
+       <p>
+        And I know there are a lot of other considerations that go into opening — considerations that you’ve heard of right from this podium.  But the dominating drive of this was to make sure that this is done in the safest way possible.
+       </p>
+       <p>
+        So let me just make a couple of comments to just reiterate more, from a broader standpoint, the things that Dr. Birx did so well in a very a granular detail.
+       </p>
+       <p>
+        First of all, in order to even consider getting into the phasing, you have to pass a hurdle.  And that’s the hurdle that we refer to as “gating in.”  Now, when you think about it and look at the map of the country and look at the differences in different parts of the country, you will see that there are some regions, states, locations that are going to be almost already into some of that gating, and will have already fulfilled some of those criteria.  Others, because of the dynamics of the outbreak in the area, will take longer to be able to do that.  But you don’t get to phase one until you get through the gating.
+       </p>
+       <p>
+        And then in order to make sure that safety and health is the dominant issue, the design of the phases were just that.  You go into phase one.  If you get no rebound and you satisfy the gating for yet again a second time, then you go to phase two.  If you have no rebound and you satisfy the gating criteria for a third time, you go into phase three.  So there are multiple checkpoints of safety there.
+       </p>
+       <p>
+        So as I’ve said, from this podium, when we were talking about the first 15 days of the mitigation and then we extended it another 30 days, I essentially pleaded with the American public to say, “Let us make sure we do the best that we can to accomplish that.”
+       </p>
+       <p>
+        And, in fact, mitigation works.  You saw the charts that the Vice President and that Dr. Birx put up.  It worked.  And what we hope and I believe we will be successful: If we carefully do this — again, with the attention to the safety and health of the American public — that we will be able to — and it will be staggered.  Not every state, not every region is going to do it at the same time; that’s clearly obvious because of the very dynamics of the outbreak.
+       </p>
+       <p>
+        But we feel confident that, sooner or later, we will get to the point — hopefully sooner, with safety as the most important thing — to a point where we can get back to some form of normality.
+       </p>
+       <p>
+        The one thing I liked about it that — that Dr. Birx said so well — is that no matter what phase you’re in, there are certain fundamental things that we’ve done that are not like it was in September and October.  You want to call it the “new normal” — you can call it whatever you want.  But even if you are in phase one, two, three, it’s not, “Okay, game over.”  It’s not.  It’s going to be a way that we protect ourselves because, as we know, and as I’ve said from this podium, it may very well be — as we go the cycle around — that there’ll be this virus that wants to come back to us.
+       </p>
+       <p>
+        I think we’re going to be able to handle that.  Thank you.
+       </p>
+       <p>
+        THE VICE PRESIDENT:  Great.  Thank you.  Tony, please.
+       </p>
+       <p>
+        Q    Dr. Fauci, so I assume that there’s also a phase four, which is after a vaccine is developed —
+       </p>
+       <p>
+        DR. FAUCI:  Right.
+       </p>
+       <p>
+        Q    — and available to everybody.  So, a question on phase three being the “new normal.”  Are we, during that phase, going to be able to see things like packed arenas for sporting events, large crowds, concerts?
+       </p>
+       <p>
+        DR. FAUCI:  The answer is: It is conceivable that we will be able to do that.  I think there will always have to be attention to making sure that we don’t do all that packing in together.  I think we’ll be able to have sports events in that phase where you actually have participants there.  I’m not sure you’re going to be able to do that uniformly and evenly, temporally, with everyone.  But when people get to that phase — paying attention to the fact that if there is a rebound of any sort — that when you’re in that phase, you can respond to that or you put it back and go in the other way.
+       </p>
+       <p>
+        So, the flexibility is that there may be some setbacks.  I mean, let’s face it, this — this is uncharted water.  There may be some setbacks, and we may have to pull back a little and then go forward.
+       </p>
+       <p>
+        But, Jon, the direct answer to your question: I do see us getting more towards normal.
+       </p>
+       <p>
+        Q    Mr. President.  Mr. President, if you — if you take a look at the gating criteria as outlined in these guidelines that are — there are at least a handful of states — I just looked at the trend lines — Idaho, Wyoming, Hawaii, Montana — that look like they’ve already satisfied that gating criteria.
+       </p>
+       <p>
+        THE PRESIDENT:  Right.
+       </p>
+       <p>
+        Q    In your call with the governors this afternoon, did you hear back from any states who said, “We’re already there.  We could start the process now.”
+       </p>
+       <p>
+        THE PRESIDENT:  I did.  I heard from a number of governors that said they’re in very good shape.  I also heard — not only from the call, but I heard from some of the governors previous — and I think you’ll have some very good things to report over the next few days about states opening up.
+       </p>
+       <p>
+        And I think, Jon, having to do with your call on — on sports: Depending on the area, depending where we’re talking about, you’re going to have large areas of our country where this has not been or has been totally eradicated.  You’ll be able to have those full arenas.
+       </p>
+       <p>
+        Now, with everything being said, a lot of great work has been done on vaccines, but you have a testing process.  Therapeutics, likewise — we have a lot of great things happening, therapeutically.  That will be a step further.
+       </p>
+       <p>
+        But, in terms of sports, they’ll probably start off — I — as you know, I spoke to the commissioners yesterday — almost, I guess, of every sport.  And many of them are going to be starting without the fans.  So it’ll be made for television.  The good old days, made for television.  And it’ll go that way, and then fans will start coming in.  Maybe they’ll be separated by two seats.  And then ultimately, we want to have packed arenas.  When the virus is gone, we’re going to have packed arenas and we’re going to be back to enjoying sports the way they’re supposed to be.  And the same thing can be said for restaurants.
+       </p>
+       <p>
+        So, at a certain point in time, when the virus is gone, we’re going to be back to normal.
+       </p>
+       <p>
+        Please, go ahead.
+       </p>
+       <p>
+        Q    Mr. President and the doctors, can you clarify then: Is the 30-day period to stop the spread — are those mitigation efforts still in place or have they been replaced by this new guidance?
+       </p>
+       <p>
+        THE PRESIDENT:  Well, they’re going to be in place, to a large extent, and it also depends on the governors, what they want to do.  You have very different states.  If you look at Montana, Wyoming, North Dakota — that’s a lot different than New York.  It’s a lot different than New Jersey.  So it’s going to be very dependent on the governor.
+       </p>
+       <p>
+        We’re recommending — as you see in the charts, we’re recommending certain things.  They’ll be in place, dependent on what the governor wants to do.  If we see something wrong, we will be expressing ourselves very strongly.
+       </p>
+       <p>
+        Please, go ahead.
+       </p>
+       <p>
+        Q    Thank you, Mr. President.  Does this mean that states such as Montana and Utah that already meet that gating period, will they be able to go to phase one as early as, say tomorrow, if the governor decides?
+       </p>
+       <p>
+        THE PRESIDENT:  You’re talking about those states that are in great shape already?
+       </p>
+       <p>
+        Q    Yes.
+       </p>
+       <p>
+        THE PRESIDENT:  They will be able to go literally tomorrow, yes — because they’ve met all of the guidelines if you go back — you’re going back 14 days, you’re going back even a month.  And they have — the ones that I’m thinking about, the ones that I’ve already spoken to governors about — they’ve met those guidelines, actually, pretty long ago.
+       </p>
+       <p>
+        Q    Mr. President, what’s your message to those protesters we’re seeing — we saw a lot in Michigan, but in other states — that are saying that they are refusing to comply with the stay-at-home orders issued by governors and local officials?  I mean, isn’t it important for everybody to go along with this as we go through these phases?
+       </p>
+       <p>
+        THE PRESIDENT:  Well, they’ve been going through it a long time, Jon, and it’s been a tough process for people.  You know, I told you this: There’s death and there’s problems in staying at home too.  It’s not just, “Isn’t it wonderful to stay at home?”  They’re having — they’re suffering.  This country wasn’t built on that principle; it was built on an exact opposite principle, actually.
+       </p>
+       <p>
+        And I watched, in one particular state, where they were — they want to get back.  They want to get back.  They were very strict sanctions that were put on people; that was probably the most strict of all.
+       </p>
+       <p>
+        But, I just think the American people have been incredible.  When you look at —
+       </p>
+       <p>
+        Q    But would you urge those —
+       </p>
+       <p>
+        THE PRESIDENT:  Jon, when you look at what they’ve done, when you look at what they’ve been through, when you look at all of the death and all of the problems and all of the sickness, when you look at what’s happened, I just think the American people have been incredible.
+       </p>
+       <p>
+        Q    But would you urge those protesters to listen to local authorities?
+       </p>
+       <p>
+        THE PRESIDENT:  I think they’re listening.  I think they listen to me.  They seem to be protesters that like me and respect this opinion.  And my opinion is the same as just about all of the governors.
+       </p>
+       <p>
+        They all want to open.  Nobody wants to stay shut, but they want to open safely.  So do I.  But we have large sections of the country right now that can start thinking about opening.  There’ll be some mitigation and they’ll keep it going for a period of time — including masks, by the way — in areas that you wouldn’t even think.
+       </p>
+       <p>
+        I asked a question today.  I said, “Why would they wear masks in Wyoming or Montana or North Dakota?”  And that’s if somebody should come in from an area that isn’t so successful, in terms of what they’ve done.
+       </p>
+       <p>
+        So, that will be a governor’s choice, and we’ll have no problem with it.
+       </p>
+       <p>
+        Q    Mr. President, you spoke this afternoon with your new congressional advisory groups — 32 bipartisan members of the House, 65 bipartisan members of the Senate — one of the big topics was the fact that the Small Business Association loan pot of $350 billion has hit the cap.  It’s exhausted.  There’s nothing moving on the $250 billion to replenish it.
+       </p>
+       <p>
+        What did you tell those bipartisan groups today about getting the move on to get some more money into the hands of small businesses?
+       </p>
+       <p>
+        THE PRESIDENT:  Right.  So, just for the viewers watching this or hearing you ask that question: “Exhausted” is a good thing, not a bad thing.  It went quickly.  It is so popular.  The banks have been incredible, including 4,000 community banks.  Four thousand.  Most people didn’t know you had that many banks.  Four thousand —
+       </p>
+       <p>
+        Q    The bad thing is they still need a loan, though.
+       </p>
+       <p>
+        THE PRESIDENT:  What they want is people want to keep this going.  And we’re doing it to keep the small businesses open and to keep the workers paid.  And we have a $250 billion request.  The Democrats like it.  The Republicans love it.  And to be honest, I think it’s going to — something is going to be happening.  I hope so, because this is a very popular program.  It was really executed flawlessly.
+       </p>
+       <p>
+        The first day, they changed an application a little bit.  There was — but when you look at what Bank of America did and what Wells Fargo did, and Citi and a lot of the banks — but when you ask —
+       </p>
+       <p>
+        Q    So what’s the hold-up now?
+       </p>
+       <p>
+        THE PRESIDENT:  — when you look at what all of the community banks did, it’s been really incredible.
+       </p>
+       <p>
+        Well, we’re negotiating with Democrats, and they should, frankly, approve it quickly.  This is a great thing for our country.  It’s a great thing for small business and for the workers.  And we’re having a hard time getting them to approve it.  I think it’s going to happen.  It should happen really unanimously.  But they’re trying to get things and we’re not too happy with what they’re trying to get.
+       </p>
+       <p>
+        Please, go ahead.
+       </p>
+       <p>
+        Q    First, can you just say which states specifically you guys think have hit the gating requirements at this point?
+       </p>
+       <p>
+        THE PRESIDENT:  I’d rather not say that, but you’ll be seeing it very soon.  I mean, they’ll be — I’d rather have the governor be able to — the governors be able to announce.  And they’re very proud of it.  They’ve worked hard.  Some are in an area that’s less susceptible and some really was done, I think we can say, through talent.  They really worked very hard.
+       </p>
+       <p>
+        And, you know, we have some states that got too much credit for what they’ve done.  Frankly, I could name you a couple of those too.  And I could name you a couple of them.  And we have others that haven’t been given credit that have done a phenomenal job.
+       </p>
+       <p>
+        Q    And then, part of the guidance seems to sort of shift to states and companies the burden not just of additional testing and surveillance, but also the sort of new normal on which, you know, there’s smaller crowds in restaurants and bars and arenas.
+       </p>
+       <p>
+        THE PRESIDENT:  Well, that’s not going to be normal.  There’s not going to be a new normal where somebody has been having, for 25 years, 158 seats in a restaurant, and now he’s got 30 or he’s got 60 — because that wouldn’t work.  That’s not normal.  No.  Normal will be if he has the 158 or 68 seats.  And that’s going to happen.  And it’s going to happen, relatively quickly, we hope.
+       </p>
+       <p>
+        But that’s our normal.  Our normal is if you have 100,000 people in an Alabama football game — or 110,000, to be exact — we want 110,000 people there.  We want every seat occupied.  Normal is not going to be where you have a game with 50,000 people.
+       </p>
+       <p>
+        Q    Sure.  But to that point: I mean, best-case scenario, that happens in these states that are doing really well in a month.  Obviously for, I think, a lot of other states, it’s going to be longer than that.
+       </p>
+       <p>
+        So my question is: What is the federal government going to do to sort of help especially companies, but states and local governments in those positions pay for what is now going to be an even longer (inaudible)?
+       </p>
+       <p>
+        THE PRESIDENT:  We’re going to be watching over.  We’re going to see that everything is working out smoothly.  We’re in very strong communication with the governors.
+       </p>
+       <p>
+        We’re going to be helping with testing.  They’re going to be doing the testing.  It’s got to be a localized thing, and it really has been since I’ve been involved.  Because I came in and the federal government supposed to do testing of parking lots in the middle of a certain state that’s 2,000 miles away.  It’s ridiculous.  But the testing has been so incredible.
+       </p>
+       <p>
+        Two things: testing and ventilators.  Ventilators are really tough.  They’re very complex.  They’re very expensive.  They’re, you know, very sophisticated machines.  Some are unbelievably sophisticated.  What we built — you saw General Motors yesterday.  Thousands are being issued.  We have 11 companies building them.  We have not had one complaint in the last week and half, which is surge time.
+       </p>
+       <p>
+        Don’t forget, when they were calling, they were calling because in two weeks, in four weeks, in five weeks, they’re going to need ventilators — not because they need them right now.  And we were right on our counts.  And nobody that wanted a ventilator didn’t get a ventilator.  Plus, we have additional, if there is a surge.  We hope there’s not going to be a surge at all.  But we’re going to be able to build up the stockpiles of states who didn’t have them, who should have had them.
+       </p>
+       <p>
+        And we’re also going to have a big stockpile in the federal government, and we’ll be able to help foreign countries — countries that need help.  Because you have comp- — look, you have countries who will never be able to build a ventilator.  It’s tough stuff.  We’re uniquely talented in the sense that we can do things that nobody else can do.
+       </p>
+       <p>
+        We’ll get right back to you, John.
+       </p>
+       <p>
+        Peter, in the back.  Peter.
+       </p>
+       <p>
+        Q     Thanks.  You said you didn’t want to name the states that might be ready to go.  So can you give us some — or maybe the experts, Dr. Birx and Dr. Fauci — give us some sense of how many?  Yesterday, you said 29 states were in good shape.  Do you think as many as 29 or —
+       </p>
+       <p>
+        THE PRESIDENT:  Well, I think — yeah, Peter.  I think 29 states are in that ballgame, not open — not for opening, but I think they’ll be able to open relatively soon.  I think the remainder are just getting better.  Look, New York, New Jersey are having very tough times, and they’ll be there.  They’ll be there at some point.  But they’re not going to be one of the earlier states; they’re going to be later, obviously.
+       </p>
+       <p>
+        I just spoke with the governor of New Jersey.  We just spoke with Mike and a couple of folks.  We had a great talk with him.  Phil is a terrific guy.  He’s working very hard — Democrat — but we get along.  He’s working very, very hard.  I guess, the fact that he’s right next to this big massive city where everybody is very closely — you know, they’re — they’re together.  And New Jersey has been hit unbelievably hard — as hard as — as hard as anybody, in the true sense.   But they’re doing a great job in New Jersey.
+       </p>
+       <p>
+        That doesn’t mean, Peter — that doesn’t mean that they’re going to be opening next week.  That’s not one that’s going to be.  But we have a lot of states that, through location, through luck, and also through a lot of talent — we have states, through a lot of talent, are in a very good position, and they’re getting ready to open and over the next very short period of time.
+       </p>
+       <p>
+        It’s going to be up to the governors.  We’re going to work with them, we’re going to help them, but it’s going to be up to the governors.  I think they’re going to — I think you’re going to see quite a few states starting to open.  And I call it a “beautiful puzzle.”  You have 50 pieces, all very different, but when it’s all done, it’s a mosaic.  When it’s all done, it’s going to be, I think, a very beautiful picture.
+       </p>
+       <p>
+        And very important is what Dr. Fauci said: It could be that, sometime in the fall, there’ll be some flare-ups.  We’re going to be in a great position with everything we’ve done and everything we’ve learned.  This was something that nobody ever saw before: such contagion and very, very powerful.
+       </p>
+       <p>
+        People don’t realize because you — we all probably have friends — I have a number of people that were just great people who were just decimated by what happened.  Some were — some were — some are dead right now.  They’re dead.  They went into a hospital.  One called me; he said, “I tested positive.”  Four days later, he was dead.  The following day after he said that, he was unconscious.  So this is a tough deal.
+       </p>
+       <p>
+        At the same time, some people got sniffles and they didn’t even realize they had a problem.  And they are supposedly immune.  We’re going to find out about that.  Even that’s a little bit soon because we don’t know how long the immunity lasts.
+       </p>
+       <p>
+        But, Peter, some states are in great shape, and they’re really in great shape to open.  And I think you’ll have quite a few states opening soon.  And they’re going to be very vigilant, they’re going to be very careful.
+       </p>
+       <p>
+        Go ahead.  (Inaudible.)
+       </p>
+       <p>
+        Q     The public — sorry.  The public health — a lot of public health experts have said that this would be better done if there were comprehensive surveillance testing, which we’re obviously not in the position to do.  I wonder if maybe Dr. Birx and Dr. Fauci can tell us whether —
+       </p>
+       <p>
+        THE PRESIDENT:  Sure, we can do that.  Either one, please.
+       </p>
+       <p>
+        Q     — they going to feel comfortable —
+       </p>
+       <p>
+        DR. BIRX:  Tony and I will — Dr. Fauci and I will do it together.  I just wanted to — that’s why I wanted to put up the syndromic and influenza-like illness piece.  Because what is key in this is the early alerts and getting in there before they even know they have a problem.  And I think CDC has been remarkable in building these platforms.  Dr. Redfield integrated them so they’re all on the same website.  If you look at COVID-19, go into “Cases,” you can find all of the data.  And the beauty of it is the states are used to utilizing that through flu season.
+       </p>
+       <p>
+        So the testing and contact tracing — and Dr. Redfield will be putting people in every single state to make sure that CDC is standing beside the state and local health officials to make sure that all of those cases are immediately identified and contact traced.
+       </p>
+       <p>
+        I think what’s new and what’s really critical is this constant sentinel surveillance for asymptomatic individuals in communities that we know are particularly vulnerable.  And that hasn’t been done in flu before, and I think that’s going to be the added dividend that’s really focused on who is most vulnerable and how do we get the fastest alert by generally screening people without symptoms.  So people who are just coming to the clinic will be screened for COVID-19.  And we do have enough testing capacity to do both that surveillance piece, as well as the diagnostic piece and contact tracing.
+       </p>
+       <p>
+        Q     Just a follow-up.
+       </p>
+       <p>
+        THE PRESIDENT:  Tony, did you want to say something?
+       </p>
+       <p>
+        DR. FAUCI:  No, actually — it — you know, people have gotten confused about that, because in the beginning, when we were focusing really on just mitigation and really trying to keep peaks down and trying to worry about ventilators and PPEs and things like that — well, now, when you get a little bit more grace period, you can start figuring out: What is the penetrance of this virus in society?  What are we missing in people who might be infected?  What is the percentage of those people that are out there?
+       </p>
+       <p>
+        That’s going to inform us greatly for a number of things, including the level, once we prove that antibody test that you have is really protective.  And we still don’t know that yet; we’re going to find that out.  We may get a good feel of what the level of protection might be in society.  But we don’t know that yet.  So it’s going to give us information as to what the vulnerable areas are and how we need to respond.
+       </p>
+       <p>
+        Remember, there’s two types of things: antibody tests and tests for the diagnosis of who has the disease.  One you need for contact tracing; the other you want to — need for finding out what’s in society.  We’re going to have both of those much, much better as we go in the next weeks and months.  And by the time we get into the fall, I think we’re going to be in pretty good shape.
+       </p>
+       <p>
+        THE PRESIDENT:  Peter, I just have to say that, as we see a hotspot possibly developing — maybe not — but if we see a hotspot developing, we’ve learned a lot.  We’ll be able to suppress it, whack it.  We’ll be able to do things that people weren’t even thinking about because nobody has ever gone through this.
+       </p>
+       <p>
+        In 1917, they went through something that was similar.  Probably not as contagious, probably more powerful in certain other ways.  But we are going to be able to suppress it, we think.  And we’re going to watch it very closely.  We’re going to — we’re going to be able to watch things very closely.
+       </p>
+       <p>
+        Please.
+       </p>
+       <p>
+        Q     Mr. President?
+       </p>
+       <p>
+        THE PRESIDENT:  Yeah.  Bob, please.
+       </p>
+       <p>
+        DR. REDFIELD:  Thank you, Mr. President.  I think what’s really important is during this — we’re bringing people back to work and our economy back to work.  And what’s going to go back is that we’re going to be very aggressively focused on early case recognition, isolation, and contact tracing.
+       </p>
+       <p>
+        In the event that we just went through, unfortunately, in — as we started, we were very capable of doing that.  When the initial cases all came from China — all the way through January, all the way through to the end of February — we were able to identify cases early, the first 14; do the contacts — do the contact tracing, over 800 contacts.  We identified that two of those contacts were actually infected.  We were able to isolate them.  We were able to contain the outbreak.
+       </p>
+       <p>
+        We’re about to enter a new phase of this where we’re going back to containment.  And mitigation is going to continue, as Dr. Birx and others have said.  Some of the things that we’ve learned to do, we’re going to continue.
+       </p>
+       <p>
+        But the major thrust of how we’re going to control and make sure that we continue to keep this nation open is early case recognition, isolation, and contact tracing.  That’s the fundamentals of public health.  That’s what we’re going to do.
+       </p>
+       <p>
+        You see we have very good surveillance systems that are going to help us.  As we see these cases sporadically across the country, we’ve got to jump on them with early diagnosis, isolation, and contact tracing.  And that’s what CDC is going to continue to help build that capacity in the states across this nation.
+       </p>
+       <p>
+        THE PRESIDENT:  And one other thing, because we — we discussed this today with the senators — we had the senators, we have the congressmen and women.  There’ll be some areas of our country — wide open plains, wide open spaces — with not that many people, relatively speaking, where you’re not going to have to do that.  Senators were saying there is no reason to do that in certain states, in certain areas, where you have the wide open.
+       </p>
+       <p>
+        In other cases, we will be doing that.  So we’ll be following it.  Largely, that also will be a function of governors.  They know their states.  So, largely, that’s going to be a function of governors.
+       </p>
+       <p>
+        Yes.
+       </p>
+       <p>
+        Q     Yeah, you mentioned the — I think you used the term “clear scientific benchmarks on testing.”  And the main periscope that I think you guys are talking about is the ILI syndromic, as well as the surveillance and the sentinel testing.
+       </p>
+       <p>
+        THE PRESIDENT:  Yeah.
+       </p>
+       <p>
+        Q     Are you opening things up, then, without doing — I just want to be clear: Are you opening things up without doing widespread testing?  Is that because you don’t have the capacity or you don’t think it’s necessary?
+       </p>
+       <p>
+        THE PRESIDENT:  We do have the capacity, but, you know, you have states without any problem.  You have states with few cases, and those few cases have healed.  You have states with very little death, relatively speaking.  As I said, one is too many, but you have states with very little, and frankly, they’re at a point where they have almost nothing.
+       </p>
+       <p>
+        So this is a much different case than a New York or New Jersey where they’re going through — frankly, they go through hell.  And if you look at New York — I’m looking at bed count, because you have to look at bed count, and it’s really dropped.  We built the Javits Center with 2,900 beds.  And it was — I mean, they built it in four days.  They did an incredible job — the Army Corps of Engineers.  It was not used very much.  We sent the ship — the hospital ship into New York Harbor, and it was not used.  Then we went COVID, and it still was not used very much, because the bed count has gone way down — way, way down.
+       </p>
+       <p>
+        Q     So in these states, when do you —
+       </p>
+       <p>
+        THE PRESIDENT:  Go ahead, please.
+       </p>
+       <p>
+        Q     — when you see yourself getting back to campaigning then?  I mean —
+       </p>
+       <p>
+        Q     Mr. President?
+       </p>
+       <p>
+        THE PRESIDENT:  This is — this is not campaigning.  I want to make the country better.  I don’t care about campaigning.  This is — this is about making our country better.  I think this team has been incredible, whether it’s Army Corps of Engineers, whether it’s FEMA.
+       </p>
+       <p>
+        One thing that happened on the call today that I noticed more than anything is Pete Gaynor.  So many governors that, “I want to thank you.”  Pete Gaynor called up.  They had tornadoes in a big part of our country this weekend — this week.  And they were all saying that he has been unbelievable.  They called one after another.  They were thanking us for — that’s FEMA.  And they were thanking us.
+       </p>
+       <p>
+        No, I want to heal this country.  This — this is a war.  We’ve been through a war.  We have an invisible, as opposed to a visible, enemy.  I think, in many ways, the invisible enemy is much more dangerous, is much tougher.
+       </p>
+       <p>
+        In the G7 today, I went through country after country.  We were there.  We all get along great.  Angela Merkel and Shinzo Abe — Prime Minister of Japan — and all of them.  And their — their countries have been devastated by this.  Their economies have been devastated by this.  A hundred and eighty-four countries all over the world.
+       </p>
+       <p>
+        And we went through one after another.  And I was angry because it should have been told to us.  It should have been told to us early.  It should have been told to us a lot sooner.  People knew it was happening, and people didn’t want to talk about it.  I don’t know why, but we’re going to get to the bottom of it.  But people should have —
+       </p>
+       <p>
+        Q    Angry with China?  Or — I mean —
+       </p>
+       <p>
+        THE PRESIDENT:   People — I’m not saying anything.  I’m saying people should have told us about this.  They should have told the rest of the world too.
+       </p>
+       <p>
+        When I looked at Germany talking today, when I looked at France talking today — the European Union was there represented; that represents a lot of countries — their economies have been devastated, but they’re going to build them back.  But we’re going to build this economy back bigger, better, stronger than ever before.  You watch.  And we have stimulus.
+       </p>
+       <p>
+        And we’re going to do things, whether it’s infrastructure — which we would like to be able to do — our roads, our tunnels, our highways, our bridges.  Our bridges need help.  You know, a lot of you have reported on our bridges.  A lot of bridges are in bad shape.  They should have been fixed 25 years ago, and they’re still standing.  They have to be fixed.
+        <br/>
+        So hopefully we’ll get an infrastructure bill.
+       </p>
+       <p>
+        The good news is the interest rate is close to zero.  And zero interest is a good thing when it comes to rebuilding your infrastructure and your country back.
+       </p>
+       <p>
+        Please, in the back.
+       </p>
+       <p>
+        Q    Mr. President, walk us through the calendar, if you would.  When it comes to Memorial Day or even Pentecost in May; you’ve got July 4th, Labor Day weekend — what would you anticipate at each of those milestones?
+       </p>
+       <p>
+        THE PRESIDENT:  Well, I don’t like to anticipate because you have a couple of states that are in difficulty that have made a lot of progress, by the way, and they’re either here or they’re heading down.  But — so I’m not going to go in, in terms of dates, but I think we’re going very quickly now.  I really believe.
+       </p>
+       <p>
+        I think we’re going to have a lot of states open relatively soon.  We’re beating the date.  I set a date of May 1st, and, you know, here we are.  And I think you’re going to have some nice surprises over the next few days.  And that’ll be before.  And that’s big stuff.  Some of those states are big.  They’re big stuff.  Very important states.  And it’s going to be added on and on.
+       </p>
+       <p>
+        And as we — look, I don’t want anyone coming back that isn’t in position to come back.  The last thing we want is for, let’s say, a New York to come back too soon or a New Jersey to come back to soon.  We want them to come back when they’re ready.  But they’re really heading in a good direction, and I think it’ll be much faster than people think.  I think it’ll be quicker.  But it’s got to be safe.
+       </p>
+       <p>
+        Q    Mr. President —
+       </p>
+       <p>
+        THE PRESIDENT:  Yeah, please.  In the back.
+       </p>
+       <p>
+        Q    Thank you.  Thank you.  Has the government modeled the possibility — what might happen, how many deaths might occur — if there is a widespread resurgence?  If this just doesn’t work, I mean, how many deaths are we talking about here?
+       </p>
+       <p>
+        THE PRESIDENT:  So, if we didn’t do what we did, we were talking about up to 2.2 million deaths.  So that’s five times almost what we lost in the Civil War.  Okay?
+       </p>
+       <p>
+        Q    Right.  But I’m talking about from here on out.
+       </p>
+       <p>
+        THE PRESIDENT:  If — if everything happens properly and if we continue to go the way we’re going now, we will be significantly less than the lowest number with mitigation.  So we’ll be significantly less.  And it’s still a lot of people.  One is too many, as I’ve said.  One is too many.  But we’ll be under the number of 100,000, which was the minimum number projected by the model.  And I give — I give everybody up here, I give all of the people that we’ve been — I mean, we — this was a military operation with a lot of private help.
+       </p>
+       <p>
+        If you look at Roche, they were incredible.  If you look at Johnson &amp; Johnson now, what they’re doing — they are very far advanced on a vaccine.  I think, therapeutically, we have some of these genius company — they’re truly genius companies.  I’m seeing them.  I’m meeting with the people that run the companies and scientists.  And, I mean, what they’re doing is incredible.  It’s incredible.  It’s a beautiful thing to see.
+       </p>
+       <p>
+        So I think we’re very far advanced, and I think we’re going to be in great shape soon.
+       </p>
+       <p>
+        Yeah, please.
+       </p>
+       <p>
+        Q    Mr. President, I know you don’t want to mention specific states, but what about Washington and California?  Do you have guidance for —
+       </p>
+       <p>
+        THE PRESIDENT:  Do you mean Washington State or Washington here?
+       </p>
+       <p>
+        Q    Washington State and California.  Do you have guidance for them?
+       </p>
+       <p>
+        THE PRESIDENT:  Well, that’s going to be up to them.  They’re going to have to make that determination.  I mean, the governor of Washington was saying that he can’t find cotton because — you know, a swab is a very easy thing to get.  And swab is — essentially, it’s a little bit more sophisticated than a Q-tip.  And you got to be able to go out and find.  You know, the federal government shouldn’t be forced to go and do everything.
+       </p>
+       <p>
+        What we’ve done is incredible.  What we’ve done are the — the ones that can’t be done — like, for instance, the ventilators — that can’t be done by anybody but a very powerful, very great manufacturing country, which is what we are and what we’re really getting to be.
+       </p>
+       <p>
+        And I have to tell you, some of these companies, what — the job they’ve done — and we’re going to recognize them pretty soon — the job they’ve done in terms of getting out, in particular, ventilators, because ventilators are so hard.  They’re so — I say, and some people say, “Oh, it’s not really as complicated.”  Well, it’s like building a car.  And you know what?  The price is the same too.  It’s a very expensive thing for a sophisticated ventilator.  It’s very, very tough stuff.
+       </p>
+       <p>
+        Yeah, please.  In the back.
+       </p>
+       <p>
+        Q    Mr. President, let me toss this question up to you and to the doctors as well.  Truthfully, for those states that aren’t ready to go to phase one — to get through these phases, do we have an idea of how many millions, tens of millions of tests they’re going to need for them to get through these phases?  Any number out there?
+       </p>
+       <p>
+        THE PRESIDENT:  Yeah, I’ll let you —
+       </p>
+       <p>
+        Q    Tests of any sort?
+       </p>
+       <p>
+        THE PRESIDENT:  I’ll let you guys —
+       </p>
+       <p>
+        DR. BIRX:  Yeah, so — I mean, I — you’ve heard me talk about tests for a while from the podium, and I think what has happened over the last several weeks is hospitals and clinics that could move to the more point-of-care tests move to those point-of-care tests.  And what it’s left is an amazing array of capacity that exists in the country for at least a million more tests per week.
+       </p>
+       <p>
+        So we have a whole team working lab by lab to see what it would take to turn on all of those labs that aren’t running the pieces of equipment now.  So you see in the system — I just said to you there’s a million more tests per week — that we have tests sitting there and equipment sitting there.  And now we have to really deal with each single lab to really figure out what they need.
+       </p>
+       <p>
+        And I just want to thank Administrator Verma — Seema Verma — who went through with us, and thanks to the lab directors, they really explained to us: highly technical difficulty to run some of these big pieces of equipment.  Because you have to allocate the samples, you have to centrifuge, you have to put them on the machine.  It takes a tech full-time.  At $50 a test, it wasn’t enough to hire another technician to run the machine full-time.  So at $100 a test, it is.
+       </p>
+       <p>
+        So those are the kinds of changes we have to make bit by bit by bit.  But that alone doubles our testing capacity per week.
+       </p>
+       <p>
+        So we’re committed to work with laboratories to answer every one of their issues with the state and local governments. And, I think, frankly, in every conversation I have — and the governors will say, “I need 5,000 people tested.”  And I say, “Well, at the University of X, there are 6,700 tests waiting for you.”  So it’s more of making sure that every governor and every public health official knows exactly where every lab is and where the tests are so we can create with them a real understanding so all these tests can be run.
+       </p>
+       <p>
+        So, yes, there is twice the capacity right now.
+       </p>
+       <p>
+        Q    May I follow up?  You’re — you’re assuring the governors can have these tests?
+       </p>
+       <p>
+        THE PRESIDENT:  So, just so you understand — excuse me.  Just so you understand, we have tremendous testing capacity.  You look at the labs; they’re actually saying, “Send us.”  And the reason it’s gone down is because we have so many other tests that, frankly, are easier because you don’t have to send.  They’re on site.  And now we have the new saliva test that just came out yesterday, which is probably the easiest of them all, when you get right down to it.
+       </p>
+       <p>
+        And I was seeing where Rutgers is involved — great school, great college, great university — and they’re using that.  So many people are going to want to use that.  But they don’t have to use the labs anymore.  The labs are great, highly accurate.  Very, very great companies.  But they’re down.  They have tremendous — as that goes down, you have additional capacity.
+       </p>
+       <p>
+        We have tremendous testing capacity.  And to think that a month and a half ago, we had virtually nothing.
+       </p>
+       <p>
+        I just want to conclude: We’re opening up our great country again.  It’s going to be over a period of time.  We’re working with some really great people — people that have become friends of mine.  And I’m including Democrat governors that have really done a good job; Republican governors, most of whom I’ve known that have done a really good job.  They’re all working together. We’re all for the — with few exceptions, the relationship has been outstanding.
+        <br/>
+        And I want to thank Doctor, Doctor, and Mike.  I want to thank the Director.  Fantastic job.  We’ve all done — by the way, head of the FDA, he has broken hurdles that years ago, even recently, would have taken years.  He was — he got one thing done in one day that would have taken two years for somebody else.  So I want to thank Dr. Hahn of the FDA.
+       </p>
+       <p>
+        We have incredible people that we’re working with.  And we’re going to bring our country back, and it’s going to be bigger and better and stronger than ever before.  We have learned a lot.  We’ve learned a lot about ourselves.
+       </p>
+       <p>
+        I want to thank everybody.  And most importantly, I want to thank the American people.  Thank you all very much.  Thank you.
+       </p>
+       <p>
+        Q    A quick question on grocery stores, sir.  Mr. Vice President, a question about Kroger.  Kroger grocery stores asked those grocery personnel to be classified as secondary first responders or emergency personnel so they can get access to testing.  Is that something that the federal government would be open to?
+       </p>
+       <p>
+        THE VICE PRESIDENT:  We’re working with all of our (inaudible).  Thank you.
+       </p>
+       <p>
+        Q    Okay.  Thank you.
+       </p>
+       <p>
+        END
+       </p>
+       <p>
+        7:19 P.M. EDT
+       </p>
+      </div>
+     </div>
+    </div>
+   </main>
+   <!-- end main -->
+   <footer class="footer">
+    <div class="footer__wrap">
+     <div class="footer__logo">
+      <a href="https://www.whitehouse.gov">
+       <img alt="White House Logo" class="footer__img" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-footer-sm.png" srcset="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-footer-sm.png 1x, https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-footer-md.png 2x, https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/white-house-logo-footer-lg.png 3x"/>
+      </a>
+     </div>
+     <div class="footer__site-title">
+      The White House
+     </div>
+     <span class="footer__divider divider">
+      <hr/>
+      <hr/>
+     </span>
+     <div class="footer__nav">
+      <nav class="nav nav--footer">
+       <ul class="nav__menu nav__menu--depth0 menu">
+        <li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-page menu-item-17230">
+         <a class="nav__link" href="https://www.whitehouse.gov/live/">
+          Live
+         </a>
+        </li>
+        <li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-custom menu-item-object-custom menu-item-8288">
+         <a class="nav__link" href="https://apply.whitehouse.gov/">
+          Jobs
+         </a>
+        </li>
+        <li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-page menu-item-8093">
+         <a class="nav__link" href="https://www.whitehouse.gov/get-involved/">
+          Get Involved
+         </a>
+        </li>
+        <li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-page menu-item-8092">
+         <a class="nav__link" href="https://www.whitehouse.gov/copyright/">
+          Copyright Policy
+         </a>
+        </li>
+        <li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-8095">
+         <a class="nav__link" href="https://www.whitehouse.gov/privacy-policy/">
+          Privacy Policy
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+    </div>
+    <div class="footer__social">
+     <nav class="nav nav--social-links-menu">
+      <ul class="nav__menu nav__menu--depth0 menu">
+       <li class="nav__menu-item nav__menu-item--depth0 footer__social-link__twitter menu-item menu-item-type-custom menu-item-object-custom menu-item-21">
+        <a class="nav__link" href="https://twitter.com/whitehouse" rel="noopener noreferrer" target="_blank">
+         <span>
+          Twitter
+         </span>
+        </a>
+       </li>
+       <li class="nav__menu-item nav__menu-item--depth0 footer__social-link__facebook menu-item menu-item-type-custom menu-item-object-custom menu-item-20">
+        <a class="nav__link" href="https://www.facebook.com/WhiteHouse/" rel="noopener noreferrer" target="_blank">
+         <span>
+          Facebook
+         </span>
+        </a>
+       </li>
+       <li class="nav__menu-item nav__menu-item--depth0 footer__social-link__instagram menu-item menu-item-type-custom menu-item-object-custom menu-item-22">
+        <a class="nav__link" href="https://www.instagram.com/whitehouse/" rel="noopener noreferrer" target="_blank">
+         <span>
+          Instagram
+         </span>
+        </a>
+       </li>
+       <li class="nav__menu-item nav__menu-item--depth0 footer__social-link__email menu-item menu-item-type-custom menu-item-object-custom menu-item-23">
+        <a class="nav__link" href="https://www.whitehouse.gov/contact/">
+         <span>
+          Contact
+         </span>
+        </a>
+       </li>
+      </ul>
+     </nav>
+    </div>
+   </footer>
+  </div>
+  <!-- end .body-overflow -->
+  <section id="wp-footer">
+   <script src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/vendor/jquery/dist/jquery.min.js?ver=fb3993a9" type="text/javascript">
+   </script>
+   <script src="https://www.whitehouse.gov/wp-includes/js/clipboard.min.js?ver=5.4" type="text/javascript">
+   </script>
+   <script src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/vendor/bows/dist/bows.min.js?ver=fb3993a9" type="text/javascript">
+   </script>
+   <script src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/dist/site.min.js?ver=fb3993a9" type="text/javascript">
+   </script>
+   <script type="text/javascript">
+    window.site = new Site();
+   </script>
+  </section>
+  <div class="popover" role="dialog">
+   <div class="popover__bar">
+    <button class="popover__hamburger-toggle" type="button">
+     <img alt="Close Menu" class="popover__hamburger-toggle-close" height="20" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/close.svg" width="20"/>
+     <img alt="Open Menu" class="popover__hamburger-toggle-open" height="20" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/hamburger.svg" width="28"/>
+    </button>
+    <button class="popover__search-toggle" type="button">
+     <img alt="Close Search" class="popover__search-toggle-close" height="20" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/close.svg" width="20"/>
+     <img alt="Open Search" class="popover__search-toggle-open" height="20" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/search.svg" width="20"/>
+    </button>
+   </div>
+   <div class="popover__content">
+    <div class="popover__hamburger">
+     <div class="popover__nav">
+      <nav class="nav nav--popover">
+       <ul class="nav__menu nav__menu--depth0 menu">
+        <li class="nav__menu-item nav__menu-item--depth0 nav__menu-item--has-submenu nav__menu-item--active-ancestor menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children current-menu-parent current-menu-ancestor nav__menu-item--has-menu-5 menu-item-658">
+         <a class="nav__link" href="https://www.whitehouse.gov/news/">
+          News
+         </a>
+         <ul class="nav__menu nav__menu--depth1 sub-menu">
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-152066">
+           <a class="nav__link" href="https://www.whitehouse.gov/remarks/">
+            Remarks
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 nav__menu-item--active menu-item menu-item-type-post_type_archive menu-item-object-briefing-statement current-menu-item menu-item-105680">
+           <a class="nav__link" href="https://www.whitehouse.gov/briefings-statements/">
+            Briefings &amp; Statements
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type_archive menu-item-object-presidential-action menu-item-105687">
+           <a class="nav__link" href="https://www.whitehouse.gov/presidential-actions/">
+            Presidential Actions
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-105701">
+           <a class="nav__link" href="https://www.whitehouse.gov/articles/">
+            Articles
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-105694">
+           <a class="nav__link" href="https://www.whitehouse.gov/news/">
+            All News
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav__menu-item nav__menu-item--depth0 nav__menu-item--has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav__menu-item--has-menu-6 menu-item-659">
+         <a class="nav__link" href="https://www.whitehouse.gov/issues/">
+          Issues
+         </a>
+         <ul class="nav__menu nav__menu--depth1 sub-menu">
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-issue menu-item-105708">
+           <a class="nav__link" href="https://www.whitehouse.gov/issues/education/">
+            Education
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-issue menu-item-105715">
+           <a class="nav__link" href="https://www.whitehouse.gov/issues/national-security-defense/">
+            National Security &amp; Defense
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-issue menu-item-105729">
+           <a class="nav__link" href="https://www.whitehouse.gov/issues/budget-spending/">
+            Budget &amp; Spending
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-issue menu-item-105722">
+           <a class="nav__link" href="https://www.whitehouse.gov/issues/immigration/">
+            Immigration
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-issue menu-item-105736">
+           <a class="nav__link" href="https://www.whitehouse.gov/issues/healthcare/">
+            Healthcare
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-105743">
+           <a class="nav__link" href="https://www.whitehouse.gov/issues/">
+            All Issues
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav__menu-item nav__menu-item--depth0 nav__menu-item--has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav__menu-item--has-menu-6 menu-item-795">
+         <a class="nav__link" href="https://www.whitehouse.gov/the-trump-administration/">
+          The Administration
+         </a>
+         <ul class="nav__menu nav__menu--depth1 sub-menu">
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-authors menu-item-105757">
+           <a class="nav__link" href="https://www.whitehouse.gov/people/donald-j-trump/">
+            President Donald J. Trump
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-authors menu-item-105764">
+           <a class="nav__link" href="https://www.whitehouse.gov/people/mike-pence/">
+            Vice President Michael R. Pence
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-authors menu-item-105750">
+           <a class="nav__link" href="https://www.whitehouse.gov/people/melania-trump/">
+            First Lady Melania Trump
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-authors menu-item-105771">
+           <a class="nav__link" href="https://www.whitehouse.gov/people/karen-pence/">
+            Second Lady Karen Pence
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-105778">
+           <a class="nav__link" href="https://www.whitehouse.gov/the-trump-administration/the-cabinet/">
+            The Cabinet
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-105785">
+           <a class="nav__link" href="https://www.whitehouse.gov/disclosures/">
+            Disclosures
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav__menu-item nav__menu-item--depth0 nav__menu-item--has-submenu menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav__menu-item--has-menu-6 menu-item-105792">
+         <a class="nav__link" href="#">
+          Executive Offices
+         </a>
+         <ul class="nav__menu nav__menu--depth1 sub-menu">
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-eop-component menu-item-105806">
+           <a class="nav__link" href="https://www.whitehouse.gov/cea/">
+            Council of Economic Advisers
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-eop-component menu-item-105799">
+           <a class="nav__link" href="https://www.whitehouse.gov/ceq/">
+            Council on Environmental Quality
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-eop-component menu-item-105813">
+           <a class="nav__link" href="https://www.whitehouse.gov/nsc/">
+            National Security Council
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-eop-component menu-item-106142">
+           <a class="nav__link" href="https://www.whitehouse.gov/omb/">
+            Office of Management and Budget
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-eop-component menu-item-105827">
+           <a class="nav__link" href="https://www.whitehouse.gov/ondcp/">
+            Office of National Drug Control Policy
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-eop-component menu-item-105834">
+           <a class="nav__link" href="https://www.whitehouse.gov/ostp/">
+            Office of Science and Technology Policy
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav__menu-item nav__menu-item--depth0 nav__menu-item--has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav__menu-item--has-menu-5 menu-item-1548">
+         <a class="nav__link" href="https://www.whitehouse.gov/about-the-white-house/">
+          About The White House
+         </a>
+         <ul class="nav__menu nav__menu--depth1 sub-menu">
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-105848">
+           <a class="nav__link" href="https://www.whitehouse.gov/about-the-white-house/tours-events/">
+            Tours &amp; Events
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-105855">
+           <a class="nav__link" href="https://www.whitehouse.gov/about-the-white-house/presidents/">
+            Past Presidents
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-105862">
+           <a class="nav__link" href="https://www.whitehouse.gov/about-the-white-house/first-ladies/">
+            Past First Ladies
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 nav__menu-item--has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav__menu-item--has-menu-5 menu-item-105995">
+           <a class="nav__link" href="https://www.whitehouse.gov/about-the-white-house/the-grounds/">
+            The Grounds
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 nav__menu-item--has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav__menu-item--has-menu-7 menu-item-106079">
+           <a class="nav__link" href="https://www.whitehouse.gov/about-the-white-house/our-government/">
+            Our Government
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav__menu-item nav__menu-item--depth0 nav__menu-item--has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav__menu-item--has-menu-3 menu-item-5738">
+         <a class="nav__link" href="https://www.whitehouse.gov/get-involved/">
+          Get Involved
+         </a>
+         <ul class="nav__menu nav__menu--depth1 sub-menu">
+          <li class="nav__menu-item nav__menu-item--depth1 menu-item menu-item-type-post_type menu-item-object-page menu-item-105869">
+           <a class="nav__link" href="https://www.whitehouse.gov/get-involved/write-or-call/">
+            Write or Call the White House
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 nav__menu-item--has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav__menu-item--has-menu-3 menu-item-105876">
+           <a class="nav__link" href="https://www.whitehouse.gov/get-involved/internships/">
+            White House Internship Program
+           </a>
+          </li>
+          <li class="nav__menu-item nav__menu-item--depth1 nav__menu-item--has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav__menu-item--has-menu-4 menu-item-105904">
+           <a class="nav__link" href="https://www.whitehouse.gov/get-involved/fellows/">
+            White House Fellows
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-page menu-item-105988">
+         <a class="nav__link" href="https://www.whitehouse.gov/contact/">
+          Contact
+         </a>
+        </li>
+        <li class="nav__menu-item nav__menu-item--depth0 menu-item menu-item-type-post_type menu-item-object-page nav__menu-item--live menu-item-105974">
+         <a class="nav__link" href="https://www.whitehouse.gov/live/">
+          <span class="nav__menu-item-label">
+           Live
+          </span>
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+     <div class="popover__seal">
+      <img alt="Presidential Crest" height="435" src="https://www.whitehouse.gov/wp-content/themes/whitehouse/assets/img/presidential-crest-gray.svg" width="435"/>
+     </div>
+    </div>
+    <div class="popover__search">
+     <form action="https://www.whitehouse.gov/search/" class="popover__search-form">
+      <label class="visually-hidden" for="popover__search-input">
+       Type Your Search
+      </label>
+      <input autocomplete="off" class="popover__search-input" id="popover__search-input" name="s" placeholder="Type Your Search..." type="search"/>
+      <button class="popover__search-submit" type="submit">
+       <span>
+        Press enter to search
+       </span>
+      </button>
+     </form>
+    </div>
+   </div>
+  </div>
+  <script type="text/javascript">
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"9360826e15","applicationID":"81062415,484304241,484396381","transactionName":"MVNbZhQFXEAEVBBfWQgZeFESDV1dSkQNWFEKUxRQFA1XVQxZAxtFEldNVwsBXEc=","queueTime":0,"applicationTime":271,"atts":"HRRYEFwfT04=","errorBeacon":"bam.nr-data.net","agent":""}
+  </script>
+ </body>
+</html>
