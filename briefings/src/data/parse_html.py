@@ -6,7 +6,7 @@ import re
 
 def clean_html(text):
     # remove HTML tags, normalize unicode, and strip newlines/whitespace at ends
-    return unicodedata.normalize('NFKD',re.sub('<[^<]+?>', '', str(text))).strip()
+    return unicodedata.normalize('NFKD',re.sub('<[^<]+?>', '', str(text)))).strip()
 
 briefings = glob.glob("../../data/raw/*.html")
 
