@@ -1,4 +1,5 @@
 import glob
+from clean_text import preprocess
 import pandas as pd
 import re
 
@@ -11,10 +12,14 @@ for briefing in briefings:
     with open(briefing,'r') as f:
         lines = f.readlines()
         for line in lines:
-            remarks.append(line.rstrip().replace(r'’','\''))
-            dates.append(date)
+            # keep the longer remarks
+            if len(line.split()) >= 16:
+                remarks.append(line.rstrip().replace(r'’','\''))
+                dates.append(date)
 
-df = pd.DataFrame({'date':date,'text':remarks})
+df = pd.DataFrame({'date':dates,'text':remarks})
+
+df['clean_text'] = df['text'].apply(lambda x: preprocess(x))
 
 df.to_csv('trump_wh_remarks.csv')
     
