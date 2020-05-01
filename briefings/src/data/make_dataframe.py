@@ -1,7 +1,14 @@
 import glob
-from clean_text import preprocess
+import nltk
+from clean_text import normalize 
+from collections import Counter
+from gensim.models import Phrases
+from gensim.models.phrases import Phraser
+from nltk.corpus import stopwords
 import pandas as pd
+import string
 import re
+from itertools import chain
 
 briefings = glob.glob("../../data/interim/*.txt")
 
@@ -19,8 +26,15 @@ for briefing in briefings:
 
 df = pd.DataFrame({'date':dates,'text':remarks})
 
-df['clean_text'] = df['text'].apply(lambda x: preprocess(x))
+df['normalized_text'] = df['text'].apply(lambda x: normalize(x))
+
+# make bigrams
+
+sentences = df['normalized_text'].values
+sentence_stream = [sentence.split() for sentence in sentences] 
+bigram = Phrases(sentence_stream, min_count=5, threshold=80)
+trigram = Phrases(bigram[sentence_stream], threshold=80)
+df['clean_text'] = df['normalized_text'].apply(lambda x: ' '.join(bigram[x.split()]))
+df['clean_text'] = df['clean_text'].apply(lambda x: ' '.join(trigram[bigram[x.split()]]))
 
 df.to_csv('trump_wh_remarks.csv')
-    
-

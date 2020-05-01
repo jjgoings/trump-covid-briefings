@@ -8,7 +8,9 @@ import inflect
 from nltk import word_tokenize, sent_tokenize
 from nltk.corpus import stopwords, words
 from nltk.stem import LancasterStemmer, WordNetLemmatizer
+from nltk.util import ngrams
 from tqdm import tqdm
+import gensim
 
 ''' From: https://gist.github.com/MrEliptik/b3f16179aa2f530781ef8ca9a16499af'''
 
@@ -84,23 +86,19 @@ def lemmatize_words(words):
             lemmas.append(lemma)
     return lemmas
 
+
 def normalize(words):
+    ''' return a normalized sentence '''
+    words = nltk.word_tokenize(replace_contractions(words))
     words = remove_non_ascii(words)
     words = to_lowercase(words)
     words = remove_punctuation(words)
     words = replace_numbers(words)
     words = remove_stopwords(words)
     words = lemmatize_words(words)
-    #words = stem_words(words)
-    return words
-
-def preprocess(sample):
-    sample = replace_contractions(sample)
-    # Tokenize
-    words = nltk.word_tokenize(sample)
-
-    # Normalize
-    return " ".join(normalize(words))
+    return ' '.join(words)
+    #return words
 
 if __name__ == '__main__':
-   print(preprocess('2-trillion-dollar'))
+   print(normalize('2-trillion-dollar'))
+   print(normalize("I can't even"))
