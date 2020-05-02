@@ -21,7 +21,7 @@ df = pd.read_csv('../../data/processed/trump_wh_remarks.csv')
 remarks = [i.split() for i in list(df['clean_text'].values)]
 
 common_dictionary = Dictionary(remarks)
-common_dictionary.filter_extremes(no_below=10,no_above=0.01)#, keep_tokens=['injury','science','data','choice'])
+common_dictionary.filter_extremes(no_below=10,no_above=0.0125, keep_tokens=['covid','coronavirus'])
 print(common_dictionary)
 common_corpus = [common_dictionary.doc2bow(remark) for remark in remarks]
 

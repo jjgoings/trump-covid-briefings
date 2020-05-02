@@ -52,6 +52,8 @@ def replace_numbers(words):
     for word in words:
         if word.isdigit():
             new_word = p.number_to_words(word)
+            new_word = new_word.replace(',','')
+            new_word = new_word.replace(' ','-')
             new_words.append(new_word)
         else:
             new_words.append(word)
@@ -79,11 +81,15 @@ def lemmatize_words(words):
     lemmatizer = WordNetLemmatizer()
     lemmas = []
     for word in words:
-        lemma = lemmatizer.lemmatize(word, pos='v')
-        lemma = lemmatizer.lemmatize(word, pos='n')
-        # WordNetLemmatizer converts us -> u
-        if lemma not in ['u']:
-            lemmas.append(lemma)
+        if word == 'pence':
+            # it likes to make "Mike Pence" "Mike Penny" :)
+            lemmas.append('pence')
+        else:
+            lemma = lemmatizer.lemmatize(word, pos='v')
+            lemma = lemmatizer.lemmatize(word, pos='n')
+            # WordNetLemmatizer converts us -> u
+            if lemma not in ['u']:
+                lemmas.append(lemma)
     return lemmas
 
 
@@ -102,3 +108,4 @@ def normalize(words):
 if __name__ == '__main__':
    print(normalize('2-trillion-dollar'))
    print(normalize("I can't even"))
+   print(normalize('2019'))

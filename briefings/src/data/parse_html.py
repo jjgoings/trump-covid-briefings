@@ -6,7 +6,7 @@ import re
 
 def clean_html(text):
     # remove HTML tags, normalize unicode, and strip newlines/whitespace at ends
-    return unicodedata.normalize('NFKD',re.sub('<[^<]+?>', '', str(text)))).strip()
+    return unicodedata.normalize('NFKD',re.sub('<[^<]+?>', '', str(text))).strip()
 
 briefings = glob.glob("../../data/raw/*.html")
 
@@ -19,6 +19,7 @@ for briefing in briefings:
     for line in text:
         # We don't want any newlines
         cleaned_line = clean_html(line).replace('\n', ' ')
+        cleaned_line = cleaned_line.replace('•', '\n')
         if cleaned_line[:5].isupper(): # actors are in all upper case for at least 5 characters long
             if cleaned_line[:14] == 'THE PRESIDENT:':
                 isTrump = True 
