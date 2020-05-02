@@ -18,7 +18,7 @@ CVs = []
 topics = []
 for num_topics in range(2,21,1):
     common_dictionary = Dictionary(remarks)
-    common_dictionary.filter_extremes(no_below=10,no_above=0.0125, keep_tokens=['covid','coronavirus'])
+    common_dictionary.filter_extremes(no_below=10,no_above=0.01, keep_tokens=['covid','coronavirus'])
     common_corpus = [common_dictionary.doc2bow(remark) for remark in remarks]
     lda = LdaMulticore(common_corpus, id2word=common_dictionary,num_topics=num_topics, alpha='symmetric', workers=4,random_state=10) 
 
