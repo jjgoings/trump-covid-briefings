@@ -21,8 +21,22 @@ for briefing in briefings:
         for line in lines:
             # keep the longer remarks
             if len(line.split()) >= 16:
-                remarks.append(line.rstrip().replace(r'’','\''))
-                dates.append(date)
+                # BERT cannot handle really long lines, so we split up any paragraphs that are too big
+                if len(line.split()) > 120:
+                    text = line.split('.')
+                    num_sent = len(text)
+                    len1 = num_sent//2
+                    print('\n',text)
+                    print(text[:len1])
+                    print(text[len1:])
+                    remarks.append('.'.join(text[:len1]).rstrip().replace(r'’','\''))
+                    dates.append(date)
+                    remarks.append('.'.join(text[len1:]).rstrip().replace(r'’','\''))
+                    dates.append(date)
+                    print(remarks[-2:])
+                else:
+                    remarks.append(line.rstrip().replace(r'’','\''))
+                    dates.append(date)
 
 df = pd.DataFrame({'date':dates,'text':remarks})
 
