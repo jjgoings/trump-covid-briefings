@@ -26,14 +26,14 @@ for briefing in briefings:
                     text = line.split('.')
                     num_sent = len(text)
                     len1 = num_sent//2
-                    print('\n',text)
-                    print(text[:len1])
-                    print(text[len1:])
+                    #print('\n',text)
+                    #print(text[:len1])
+                    #print(text[len1:])
                     remarks.append('.'.join(text[:len1]).rstrip().replace(r'’','\''))
                     dates.append(date)
                     remarks.append('.'.join(text[len1:]).rstrip().replace(r'’','\''))
                     dates.append(date)
-                    print(remarks[-2:])
+                    #print(remarks[-2:])
                 else:
                     remarks.append(line.rstrip().replace(r'’','\''))
                     dates.append(date)
