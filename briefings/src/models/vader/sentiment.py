@@ -38,7 +38,7 @@ ax.xaxis.set_minor_locator(mdates.DayLocator())
 #set major ticks format
 ax.xaxis.set_major_formatter(mdates.DateFormatter('%b %d'))
 
-plt.ylim([0.15,0.65])
+plt.ylim([0.15,0.75])
 plt.ylabel('Sentiment')
 plt.xlabel('Date')
 plt.show()

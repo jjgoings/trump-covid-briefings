@@ -29,6 +29,44 @@ Given that all his remarks are publicly recorded on the [White House webpage](ht
 
 ### What does Trump talk about?
 
+### Keywords for each day's briefing
+
+|    Date    |          Keyword 1         |      Keyword 2     |        Keyword 3        |        Keyword 4       |         Keyword 5        |
+|:----------:|:--------------------------:|:------------------:|:-----------------------:|:----------------------:|:------------------------:|
+| March 14 |                        fed |          proactive |                     mic |                closure |                refinance |
+| March 15 |                    predict |    Federal Reserve |                  Google |                  relax |                    store |
+| March 16 |                 postponing |            symptom |            Friday night |                   wash |                 Rochelle |
+| March 17 |                payroll tax |             boeing |              telehealth |                tourism |                 screened |
+| March 18 |                  self swab |               calm |              invincible |                 target |                passenger |
+| March 19 |                      Syria |        chloroquine |                    Tice |                 mother |                    chaos |
+| March 21 |               student loan |            penalty |            inaccurately |                buyback |         religious leader |
+| March 22 |                    veteran |                 VA | Federal Medical Station |            preexisting |                     rich |
+| March 23 |                     boeing | cure is worse than the problem |        watching closely |               exchange |                 learning |
+| March 24 |                   timeline |       independence |                   Larry |          large section |              established |
+| March 25 |                      Steve |           Olympics |             South Korea |          specification |             significance |
+| March 26 |                      steel |              Brady |                     Tom |            South Korea |               96 |
+| March 27 |               appreciative |              Peter |                smartest |                 Boeing |                   handle |
+| March 30 |                   June 1st |             rating |                   waive | 300,000 |        22 million |
+| March 31 |                      scarf |              guest |                    ride |              impeached |                      oil |
+| April 01 |                       cash |           violence |                   train |                  Logan |                 Facebook |
+| April 02 |                    gesture |                cut |                    flat |                   Iran |                     bump |
+| April 03 |                   voter id |         81 |               voluntary |                   mail |                      oil |
+| April 04 |              whistleblower |         transcript |                informer |           commissioner |   180 |
+| April 05 | 182 |                sue |                 rushing |                    oil |                     sign |
+| April 06 |                     letter |             London |               intensive |                nuclear |              replacement |
+| April 08 |                   delegate |             Bernie |                    memo |                 Easter |                   voting |
+| April 09 |                        oil |             mental |                  Scalia |                storage |                     OPEC |
+| April 10 |                     pastor |             Denver |            interruption |                 Mexico | World Trade Organization |
+| April 13 |                    January |          committee |                    clip |           Jan 17th |                    Wuhan |
+| April 15 |                      judge |           approved |                   Sonny |                session |                  nominee |
+| April 16 |                      count |               wide |                   arena |             devastated |                 capacity |
+| April 19 |                       swab |            aroused |                     ran |               pressure |                    hotel |
+| April 20 |                  defending |            squeeze |             sustainable |         60,000 |                    rally |
+| April 22 |                     corona |             parlor |               misquoted |                  ember |                      flu |
+| April 23 |                        sun |               heat |              laboratory |                surface |               Brian Kemp |
+| April 24 |                    Stephen |          approving |                declined |                payment |                      Tim |
+| April 27 |                   pharmacy |             damage |        Attorney General |          General Flynn |                  quarter |
+
 ### How positive/negative is Trump during his speeches?
 
 ### What might be influencing Trump's attitude?
