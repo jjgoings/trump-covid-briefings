@@ -1,13 +1,20 @@
 # What does Trump talk about when he talks about COVID-19? 
 
+<p align="center">
+<img alt="" src="/assets/trump_wh_press_briefing.jpg" height="200" />
+<img alt="" src="/assets/covid.png" height="200" />
+</p>
+
+
+<!---  * [What does Trump talk about?](#what-does-trump-talk-about) -->
 ## Table of Contents
 * [Background](#background)
 * [Findings](#findings)
-  * [What does Trump talk about?](#what-does-trump-talk-about)
+  * [Keywords for each day's briefing](#keywords-for-each-days-briefing)
   * [How positive/negative is Trump during his speeches?](#how-positivenegative-is-trump-during-his-speeches)
   * [What might be influencing Trump's attitude?](#what-might-be-influencing-trumps-attitude)
 * [Details on Data Acquisition](#details-on-data-acquisition)
-* [Usage](#usage)
+<!---* [Usage](#usage)-->
 
 ## Background
 
@@ -19,6 +26,8 @@ I wondered, though, if a more **data-driven** approach to Trump's remarks would 
 
 * What topics Trump thinks are particularly important?
 
+* What are some of the keywords for each day's briefing? 
+
 * Trump's attitude (sentiment) during his speeches?
 
 * What underlying factors in the news or world correlate with his message?
@@ -27,21 +36,33 @@ Given that all his remarks are publicly recorded on the [White House webpage](ht
 
 ## Findings
 
-### What does Trump talk about?
+<!---### What does Trump talk about? -->
 
 ### Keywords for each day's briefing
+
+It's interesting to see what Trump thinks is important each day. One way to address this is to pull out the top keywords for each day's briefing. The technique we use is term-frequency inverse-document-frequency (TF-IDF) and treat each day's briefing as a "document". It's a cheap and effective way to pull out those unique keywords that distinguish each day's briefing.
+
+So on March 14, for example, you can see that "mic" (or "microphone") was a keyword of interest. Interestingly, he went on a bit of a rant during his talk because he was accused of touching the microphone too much:
+
+> Somebody said yesterday I touched the microphone.  I was touching it because we have different height people and I'm trying to make it easy for them because they're going to have to touch, because they wouldn't be able to reach the mic; they wouldn't be able to speak in the mic.  So I'll move the mic down.  And they said, "Oh, he touched the microphone."  Well, if I don't touch it, they’re going to have to touch it.  Somebody is going to have to, so I might as well be the one to do it. 
+
+Amusing that the model identified this (somewhat) bizarre tangent.
+
+You can see for yourself below. Near the beginning of the briefings, things seem much more focused on health-care and government action ("proactive", "self swab", "buyback"). But as the economy progressively gets worse (see March 23!) then we see more of an economic focus ('exchange', 'cure is worse than the problem'). The economic shutdown is no small deal!
+
+You can also see the importance of oil in April. It wasn't a huge issue, but you see it become more important starting around April 3, peaking around April 9. That day, if you recall, was when OPEC made *huge* cuts in oil production. So naturally it was a topic in Trump's briefing that day! 
 
 |    Date    |          Keyword 1         |      Keyword 2     |        Keyword 3        |        Keyword 4       |         Keyword 5        |
 |:----------:|:--------------------------:|:------------------:|:-----------------------:|:----------------------:|:------------------------:|
 | March 14 |                        fed |          proactive |                     mic |                closure |                refinance |
 | March 15 |                    predict |    Federal Reserve |                  Google |                  relax |                    store |
 | March 16 |                 postponing |            symptom |            Friday night |                   wash |                 Rochelle |
-| March 17 |                payroll tax |             boeing |              telehealth |                tourism |                 screened |
+| March 17 |                payroll tax |             Boeing |              telehealth |                tourism |                 screened |
 | March 18 |                  self swab |               calm |              invincible |                 target |                passenger |
 | March 19 |                      Syria |        chloroquine |                    Tice |                 mother |                    chaos |
 | March 21 |               student loan |            penalty |            inaccurately |                buyback |         religious leader |
 | March 22 |                    veteran |                 VA | Federal Medical Station |            preexisting |                     rich |
-| March 23 |                     boeing | cure is worse than the problem |        watching closely |               exchange |                 learning |
+| March 23 |                     Boeing | cure is worse than the problem |        watching closely |               exchange |                 learning |
 | March 24 |                   timeline |       independence |                   Larry |          large section |              established |
 | March 25 |                      Steve |           Olympics |             South Korea |          specification |             significance |
 | March 26 |                      steel |              Brady |                     Tom |            South Korea |               96 |
@@ -69,10 +90,28 @@ Given that all his remarks are publicly recorded on the [White House webpage](ht
 
 ### How positive/negative is Trump during his speeches?
 
+We can investigate how positive or negative Trump is speaking during his briefings. To do this, we look at the compound sentiment for each briefing using the Valence Aware Dictionary and sEntiment Reasoner ([VADER](http://comp.social.gatech.edu/papers/icwsm14.vader.hutto.pdf)). Although it was trained on social media, it works well for our purposes. It ranges from -1 (negative) to +1 (positive). You can see that, on the whole, Trump is pretty positive-to-neutral. Politically, I think this would be better to lean positive during the briefings. Of course, you don't want to be too positive either during these tough times!
+
+<p align="center">
+<img alt="" src="/briefings/src/models/vader/sentiment.png" width="800" />
+</p>
+
+On average, his sentiment lies around 0.4, with a standard deviation of 0.1. So leaning positive, but by no means elated, which is probably the right tone to hit.  
+
 ### What might be influencing Trump's attitude?
+
+Perhaps more interesting is to try and find patterns in Trump's sentiment. Initially, I noticed the big spike in sentiment on March 24, as well as a pretty big drop in sentiment on April 1. On March 24, there was a big stock market rally, and on April 1, the market suffered a few days of losses. I wondered: could it be that Trump's mood is correlated with stock market performance? 
+
+To investigate, I plotted Trump's sentiment versus the percent change in the closing value of the Dow Jones Industrial Average. On first look, you can see that the briefing sentiment shows some correlation with changes in thew DJIA. If the market is doing bad, Trump is generally more negative, and if the market is doing well, Trump is more positive. It's tough to say which direction the correlation goes (correlation is not causation!) but given that Trump usually holds his briefings later in the day, I'm inclined to think the market bears more influence on his mood. But the issues are complicated and there are many more variables at play, so take it with a grain of salt. 
 
 <p align="center">
 <img alt="" src="/briefings/src/models/vader/sentiment_vs_djia.png" width="800" />
+</p>
+
+We can actually make the correlation between stock market and Trump's mood a bit tighter. Below we have a regression plot, and find that the Pearson correlation is around +0.45. This is good enough to say that there is likely a moderate positive correlation between Trump's sentiment and the market performance. Makes sense, as he prides himself on his business acumen and being able to keep the American economy strong. (No comment if that corresponds to reality.)
+
+<p align="center">
+<img alt="" src="/briefings/src/models/vader/sentiment_vs_djia_correlation.png" width="800" />
 </p>
 
 ## Details on Data Acquisition
@@ -85,5 +124,5 @@ Once the raw text was extracted to a `pandas` DataFrame, we applied standard tex
 
 After cleaning, the data is saved in `briefings/data/processed/trump_wh_remarks.csv` for further NLP analysis.
 
-## Usage
+<!---## Usage-->
 
