@@ -42,15 +42,21 @@ Given that all his remarks are publicly recorded on the [White House webpage](ht
 
 It's interesting to see what Trump thinks is important each day. One way to address this is to pull out the top keywords for each day's briefing. The technique we use is term-frequency inverse-document-frequency (TF-IDF) and treat each day's briefing as a "document". It's a cheap and effective way to pull out those unique keywords that distinguish each day's briefing.
 
-So on March 14, for example, you can see that "mic" (or "microphone") was a keyword of interest. Interestingly, he went on a bit of a rant during his talk because he was accused of touching the microphone too much:
+Here's an example of the important keywords found on March 14:
+
+|    Date    |          Keyword 1         |      Keyword 2     |        Keyword 3        |        Keyword 4       |         Keyword 5        |
+|:----------:|:--------------------------:|:------------------:|:-----------------------:|:----------------------:|:------------------------:|
+| March 14 |                        fed |          proactive |                     mic |                closure |                refinance |
+
+So here you can see that "mic" (or "microphone") was a keyword of interest. Interestingly, Trump went on a bit of a rant during his talk because he was accused of touching the microphone:
 
 > Somebody said yesterday I touched the microphone.  I was touching it because we have different height people and I'm trying to make it easy for them because they're going to have to touch, because they wouldn't be able to reach the mic; they wouldn't be able to speak in the mic.  So I'll move the mic down.  And they said, "Oh, he touched the microphone."  Well, if I don't touch it, they’re going to have to touch it.  Somebody is going to have to, so I might as well be the one to do it. 
 
 Amusing that the model identified this (somewhat) bizarre tangent.
 
-You can see for yourself below. Near the beginning of the briefings, things seem much more focused on health-care and government action ("proactive", "self swab", "buyback"). But as the economy progressively gets worse (see March 23!) then we see more of an economic focus ('exchange', 'cure is worse than the problem'). The economic shutdown is no small deal!
+You can see for yourself below. (Click to expand the table.) Near the beginning of the briefings, things seem much more focused on health-care and government action ("proactive", "self swab", "buyback"). But as the economy progressively gets worse (see March 23!) then we see more of an economic focus ('exchange', 'cure is worse than the problem'). The economic shutdown is no small deal!
 
-You can also see the importance of oil in April. It wasn't a huge issue, but you see it become more important starting around April 3, peaking around April 9. That day, if you recall, was when OPEC made *huge* cuts in oil production. So naturally it was a topic in Trump's briefing that day! 
+<details><summary><b> Click to show important keywords by day </b> </summary>
 
 |    Date    |          Keyword 1         |      Keyword 2     |        Keyword 3        |        Keyword 4       |         Keyword 5        |
 |:----------:|:--------------------------:|:------------------:|:-----------------------:|:----------------------:|:------------------------:|
@@ -87,6 +93,10 @@ You can also see the importance of oil in April. It wasn't a huge issue, but you
 | April 23 |                        sun |               heat |              laboratory |                surface |               Brian Kemp |
 | April 24 |                    Stephen |          approving |                declined |                payment |                      Tim |
 | April 27 |                   pharmacy |             damage |        Attorney General |          General Flynn |                  quarter |
+
+</details>
+
+You can also see the importance of oil in April. It wasn't a huge issue, but you see it become more important starting around April 3, peaking around April 9. That day, if you recall, was when OPEC made *huge* cuts in oil production. So naturally it was a topic in Trump's briefing that day! 
 
 ### How positive/negative is Trump during his speeches?
 
