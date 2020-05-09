@@ -38,7 +38,7 @@ Given that all his remarks are publicly recorded on the [White House webpage](ht
 
 ### What does Trump talk about?
 
-I wanted to get an idea of what topics Trump talks about during his briefings. To answer this, I used [non-negative matrix factorization (NMF)](https://en.wikipedia.org/wiki/Non-negative_matrix_factorization) to cluster keywords around certain topics. The number of topic and the interpretation of the topic is up to the scientist. There's no right answer as this is an unsupervised learning problem, but I found that the topics made the most sense if you limit them to six.
+I wanted to get an idea of what topics Trump talks about during his briefings. To answer this, I used [non-negative matrix factorization (NMF)](https://en.wikipedia.org/wiki/Non-negative_matrix_factorization) to cluster keywords around certain topics. The number of topics and the interpretation of the topic is up to the scientist. There's no right answer as this is an unsupervised learning problem, but I found that the topics made the most sense if you limit them to six.
  
 <p align="center">
 <img alt="" src="/assets/NMF-topics.jpeg" width="600" />
