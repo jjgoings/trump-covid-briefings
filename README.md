@@ -45,7 +45,7 @@ It's interesting to see what Trump thinks is important each day. One way to addr
 Here's an example of the important keywords found on March 14:
 
 |    Date    |          Keyword 1         |      Keyword 2     |        Keyword 3        |        Keyword 4       |         Keyword 5        |
-|:----------:|:--------------------------:|:------------------:|:-----------------------:|:----------------------:|:------------------------:|
+|:----------|--------------------------:|------------------:|-----------------------:|----------------------:|------------------------:|
 | March 14 |                        fed |          proactive |                     mic |                closure |                refinance |
 
 So here you can see that "mic" (or "microphone") was a keyword of interest. Interestingly, Trump went on a bit of a rant during his talk because he was accused of touching the microphone:
@@ -59,7 +59,7 @@ You can see for yourself below. (Click to expand the table.) Near the beginning 
 <details><summary><b> Click to show important keywords by day </b> </summary>
 
 |    Date    |          Keyword 1         |      Keyword 2     |        Keyword 3        |        Keyword 4       |         Keyword 5        |
-|:----------:|:--------------------------:|:------------------:|:-----------------------:|:----------------------:|:------------------------:|
+|:----------|--------------------------:|------------------:|-----------------------:|----------------------:|------------------------:|
 | March 14 |                        fed |          proactive |                     mic |                closure |                refinance |
 | March 15 |                    predict |    Federal Reserve |                  Google |                  relax |                    store |
 | March 16 |                 postponing |            symptom |            Friday night |                   wash |                 Rochelle |
@@ -107,6 +107,14 @@ We can investigate how positive or negative Trump is speaking during his briefin
 </p>
 
 On average, his sentiment lies around 0.4, with a standard deviation of 0.1. So leaning positive, but by no means elated, which is probably the right tone to hit.  
+
+It's interesting to note the spike in Trump's positivity on April 24. Was he really more positive than usual? The model suggests so &mdash; and he was!
+
+POLITICO noticed then same thing, and [ran an article about it](https://www.politico.com/news/2020/04/24/trumps-coronavirus-briefing-207563). After getting rebuked the day before for touting sunlight and ingesting Lysol as a cure for COVID-19, Trump took a more conventional approach. In this particular briefing, he didn't bash any political opponents, didn't talk about any unproven cures, or argue with reporters. He only predicted quick economic turnaround. The article states:
+
+> For a ritual that in recent days has displayed some the trappings of a political rally, the most unusual thing about the briefing was how conventional it was ... There was no touting of unproven remedies, no swipes at political foes; only prediction of a swift economic rebound, praise for governors who are rolling out plans to reopen their states and updates on his administration's public health and economic response to the crisis that has killed more than 50,000 Americans. (POLITICO 04/24/2020)
+
+Fascinating to see the change in attitude reflected in the VADER analysis!
 
 ### What might be influencing Trump's attitude?
 
