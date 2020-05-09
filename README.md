@@ -54,7 +54,7 @@ So here you can see that "mic" (or "microphone") was a keyword of interest. Inte
 
 Amusing that the model identified this (somewhat) bizarre tangent.
 
-You can see for yourself below. (Click to expand the table.) Near the beginning of the briefings, things seem much more focused on health-care and government action ("proactive", "self swab", "buyback"). But as the economy progressively gets worse (see March 23!) then we see more of an economic focus ('exchange', 'cure is worse than the problem'). The economic shutdown is no small deal!
+You can see for yourself below. (Click to expand the table.) Near the beginning of the briefings, things seem much more focused on health-care and government action ("proactive", "self swab", "buyback"). But as the economy progressively gets worse (see March 23!) then we see more of an economic focus ("exchange", "cure is worse than the problem"). The economic shutdown is no small deal!
 
 <details><summary><b> Click to show important keywords by day </b> </summary>
 
