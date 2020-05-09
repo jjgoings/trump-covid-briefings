@@ -70,6 +70,19 @@ You can see for yourself below!
 
 </details>
 
+In general, when Trump speaks his statements fall into one of these topics 18% of the time. That's pretty good coverage for our topics given that we limit ourselves to only 6 topics. That said, relatively speaking, what does he talk most about?
+
+| Topic                   | % Statements |
+|:-------------------------|--------------:|
+| Vaccine & treatment     | 16.6         |
+| Global impact           | 21.4         |
+| Media coverage          | 10.2         |
+| Farms, trade, & tariffs | 24.7         |
+| COVID Task Force        | 14.1         |
+| Economic recovery       | 12.9         |
+
+Of the six topics, Trump talks about farmers, trade, and tariffs nearly 25% of the time. If we lump this group in with the economic recovery topic, it seems Trump talks about the economy well over a third of the time, nearly double that of the actual health impact (vaccines and treatment). Another quarter of the time is spent commenting on the media and how his administration is handling the crisis. These are rough numbers, but the pattern emerges that Trump's preferred topics are the economy and his image (combining both press coverage and his administration's COVID Task Force).
+
 ### Keywords for each day's briefing
 
 It's interesting to see what Trump thinks is important each day. One way to address this is to pull out the top keywords for each day's briefing. The technique we use is [term-frequency inverse-document-frequency (TF-IDF)](https://en.wikipedia.org/wiki/Tf%E2%80%93idf) and treat each day's briefing as a "document". It's a cheap and effective way to pull out those unique keywords that distinguish each day's briefing.

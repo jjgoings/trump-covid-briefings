@@ -12,6 +12,7 @@ num_topics = 6
 
 # Load data and make each document a day's briefing 
 df = pd.read_csv('../../../data/processed/trump_wh_remarks.csv')
+#print(df)
 remarks = [i for i in list(df['clean_text'].values)]
 full_remarks = [i for i in list(df['text'].values)]
 
@@ -50,7 +51,24 @@ def display_topics(H, W, feature_names, remarks, no_top_words, no_top_remarks):
 nmf_W = nmf.transform(tfidf)
 nmf_H = nmf.components_
 
-no_top_words = 10
-no_top_remarks = 10
-display_topics(nmf_H, nmf_W, tfidf_feature_names, full_remarks, no_top_words, no_top_remarks)
+print(nmf_W.shape)
+#print(nmf_H.shape)
+#print(tfidf.shape)
+
+# Get percent topics
+# NMF is non-probabilistic, but it will still "assign" documents
+topics = []
+for i in range(nmf_W.shape[0]):
+    doc = nmf_W[i,:]
+    if np.linalg.norm(doc) > 1e-6:
+    #    print(nmf_W[i,:])
+        topics.append(np.argmax(nmf_W[i,:]))
+
+for i in range(num_topics):
+    print(i+1, topics.count(i)/len(topics)*100, topics.count(i)/nmf_W.shape[0]*100)
+
+
+#no_top_words = 10
+#no_top_remarks = 10
+#display_topics(nmf_H, nmf_W, tfidf_feature_names, full_remarks, no_top_words, no_top_remarks)
 
