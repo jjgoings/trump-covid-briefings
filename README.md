@@ -6,7 +6,6 @@
 </p>
 
 
-  * [What does Trump talk about?](#what-does-trump-talk-about)
 ## Table of Contents
 * [Background](#background)
 * [Findings](#findings)
