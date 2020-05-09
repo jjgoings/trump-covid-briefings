@@ -13,6 +13,7 @@ num_topics = 6
 # Load data and make each document a day's briefing 
 df = pd.read_csv('../../../data/processed/trump_wh_remarks.csv')
 remarks = [i for i in list(df['clean_text'].values)]
+full_remarks = [i for i in list(df['text'].values)]
 
 # From sklearn example
 def print_top_words(model, feature_names, n_top_words):
@@ -36,4 +37,20 @@ nmf = NMF(n_components=num_topics, random_state=1,
 tfidf_feature_names = tfidf_vectorizer.get_feature_names()
 print_top_words(nmf, tfidf_feature_names, 10)
 
+# adapted from https://towardsdatascience.com/improving-the-interpretation-of-topic-models-87fd2ee3847d
+def display_topics(H, W, feature_names, remarks, no_top_words, no_top_remarks):
+    for topic_idx, topic in enumerate(H):
+        print("Topic %d:" % (topic_idx))
+        print(" ".join([feature_names[i]
+                        for i in topic.argsort()[:-no_top_words - 1:-1]]))
+        top_doc_indices = np.argsort( W[:,topic_idx] )[::-1][0:no_top_remarks]
+        for doc_index in top_doc_indices:
+            print(remarks[doc_index])
+
+nmf_W = nmf.transform(tfidf)
+nmf_H = nmf.components_
+
+no_top_words = 10
+no_top_remarks = 10
+display_topics(nmf_H, nmf_W, tfidf_feature_names, full_remarks, no_top_words, no_top_remarks)
 

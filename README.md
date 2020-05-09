@@ -39,17 +39,41 @@ Given that all his remarks are publicly recorded on the [White House webpage](ht
 
 ### What does Trump talk about?
 
-I wanted to get an idea of what topics Trump talks about during his briefings. To answer this, I used [non-negative matrix factorization (NMF)](https://en.wikipedia.org/wiki/Non-negative_matrix_factorization) to cluster keywords around certain topics. The number of topic and the interpretation of the topic is up to the scientist. There's no right answer as this is an unsupervised learning problem, but I found that the topics made the most sense if you limit them to six. Here's what I found: 
-
+I wanted to get an idea of what topics Trump talks about during his briefings. To answer this, I used [non-negative matrix factorization (NMF)](https://en.wikipedia.org/wiki/Non-negative_matrix_factorization) to cluster keywords around certain topics. The number of topic and the interpretation of the topic is up to the scientist. There's no right answer as this is an unsupervised learning problem, but I found that the topics made the most sense if you limit them to six.
+ 
 <p align="center">
-<img alt="" src="/assets/NMF-topics.jpeg" width="800" />
+<img alt="" src="/assets/NMF-topics.jpeg" width="600" />
 </p>
 
-The most important keywords are listed and my intepretation of the topic. For example, the first topic is clearly talking about new treatments, cures, and vaccines for COVID-19. We should expect this to be a topic duing his briefings! Other ones make sense to me as well, like economic recovery. I was a little surprised (OK maybe not too surprised) how much complaining about the press made it into his briefings. I was also a little surprised that farmers and tariffs emerged as a key topic. I knew it was an important issue, but I didn't expect it to be as salient as it was.
+The most important keywords are listed and my intepretation of the topic. For example, the first topic is clearly talking about new treatments, cures, and vaccines for COVID-19. We should expect this to be a topic duing his briefings! Other ones make sense to me as well, like economic recovery. I was a little surprised (OK maybe not too surprised) how often he remarked on his media coverage. And the COVID-19 Task Force topic generally seems to bring up how well his administration is handling the pandemic. This is consistent with what the NYT article found.
+
+You can see for youself below! 
+
+<details><summary> <b>Click for examples of Trump remarks by topic</b> </summary>
+
+**Topic 1: Vaccine and treatment** 
+> *April 13:* We have things happening that are unbelievable. I saw a presentation today that I can't talk about yet, but it's incredible. Plus, I think they're doing — Tony — I think they're doing very well in the vaccines. They're working hard on the vaccines and I think you'll have an answer for vaccines. I believe that there's some great things coming out with respect to that. Now you need a testing period, but you're going to have some great things.
+
+**Topic 2: Global impact**
+> *April 19:* I had a G7 call and their economies are in tatters. They're shattered, the G7 countries. You have Japan and Germany and France, and the different countries. Italy — look at what happened to Italy. Look at what happened to these countries. Look at what happened to Spain. Look what happened to Spain, how — how incredible. It's just been shattered. And so many other countries are shattered.
+
+**Topic 3: Media coverage**
+> *March 29:* I mean, even the media is much more fair. I wouldn't say all of it, but that's okay. They should be fair because they should want this to end. This is — this is about death.
+
+**Topic 4: Farms, trade, and tariffs**
+> *April 22:* We don't want to do — you know, the border has been turned off a number of times over the years. And you know what happened? Our farmers all went out of business. They were out of business. They couldn't farm. We're taking care of our farmers. Nobody ever took care of farmers like I take care of farmers.
+
+**Topic 5: COVID Task Force**
+> *April 16:* I would now like to ask Vice President Mike Pence and Dr. Birx to further explain the new guidelines. I want to thank Dr. Birx. I want to thank Dr. Fauci. And I want to thank, really especially, a man who has devoted 24 hours a day to his task force and done such an incredible job — our great Vice President, Mike Pence.
+
+**Topic 6: Economic recovery**
+> *April 2:* And we've learned a lot. We've learned about borders. We've learned about reliance on other countries. We've learned so much — so much that I think we really have a chance to be bigger and better and stronger. And I think it's going to come back very quickly, but first we have to defeat this enemy.
+
+</details>
 
 ### Keywords for each day's briefing
 
-It's interesting to see what Trump thinks is important each day. One way to address this is to pull out the top keywords for each day's briefing. The technique we use is term-frequency inverse-document-frequency (TF-IDF) and treat each day's briefing as a "document". It's a cheap and effective way to pull out those unique keywords that distinguish each day's briefing.
+It's interesting to see what Trump thinks is important each day. One way to address this is to pull out the top keywords for each day's briefing. The technique we use is [term-frequency inverse-document-frequency (TF-IDF)](https://en.wikipedia.org/wiki/Tf%E2%80%93idf) and treat each day's briefing as a "document". It's a cheap and effective way to pull out those unique keywords that distinguish each day's briefing.
 
 Here's an example of the important keywords found on March 14:
 
