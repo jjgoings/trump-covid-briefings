@@ -6,10 +6,11 @@
 </p>
 
 
-<!---  * [What does Trump talk about?](#what-does-trump-talk-about) -->
+  * [What does Trump talk about?](#what-does-trump-talk-about)
 ## Table of Contents
 * [Background](#background)
 * [Findings](#findings)
+  * [What does Trump talk about?](#what-does-trump-talk-about)
   * [Keywords for each day's briefing](#keywords-for-each-days-briefing)
   * [How positive/negative is Trump during his speeches?](#how-positivenegative-is-trump-during-his-speeches)
   * [What might be influencing Trump's attitude?](#what-might-be-influencing-trumps-attitude)
@@ -36,7 +37,15 @@ Given that all his remarks are publicly recorded on the [White House webpage](ht
 
 ## Findings
 
-<!---### What does Trump talk about? -->
+### What does Trump talk about?
+
+I wanted to get an idea of what topics Trump talks about during his briefings. To answer this, I used [non-negative matrix factorization (NMF)](https://en.wikipedia.org/wiki/Non-negative_matrix_factorization) to cluster keywords around certain topics. The number of topic and the interpretation of the topic is up to the scientist. There's no right answer as this is an unsupervised learning problem, but I found that the topics made the most sense if you limit them to six. Here's what I found: 
+
+<p align="center">
+<img alt="" src="/assets/NMF-topics.jpeg" width="800" />
+</p>
+
+The most important keywords are listed and my intepretation of the topic. For example, the first topic is clearly talking about new treatments, cures, and vaccines for COVID-19. We should expect this to be a topic duing his briefings! Other ones make sense to me as well, like economic recovery. I was a little surprised (OK maybe not too surprised) how much complaining about the press made it into his briefings. I was also a little surprised that farmers and tariffs emerged as a key topic. I knew it was an important issue, but I didn't expect it to be as salient as it was.
 
 ### Keywords for each day's briefing
 
