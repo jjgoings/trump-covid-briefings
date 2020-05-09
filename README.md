@@ -72,16 +72,16 @@ You can see for yourself below!
 
 In general, when Trump speaks his statements fall into one of these topics 18% of the time. That's pretty good coverage for our topics given that we limit ourselves to only 6 topics. That said, relatively speaking, what does he talk most about?
 
-| Topic                   | % Statements |
-|:-------------------------|--------------:|
-| Vaccine & treatment     | 16.6         |
-| Global impact           | 21.4         |
-| Media coverage          | 10.2         |
-| Farms, trade, & tariffs | 24.7         |
-| COVID Task Force        | 14.1         |
-| Economic recovery       | 12.9         |
+| Topic                   | % Relative  | % Total |
+|:-------------------------|--------------:|----------:|
+| Vaccine & treatment     | 16.6         | 2.9 |
+| Global impact           | 21.4         | 3.7 |
+| Media coverage          | 10.2         | 1.8 |
+| Farms, trade, & tariffs | 24.7         | 4.3 |
+| COVID Task Force        | 14.1         | 2.5 |
+| Economic recovery       | 12.9         | 2.3 |
 
-Of the six topics, Trump talks about farmers, trade, and tariffs nearly 25% of the time. If we lump this group in with the economic recovery topic, it seems Trump talks about the economy well over a third of the time, nearly double that of the actual health impact (vaccines and treatment). Another quarter of the time is spent commenting on the media and how his administration is handling the crisis. These are rough numbers, but the pattern emerges that Trump's preferred topics are the economy and his image (combining both press coverage and his administration's COVID Task Force).
+When Trump's statements fall into one of these six topics, Trump talks about farmers, trade, and tariffs nearly 25% of the time (4.3% overall). If we lump this group in with the economic recovery topic, it seems Trump talks about the economy well over a third of the time, nearly double that of the actual health impact (vaccines and treatment). Another quarter of the time is spent commenting on the media and how his administration is handling the crisis. These are rough numbers, but the pattern emerges that Trump's preferred topics are the economy and his image (combining both press coverage and his administration's COVID Task Force).
 
 ### Keywords for each day's briefing
 
@@ -141,7 +141,7 @@ You can see for yourself below. (Click to expand the table.) Near the beginning 
 
 </details>
 
-You can also see the importance of oil in April. It wasn't a huge issue, but you see it become more important starting around April 3, peaking around April 9. That day, if you recall, was when OPEC made *huge* cuts in oil production. So naturally it was a topic in Trump's briefing that day! 
+You can also see the importance of oil in April. It wasn't a huge issue early on, but you see it become more important starting around April 3, peaking around April 9. That day, if you recall, was when OPEC made *huge* cuts in oil production. So naturally it was a topic in Trump's briefing that day! 
 
 ### How positive/negative is Trump during his speeches?
 
@@ -155,7 +155,7 @@ On average, his sentiment lies around 0.4, with a standard deviation of 0.1. So 
 
 It's interesting to note the spike in Trump's positivity on April 24. Was he really more positive than usual? The model suggests so &mdash; and he was!
 
-POLITICO noticed then same thing, and [ran an article about it](https://www.politico.com/news/2020/04/24/trumps-coronavirus-briefing-207563). After getting rebuked the day before for touting sunlight and ingesting Lysol as a cure for COVID-19, Trump took a more conventional approach. In this particular briefing, he didn't bash any political opponents, didn't talk about any unproven cures, or argue with reporters. He only predicted quick economic turnaround. The article states:
+POLITICO noticed then same thing, and [ran an article about it](https://www.politico.com/news/2020/04/24/trumps-coronavirus-briefing-207563). After getting rebuked the day before for claiming sunlight and ingesting Lysol as a cure for COVID-19, Trump took a more conventional approach. In this particular briefing, he didn't bash any political opponents, didn't talk about any unproven cures, or argue with reporters. He only predicted quick economic turnaround. The article states:
 
 > For a ritual that in recent days has displayed some the trappings of a political rally, the most unusual thing about the briefing was how conventional it was ... There was no touting of unproven remedies, no swipes at political foes; only prediction of a swift economic rebound, praise for governors who are rolling out plans to reopen their states and updates on his administration's public health and economic response to the crisis that has killed more than 50,000 Americans. (POLITICO 04/24/2020)
 
@@ -165,7 +165,7 @@ Fascinating to see the change in attitude reflected in the VADER analysis!
 
 Perhaps more interesting is to try and find patterns in Trump's sentiment. Initially, I noticed the big spike in sentiment on March 24, as well as a pretty big drop in sentiment on April 1. On March 24, there was a big stock market rally, and on April 1, the market suffered a few days of losses. I wondered: could it be that Trump's mood is correlated with stock market performance? 
 
-To investigate, I plotted Trump's sentiment versus the percent change in the closing value of the Dow Jones Industrial Average. On first look, you can see that the briefing sentiment shows some correlation with changes in thew DJIA. If the market is doing bad, Trump is generally more negative, and if the market is doing well, Trump is more positive. It's tough to say which direction the correlation goes (correlation is not causation!) but given that Trump usually holds his briefings later in the day, I'm inclined to think the market bears more influence on his mood. But the issues are complicated and there are many more variables at play, so take it with a grain of salt. 
+To investigate, I plotted Trump's sentiment versus the percent change in the closing value of the Dow Jones Industrial Average. On first look, you can see that the briefing sentiment shows some correlation with changes in the DJIA. If the market is doing bad, Trump is generally more negative, and if the market is doing well, Trump is more positive. It's tough to say which direction the correlation goes (correlation is not causation!) but given that Trump usually holds his briefings later in the day, I'm inclined to think the market bears more influence on his mood. But the issues are complicated and there are many more variables at play, so take it with a grain of salt. 
 
 <p align="center">
 <img alt="" src="/briefings/src/models/vader/sentiment_vs_djia.png" width="800" />
