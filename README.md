@@ -47,7 +47,7 @@ I wanted to get an idea of what topics Trump talks about during his briefings. T
 
 The most important keywords are listed and my intepretation of the topic. For example, the first topic is clearly talking about new treatments, cures, and vaccines for COVID-19. We should expect this to be a topic duing his briefings! Other ones make sense to me as well, like economic recovery. I was a little surprised (OK maybe not too surprised) how often he remarked on his media coverage. And the COVID-19 Task Force topic generally seems to bring up how well his administration is handling the pandemic. This is consistent with what the NYT article found.
 
-You can see for youself below! 
+You can see for yourself below! 
 
 <details><summary> <b>Click for examples of Trump remarks by topic</b> </summary>
 
