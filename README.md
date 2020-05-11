@@ -145,7 +145,11 @@ You can also see the importance of oil in April. It wasn't a huge issue early on
 
 ### How positive/negative is Trump during his speeches?
 
-We can investigate how positive or negative Trump is speaking during his briefings. To do this, we look at the compound sentiment for each briefing using the Valence Aware Dictionary and sEntiment Reasoner ([VADER](http://comp.social.gatech.edu/papers/icwsm14.vader.hutto.pdf)). Although it was trained on social media, it works well for our purposes. It ranges from -1 (negative) to +1 (positive). You can see that, on the whole, Trump is pretty positive-to-neutral. Politically, I think this would be better to lean positive during the briefings. Of course, you don't want to be too positive either during these tough times!
+We can investigate how positive or negative Trump is speaking during his briefings. To do this, we look at the compound sentiment for each briefing using the Valence Aware Dictionary and sEntiment Reasoner ([VADER](http://comp.social.gatech.edu/papers/icwsm14.vader.hutto.pdf)). Although it was trained on social media, it works well for our purposes. It ranges from -1 (negative) to +1 (positive). 
+
+So given the statement: "I hate you!", VADER assigns it a -1. But given the statement "I love you!" VADER assigns it a +1. For statements like "I love pizza, but hate the color red", VADER gives it a compound sentiment of zero. For Trump, we take the average compound sentiment for a given day.
+
+You can see that, on the whole, Trump is pretty positive-to-neutral. Politically, I think this would be better to lean positive during the briefings. Of course, you don't want to be too positive either during these tough times!
 
 <p align="center">
 <img alt="" src="/briefings/src/models/vader/sentiment.png" width="800" />
