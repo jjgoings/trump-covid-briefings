@@ -171,7 +171,7 @@ To investigate, I plotted Trump's sentiment versus the percent change in the clo
 <img alt="" src="/briefings/src/models/vader/sentiment_vs_djia.png" width="800" />
 </p>
 
-We can actually make the correlation between stock market and Trump's mood a bit tighter. Below we have a regression plot, and find that the Pearson correlation is around +0.45. This is good enough to say that there is likely a moderate positive correlation between Trump's sentiment and the market performance. Makes sense, as he prides himself on his business acumen and being able to keep the American economy strong. (No comment if that corresponds to reality.)
+We can actually make the correlation between stock market and Trump's mood a bit tighter. Below we have a regression plot, and find that the Pearson correlation is around +0.45. Note that we don't include the cases where Trump gives a briefing on a weekend or holiday! (Which shouldn't be correlated.) This is good enough to say that there is likely a moderate positive correlation between Trump's sentiment and the market performance. Makes sense, as he prides himself on his business acumen and being able to keep the American economy strong. (No comment if that corresponds to reality.)
 
 <p align="center">
 <img alt="" src="/briefings/src/models/vader/sentiment_vs_djia_correlation.png" width="800" />

@@ -8,11 +8,11 @@ from sklearn.decomposition import NMF
 sns.set_color_codes()
 
 # I found that 6 topics makes the most sense
-num_topics = 6
+num_topics = 8 
 
 # Load data and make each document a day's briefing 
 df = pd.read_csv('../../../data/processed/trump_wh_remarks.csv')
-#print(df)
+print(df.describe())
 remarks = [i for i in list(df['clean_text'].values)]
 full_remarks = [i for i in list(df['text'].values)]
 
@@ -33,8 +33,9 @@ tfidf_vectorizer = TfidfVectorizer(max_df=0.01, min_df=5)
 tfidf = tfidf_vectorizer.fit_transform(remarks)
 
 print("NMF topics")
-nmf = NMF(n_components=num_topics, random_state=1,
-          alpha=.1, l1_ratio=.5).fit(tfidf)
+nmf = NMF(n_components=num_topics, random_state=1,beta_loss='kullback-leibler',
+          solver='mu',alpha=.1, l1_ratio=.5).fit(tfidf)
+          #alpha=.1).fit(tfidf)
 tfidf_feature_names = tfidf_vectorizer.get_feature_names()
 print_top_words(nmf, tfidf_feature_names, 10)
 
@@ -52,7 +53,7 @@ nmf_W = nmf.transform(tfidf)
 nmf_H = nmf.components_
 
 print(nmf_W.shape)
-#print(nmf_H.shape)
+print(nmf_H.shape)
 #print(tfidf.shape)
 
 # Get percent topics
@@ -64,9 +65,19 @@ for i in range(nmf_W.shape[0]):
     #    print(nmf_W[i,:])
         topics.append(np.argmax(nmf_W[i,:]))
 
+total_percent = 0.0
 for i in range(num_topics):
+    total_percent += topics.count(i)/nmf_W.shape[0]*100
     print(i+1, topics.count(i)/len(topics)*100, topics.count(i)/nmf_W.shape[0]*100)
 
+print(total_percent)
+
+#topics = pd.DataFrame(nmf_W).idxmax(axis=0, skipna=True)
+#for i in range(100):
+#    print(np.argmax(nmf_W[i,:]),np.max(nmf_W[i,:]))
+
+#plt.bar(x=topics.index, height=topics.mul(100)/topics.sum())
+#plt.show()
 
 #no_top_words = 10
 #no_top_remarks = 10

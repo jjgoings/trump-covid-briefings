@@ -33,7 +33,10 @@ data['sentiment'] = sentiment
 data = data.groupby(['date']).mean()
 data.index = pd.to_datetime(data.index)
 data.index.name = 'Date'
+
+# since stocks does not include weekends, we will not have any correlation if Trump gives a briefing on a weekend or holiday
 merge=pd.merge(data,stocks, how='inner', left_index=True, right_index=True)
+
 
 fog,ax = plt.subplots()
 R = np.corrcoef(merge['sentiment'].values.astype(float),merge['pct_chg'].astype(float))[1,0]
