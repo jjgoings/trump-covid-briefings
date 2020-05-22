@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import seaborn as sns
+from scipy.stats import linregress
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from matplotlib.dates import MO, TU, WE, TH, FR, SA, SU
@@ -38,21 +39,26 @@ data.index.name = 'Date'
 merge=pd.merge(data,stocks, how='inner', left_index=True, right_index=True)
 
 
-fog,ax = plt.subplots()
+fig,ax = plt.subplots()
 R = np.corrcoef(merge['sentiment'].values.astype(float),merge['pct_chg'].astype(float))[1,0]
+p_value = linregress(merge['sentiment'].values.astype(float),merge['pct_chg'].astype(float))[3]
 print(R)
 print(R*R)
 sns.regplot(x='sentiment',y='pct_chg',data=merge)
 plt.xlabel("Trump's Attitude")
 plt.ylabel('% Change in Dow Jones')
 
-textstr = '{}{:.2f}'.format("Pearson Correlation: ",R) 
+#textstr = '{}{:.2f}'.format("Pearson Correlation: ",R) 
+textstr = '\n'.join((
+    '{}{:.2f}'.format("Pearson Correlation: ",R),
+    '{}{:.2f}'.format("R$^2$: ",R*R),
+    '{}{:.2f}'.format("p-value: ",p_value)))
 
 # these are matplotlib.patch.Patch properties
 props = dict(facecolor='white', edgecolor='white',alpha=0.0)
 
 # place a text box in upper left in axes coords
-ax.text(0.5, 0.06, textstr, transform=ax.transAxes, fontsize=14,
+ax.text(0.5, 0.2, textstr, transform=ax.transAxes, fontsize=14,
         verticalalignment='top', bbox=props)
 
 plt.savefig('sentiment_vs_djia_correlation.png',bbox_inches='tight',dpi=300)
